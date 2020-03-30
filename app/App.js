@@ -9,14 +9,21 @@ import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Block, GalioProvider } from 'galio-framework';
+import { decode, encode } from 'base-64';
 
 //import AppContainer from './navigation/Screens';
-
 import AppContainer from './src/navigation/DrawerNavigator';
-import { Images, products, materialTheme } from './constants';
+import { materialTheme } from './constants';
 import Store from './src/root/store';
 import StudentsStore from './src/modules/students/root/store';
 import AdminsStore from './src/modules/admins/root';
+
+global.crypto = require("@firebase/firestore");
+global.crypto.getRandomValues = byteArray => { for (let i = 0; i < byteArray.length; i++) { byteArray[i] = Math.floor(256 * Math.random()); } }
+
+if (!global.btoa) { global.btoa = encode; }
+
+if (!global.atob) { global.atob = decode; }
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
@@ -60,9 +67,9 @@ async function loadResourcesAsync() {
       ...Ionicons.font,
       // We include SpaceMono because we use it in HomeScreen.js. Feel free to
       // remove this if you are not using it in your app
-      'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
-      'amaticsc': require('./assets/fonts/AmaticSC-Regular.ttf'),
-      'caviardreams_italic': require('./assets/fonts/CaviarDreams_Italic.ttf')//UniSansDemo
+      //'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+      //'amaticsc': require('./assets/fonts/AmaticSC-Regular.ttf'),
+      //'caviardreams_italic': require('./assets/fonts/CaviarDreams_Italic.ttf')//UniSansDemo
     }),
   ]);
 }

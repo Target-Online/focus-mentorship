@@ -17,11 +17,13 @@ export const signup = (user, navigation, setInprogress) => {
             setInprogress(false);
             updateDetails(user, navigation);
 
-            const uid = response.user.uid;
+            const uid = response.user.email;
             db.collection('users').doc(uid)
             .set({
                 ...user, 
                 id: uid,
+                uid: response.user.uid,
+                password: "*********",
                 createdAt: Date.now()
             })
         },

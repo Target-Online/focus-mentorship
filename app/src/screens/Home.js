@@ -37,7 +37,7 @@ export default Home = props => {
       </Block>
       <Block flex style={styles.options}>
         <ScrollView showsVerticalScrollIndicator={true}>
-            <TouchableOpacity onPress={() => navigation.navigate('Students')}>
+            <TouchableOpacity onPress={() => !users.inProgress &&  navigation.navigate('Students')}>
               <Product product={options[0]} horizontal inProgress={users.inProgress}/>
             </TouchableOpacity>
 

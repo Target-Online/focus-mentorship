@@ -4,7 +4,6 @@
     "description": "Focus Mentorship",
     "slug": "focus-mentorship",
     "privacy": "unlisted",
-    "sdkVersion": "35.0.0",
     "platforms": [
       "ios",
       "android"

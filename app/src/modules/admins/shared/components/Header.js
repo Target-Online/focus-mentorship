@@ -131,8 +131,8 @@ const Header = props => {
         style={styles.search}
         placeholder="Search ..."
         onChangeText={value => {
-          if(title == 'Students' || title == 'AddStudent' ) dispatchStudents({ type: 'setSearch', search: value })
-          if(title == 'Documents') dispatchDocuments({ type: 'setSearch', search: value })
+          if(title == 'Students' || title == 'AddStudent' ) dispatchStudents({ type: 'setSearch', search: value.toLowerCase()  })
+          if(title == 'Documents') dispatchDocuments({ type: 'setSearch', search: value.toLowerCase()  })
           
         }}
         iconContent={<Icon size={16} color={theme.COLORS.MUTED} name="magnifying-glass" family="entypo" />}

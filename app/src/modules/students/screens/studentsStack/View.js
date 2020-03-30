@@ -22,7 +22,7 @@ export default View = props => {
 
     const updateProfile = () => {
         if (student.id == currentUser.id || currentUser.isAdmin){
-            imageUtils._pickImage(setImage, currentUser, setInProgress)
+            imageUtils._pickImage(setImage, currentUser)
         }
     }
 

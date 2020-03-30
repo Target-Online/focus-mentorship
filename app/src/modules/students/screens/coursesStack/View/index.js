@@ -39,15 +39,15 @@ export default CourseView = props => {
     const [editDescription, setEditDescription] = useState(false);
     const [description, setDescription] = useState(product.description);
 
-    const [students,] = useContext(StudentsContext);
-    const [studentCourse,] = useContext(StudentCourseContext);
+    const [students] = useContext(StudentsContext);
+    const [studentCourse] = useContext(StudentCourseContext);
 
     const updateCourse = () => {
         if (isAdmin) imageUtils._updateDocumentImage(setImage, product.id);
     }
 
-    const studentsEnrolledForThisCourse = students.data.filter(s =>
-        studentCourse.data.filter(sc => sc.courseId == product.id)
+    const studentsEnrolledForThisCourse = students.collection.filter(s =>
+        studentCourse.collection.filter(sc => sc.courseId == product.id)
             .map(es => es.studentId)
             .includes(s.id))
 

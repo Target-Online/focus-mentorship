@@ -5,7 +5,8 @@ import {
     View,
     TouchableOpacity,
     Image,
-    FlatList
+    FlatList,
+    ScrollView
 } from 'react-native';
 import { Block } from 'galio-framework';
 
@@ -17,7 +18,6 @@ import { UsersContext } from '../../../../root/store';
 export default users = props => {
     const [users] = useContext(UsersContext);
 
-    console.log('users', users)
     const addStudent = userId =>{
         firestoreApi.updateDocument('users', userId, { isAdmin: true });
         props.navigation.goBack();
@@ -42,9 +42,9 @@ export default users = props => {
         );
     }
 
-    const data = users.data.filter(s => s.name.includes(users.search) && s.isStudent)
+    const data = users.collection.filter(s => s.name.toLowerCase().includes(users.search) && s.isStudent)
     return (
-        <Spinner inProgress={users.inProgress}>
+        <ScrollView>
             <FlatList
                 data={data}
                 keyExtractor={item => item.id.toString()}
@@ -53,7 +53,7 @@ export default users = props => {
             <Block center style={{ marginTop: 10 }}>
                 {data.length == 0 && !users.inProgress && <Text>No users.</Text>}
             </Block>
-        </Spinner>
+        </ScrollView>
     );
 }
 

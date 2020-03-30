@@ -1,26 +1,20 @@
-import React, { useContext, useEffect, useReducer } from 'react';
+import React, { useContext } from 'react';
 import { StyleSheet, ScrollView, Dimensions, Text } from 'react-native';
 import { Block, theme } from 'galio-framework';
 
 import { Spinner, Card } from '../../shared/components';
 import { Images } from '../../../../shared/constants';
 import { FoldersContext } from '../../root/store';
-import { rootReducer } from '../../../../shared/utils';
-import { firestoreApi } from '../../../../api';
 
 const { height } = Dimensions.get('screen');
 
 export default Resources = () => {
   const [resources] = useContext(FoldersContext);
-  const [state, dispatch] = useReducer(rootReducer.observerReducer, { 'collection': resources.data });
-  const data = state.collection.sort((a, b) => b.createdAt - a.createdAt)
-  const noData = data.length == 0 && !resources.inProgress;
+  const data = resources.collection.sort((a, b) => b.createdAt - a.createdAt)
 
-  useEffect(() => firestoreApi.collectionObserver('folders', dispatch), []);
-  
   return (
     <Spinner inProgress={resources.inProgress}>
-      <Block flex style={[styles.options, !noData && { height: height }]}>
+      <Block flex style={[styles.options, !data.length == 0 && { height: height }]}>
         <ScrollView showsVerticalScrollIndicator={true}>
           {data.map(resource =>
             <Card
@@ -34,7 +28,7 @@ export default Resources = () => {
           )}
         </ScrollView>
         <Block center style={{ marginTop: 10 }}>
-          {noData && <Text>No folders.</Text>}
+          {data.length == 0 && <Text>No folders.</Text>}
         </Block>
       </Block>
     </Spinner>

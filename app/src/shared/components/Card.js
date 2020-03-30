@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexWrap: 'wrap',
     paddingBottom: 6,
+    alignContent: 'center'
   },
   productDescription: {
     padding: theme.SIZES.BASE / 2

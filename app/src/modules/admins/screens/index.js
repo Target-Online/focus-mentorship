@@ -28,7 +28,7 @@ const thumbMeasure = (width - 48 - 32) / 3;
 
 export default CourseView = props => {
     const [clients] = useContext(ClientsContext);
-    const client = clients.data.filter(c => c.name == appsettings.appName)[0] 
+    const client = clients.collection.filter(c => c.name == appsettings.appName)[0] 
 
     const [currentUser] = useContext(UserContext);
     const isAdmin = currentUser && currentUser.isAdmin;
@@ -50,7 +50,7 @@ export default CourseView = props => {
         if (isAdmin) imageUtils._updateDocumentImage(setImage, client.id);
     }
 
-    const staff = users.data.filter(user => user.isAdmin)
+    const staff = users.collection.filter(user => user.isAdmin)
 
     const AddAnnouncement = (
         <ConfirmDialog

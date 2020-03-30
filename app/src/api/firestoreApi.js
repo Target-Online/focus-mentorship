@@ -11,24 +11,20 @@ export const getDocument = (
     collection,
     documentId,
     setDocument,
-    setInProgress
 ) => {
-    setInProgress(true);
-
     db.collection(collection)
         .doc(documentId)
         .get()
         .then(doc => {
             if (!doc.exists) {
                 onError(fsdocument + ' does not exist');
-                setInProgress(false);
+                console.log(fsdocument + ' does not exist')
             }
             else setDocument(doc.data())
-            setInProgress(false);
         })
         .catch(err => {
             error('Error getting document', err);
-            setInProgress(false);
+            console.log('Error getting document', err)
         });
 }
 
@@ -107,32 +103,30 @@ export const updateAuthUser = async data => {
 export const getCollection = (
     collectionRef,
     dispatch
-) =>  db.collection(collectionRef)
-        .get()
-        .then(querySnapshot => {
-            dispatch({type: 'setData', data: querySnapshot.docs.map(doc => doc.data())});
-            dispatch({type: 'setInProgress', inProgress: false});
-        }).catch(error => {
-            error('Error getting document', error);
-            dispatch({type: 'setInProgress', inProgress: false})
-        });
-        
+) => db.collection(collectionRef)
+    .get()
+    .then(querySnapshot => {
+        dispatch({ type: 'setData', data: querySnapshot.docs.map(doc => doc.data()) });
+        dispatch({ type: 'setInProgress', inProgress: false });
+    }).catch(error => {
+        error('Error getting document', error);
+        dispatch({ type: 'setInProgress', inProgress: false })
+    });
+
 export const collectionObserver = (
     collectionRef,
     dispatch
 ) => {
-    db.collection(collectionRef).onSnapshot(querySnapshot => { querySnapshot
-            .docChanges()
-            .forEach(change => {
-                if (!change.doc.metadata.fromCache) {
-                    const doc = change.doc.data();
-                    if (change.type === 'added') dispatch({type: 'added', doc: doc})
-        
-                    if (change.type === 'modified') dispatch({type: 'modified', doc: doc})
+    db.collection(collectionRef).onSnapshot(querySnapshot => {
+        querySnapshot.docChanges()
+        .forEach(change => {
+            const doc = change.doc.data();
+            if (change.type === 'added') dispatch({ type: 'added', doc: doc })
 
-                    if (change.type === 'removed') dispatch({type: 'removed', doc: doc})
-                }
-            });
+            if (change.type === 'modified') dispatch({ type: 'modified', doc: doc })
+
+            if (change.type === 'removed') dispatch({ type: 'removed', doc: doc })
+        });
     });
 
 }

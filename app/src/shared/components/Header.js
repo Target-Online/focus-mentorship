@@ -123,7 +123,7 @@ const Header = props => {
         onFocus={() => navigation.navigate('Pro')}
         iconContent={<Icon size={16} color={theme.COLORS.MUTED} name="magnifying-glass" family="entypo" />}
         onChangeText={value => {
-          if(title == 'Add Admin' ) dispatchUsers({ type: 'setSearch', search: value })          
+          if(title == 'Add Admin' ) dispatchUsers({ type: 'setSearch', search: value.toLowerCase()  })          
         }}
       />
     )

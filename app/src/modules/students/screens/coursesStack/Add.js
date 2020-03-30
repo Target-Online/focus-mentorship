@@ -15,12 +15,11 @@ export default AddCourse = props => {
     const { navigation } = props;
     const [image, setImage] = useState('');
     const [course, setCourse] = useState({});
-    const [inProgress, setInprogress] = useState(false);
 
     return (
         <ScrollView style={styles.container}>
             <Block>
-                <TouchableOpacity onPress={() => imageUtils._pickImage(setImage, null, setInprogress)}>
+                <TouchableOpacity onPress={() => imageUtils._pickImage(setImage, null)}>
                     <ImageBackground
                         source={image != '' ? { uri: image } : Images.placeholder }
                         style={styles.profileContainer}
@@ -62,7 +61,6 @@ export default AddCourse = props => {
             <Block center >
                 <Button
                     shadowless
-                    disabled={inProgress}
                     color={materialTheme.COLORS.PRIMARY}
                     style={[styles.button, styles.shadow]}
                     onPress={() => {
@@ -72,7 +70,7 @@ export default AddCourse = props => {
                             navigation.goBack();
                         }
                     }}>
-                    {inProgress ? <ActivityIndicator size="small" color="#00ff00" /> : 'Submit'}
+                    Submit
                 </Button>
             </Block>
             </ScrollView>

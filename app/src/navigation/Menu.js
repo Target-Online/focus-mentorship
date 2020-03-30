@@ -31,6 +31,9 @@ const Drawer = props => {
         <DrawerItems {...props} />
       </ScrollView>
     </Block>
+    <Block flex>
+      <Text center> Version: {appsettings.version} </Text>
+    </Block>
   </Block>
 )};
 

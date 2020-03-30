@@ -5,18 +5,13 @@ import { Block, theme } from 'galio-framework';
 import { Spinner, Card } from '../../shared/components';
 import { Images } from '../../../../shared/constants';
 import { CoursesContext } from '../../root/store';
-import { rootReducer } from '../../../../shared/utils';
-import { firestoreApi } from '../../../../api';
 
 const { height } = Dimensions.get('window');
 
 export default Courses = () => {
   const [courses] = useContext(CoursesContext);
-  const [state, dispatch] = useReducer(rootReducer.observerReducer, {'collection': courses.data});
-  const data = state.collection.sort((a, b) => b.createdAt - a.createdAt)
-  const noData = data.length == 0 && !courses.inProgress;
-
-  useEffect(() => firestoreApi.collectionObserver('courses', dispatch), []);
+  const data = courses.collection.sort((a, b) => b.createdAt - a.createdAt)
+  const noData = data.length == 0;
 
   return (
     <Spinner inProgress={courses.inProgress}>

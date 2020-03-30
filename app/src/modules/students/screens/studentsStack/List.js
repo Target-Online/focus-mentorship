@@ -1,4 +1,4 @@
-import React, { useContext, useReducer } from 'react';
+import React, { useContext } from 'react';
 import {
     StyleSheet,
     Text,
@@ -6,11 +6,11 @@ import {
     TouchableOpacity,
     Image,
     FlatList,
+    ScrollView
 } from 'react-native';
 import { Block } from 'galio-framework';
 
 import { Images } from '../../../../shared/constants';
-import { Spinner } from '../../shared/components';
 import { StudentsContext } from '../../root/store';
 
 export default Students = props => {
@@ -27,7 +27,7 @@ export default Students = props => {
                             <Text style={styles.mblTxt}>Mobile</Text>
                         </View>
                         <View style={styles.msgContainer}>
-                            <Text style={styles.msgTxt}>{item.city} {item['suburb/township']}</Text>
+                            <Text style={styles.msgTxt}>{item.email}</Text>
                         </View>
                     </View>
                 </View>
@@ -35,18 +35,18 @@ export default Students = props => {
         );
     }
     
-    const data = students.data.filter(s => s.name.includes(students.search) && s.isStudent);
+    const data = students.collection.filter(s => s.name.toLowerCase().includes(students.search) && s.isStudent);
     return (
-        <Spinner inProgress={students.inProgress}>
+        <ScrollView>
             <FlatList
-                data={data} 
+                data={data.sort((a, b) => b.createdAt - a.createdAt)} 
                 keyExtractor={item => item.id.toString()}
                 renderItem={item => renderItem(item)}
             />
             <Block center style={{ marginTop: 10 }}>
-                {data.length == 0 && !students.inProgress && <Text>No students.</Text>}
+                {data.length == 0 && <Text>No students.</Text>}
             </Block>
-        </Spinner>
+        </ScrollView>
     );
 }
 

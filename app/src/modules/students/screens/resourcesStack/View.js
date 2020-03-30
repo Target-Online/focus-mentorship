@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 
 import { Spinner, FontAwesomeIcons } from '../../../../shared/components';
-import { SearchContext } from '../../../../root/store';
 import { Block, Text } from 'galio-framework';
 import { DocumentsContext } from '../../root/store';
 
@@ -29,9 +28,9 @@ export default Documents = props => {
         );
     }
 
-    const data = documents.data.filter(d => 
+    const data = documents.collection.filter(d => 
         d.parentId == product.id &&
-        d.name.includes(documents.search)
+        d.name.toLowerCase().includes(documents.search)
     );
 
     return (

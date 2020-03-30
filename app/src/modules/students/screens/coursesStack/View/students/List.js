@@ -1,26 +1,22 @@
-import React, { useReducer, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import {
     StyleSheet,
     Text,
     View,
     TouchableOpacity,
     Image,
-    FlatList
+    FlatList,
+    ScrollView
 } from 'react-native';
 import { Block } from 'galio-framework';
 
-import { firestoreApi } from '../../../../../../api';
-import { Spinner, Filter } from '../../../../../../shared/components';
+import { Filter } from '../../../../../../shared/components';
 import { Images } from '../../../../../../shared/constants';
 import { StudentsContext, StudentCourseContext } from '../../../../root/store';
-import { rootReducer } from '../../../../../../shared/utils';
 
 export default Users = props => {
     const [students] = useContext(StudentsContext);
     const [studentCourse] = useContext(StudentCourseContext);
-    const [state, dispatch] = useReducer(rootReducer.observerReducer, {'collection': studentCourse.data});
-            
-    useEffect(() => firestoreApi.collectionObserver('studentCourse', dispatch), []);
 
     const renderItem = ({ item }) => {
         return (
@@ -33,7 +29,7 @@ export default Users = props => {
                                 <Text style={styles.nameTxt} numberOfLines={1} ellipsizeMode="tail">{item.name}</Text>
                             </View>
                             <View style={styles.msgContainer}>
-                                <Text style={styles.msgTxt}>{item.city} {item['suburb/township']}</Text>
+                                <Text style={styles.msgTxt}>{item.email} </Text>
                             </View>
                         </View>
                     </View>
@@ -41,15 +37,14 @@ export default Users = props => {
             </Filter>
         );
     }
-
-    const inProgress = students.inProgress || studentCourse.inProgress;
-    
+ 
+    const studentsOnThisCourse = studentCourse.collection.filter(sc => sc.courseId == props.course.id)
     return (
-        <Spinner inProgress={inProgress}>
+        <ScrollView>
             <FlatList
                 data={
-                    students.data.filter(s =>
-                        state.collection.filter(sc => sc.courseId == props.course.id)
+                    students.collection.filter(s =>
+                        studentsOnThisCourse
                         .map(es => es.studentId)
                         .includes(s.id))
                 }
@@ -57,9 +52,9 @@ export default Users = props => {
                 renderItem={item => renderItem(item)}
             />
             <Block center style={{ marginTop: 10 }}>
-                {state.collection.filter(sc => sc.courseId == props.course.id).length == 0 && !inProgress && <Text>No students.</Text>}
+                {studentsOnThisCourse.length == 0 && <Text>No students.</Text>}
             </Block>
-        </Spinner>
+        </ScrollView>
     );
 }
 

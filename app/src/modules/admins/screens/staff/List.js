@@ -5,22 +5,17 @@ import {
     View,
     TouchableOpacity,
     Image,
-    FlatList
+    FlatList,
+    ScrollView
 } from 'react-native';
 import { Block } from 'galio-framework';
 
-import { firestoreApi } from '../../../../api';
-import { Spinner, Filter } from '../../../../shared/components';
 import { Images } from '../../../../shared/constants';
 import { StudentsContext } from '../../../students/root/store';
-import { rootReducer } from '../../../../shared/utils';
 
 export default Users = props => {
     const [users] = useContext(StudentsContext);
-    const [state, dispatch] = useReducer(rootReducer.observerReducer, {'collection': users.data});
         
-    useEffect(() => firestoreApi.collectionObserver('users', dispatch), []);
-
     const renderItem = ({ item }) => {
         return (
             <TouchableOpacity onPress={() => props.navigation.navigate('ViewAdmin', { student: item })}>
@@ -29,10 +24,10 @@ export default Users = props => {
                     <View>
                         <View style={styles.nameContainer}>
                             <Text style={styles.nameTxt} numberOfLines={1} ellipsizeMode="tail">{item.name}</Text>
-                            <Text style={styles.mblTxt} numberOfLines={1} ellipsizeMode="tail">{item.title}</Text>
+                            <Text style={styles.mblTxt} numberOfLines={1} ellipsizeMode="tail">{item.city}</Text>
                         </View>
                         <View style={styles.msgContainer}>
-                            <Text style={styles.msgTxt}>{item.city} {item['suburb/township']}</Text>
+                            <Text style={styles.msgTxt}>{item.title}</Text>
                         </View>
                     </View>
                 </View>
@@ -41,16 +36,16 @@ export default Users = props => {
     }
     
     return (
-        <Spinner inProgress={users.inProgress}>
+        <ScrollView>
             <FlatList
-                data={state.collection.filter(user => user.isAdmin)}
+                data={users.collection.filter(user => user.isAdmin)}
                 keyExtractor={item => item.id.toString()}
                 renderItem={item => renderItem(item)}
             />
             <Block center style={{ marginTop: 10 }}>
-                {state.collection.filter(user => user.isAdmin).length == 0 && !users.inProgress && <Text>No admins.</Text>}
+                {users.collection.filter(user => user.isAdmin).length == 0 && <Text>No admins.</Text>}
             </Block>
-        </Spinner>
+        </ScrollView>
     );
 }
 

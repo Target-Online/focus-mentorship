@@ -6,19 +6,15 @@ import {
     TouchableOpacity,
     Linking,
     FlatList,
+    ScrollView,
 } from 'react-native';
 import { Block } from 'galio-framework';
 
-import { Spinner, FontAwesomeIcons } from '../../../../shared/components';
+import { FontAwesomeIcons } from '../../../../shared/components';
 import { DocumentsContext } from '../../root';
-import { rootReducer } from '../../../../shared/utils';
-import { firestoreApi } from '../../api';
 
 export default Documents = props => {
     const [documents] = useContext(DocumentsContext);
-    const [state, dispatch] = useReducer(rootReducer.observerReducer, {'collection': documents.data});
-
-    useEffect(() => firestoreApi.collectionObserver('documents', dispatch), []);
 
     const renderItem = ({ item }) => {
         return (
@@ -33,18 +29,18 @@ export default Documents = props => {
         );
     }
 
-    const data = state.collection.filter(d => d.parentId == props.id)
+    const data = documents.collection.filter(d => d.parentId == props.id)
     return (
-        <Spinner inProgress={documents.inProgress}>
+        <ScrollView>
             <FlatList
                 data={data}
                 keyExtractor={item => item.id.toString()}
                 renderItem={item => renderItem(item)}
             />
             <Block center style={{ marginTop: 10 }}>
-                {data.length == 0 && !documents.inProgress && <Text>No documents.</Text>}
+                {data.length == 0  && <Text>No documents.</Text>}
             </Block>
-        </Spinner>
+        </ScrollView>
     );
 }
 

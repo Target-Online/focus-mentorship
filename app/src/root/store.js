@@ -9,23 +9,22 @@ export const UserContext = React.createContext()
 export const UsersContext = React.createContext()
 
 const initalState = {
-    data: [],
-    search: '',
-    inProgress: true
+	collection: [],
+	search: '',
+	inProgress: true
 }
 
 if (!firebase.apps.length) firebase.initializeApp(appsettings.firebaseConfig);
 
 const Store = ({ children }) => {
 	const [currentUser, setUser] = useState()
-    const [users, dispatchUsers] = useReducer(rootReducer.setStateReducer, initalState)
+	const [users, dispatchUsers] = useReducer(rootReducer.setStateReducer, initalState)
 
 	useEffect(() => {
-		firebase.auth();
 		firestoreApi.getCollection('users', dispatchUsers);
 		firebase.auth().onAuthStateChanged(user => {
-			if (user) {
-				firestoreApi.getDocument('users', user.uid, setUser, () => { });
+			if(user){
+				firestoreApi.getDocument('users', user.email, setUser);
 				pushNotifications.registerForPushNotificationsAsync(user.uid)
 			}
 		});

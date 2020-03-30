@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import {
     StyleSheet,
     Text,
     View,
     TouchableOpacity,
     Image,
-    FlatList
+    FlatList,
+    ScrollView
 } from 'react-native';
 import { Block } from 'galio-framework';
 
 import { pushNotifications } from '../../../../../../shared/utils';
 import { firestoreApi } from '../../../../../../api';
-import { Spinner } from '../../../../../../shared/components';
 import { Images } from '../../../../../../shared/constants';
 import { StudentsContext, StudentCourseContext } from '../../../../root/store';
 
@@ -40,10 +40,9 @@ export default Students = props => {
                     <View>
                         <View style={styles.nameContainer}>
                             <Text style={styles.nameTxt} numberOfLines={1} ellipsizeMode="tail">{item.name}</Text>
-                            <Text style={styles.mblTxt}>Mobile</Text>
                         </View>
                         <View style={styles.msgContainer}>
-                            <Text style={styles.msgTxt}>{item.city} {item['suburb/township']}</Text>
+                            <Text style={styles.msgTxt}>{item.email}</Text>
                         </View>
                     </View>
                 </View>
@@ -51,18 +50,18 @@ export default Students = props => {
         );
     }
 
-    const data = students.data.filter(s => s.name.includes(students.search) && s.isStudent && !studentCourse.data.some(sc => sc.courseId == course.id && sc.studentId == s.id))
+    const data = students.collection.filter(s => s.name.toLowerCase().includes(students.search) && s.isStudent && !studentCourse.collection.some(sc => sc.courseId == course.id && sc.studentId == s.id))
     return (
-        <Spinner inProgress={students.inProgress}>
+        <ScrollView>
             <FlatList
-                data={data}
+                data={data.sort((a, b) => b.createdAt - a.createdAt)}
                 keyExtractor={item => item.id.toString()}
                 renderItem={item => renderItem(item)}
             />
             <Block center style={{ marginTop: 10 }}>
                 {data.length == 0 && !students.inProgress && <Text>No students.</Text>}
             </Block>
-        </Spinner>
+        </ScrollView>
     );
 }
 

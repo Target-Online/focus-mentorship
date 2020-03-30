@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import firebase from "firebase";
 
 import { UserContext } from '../root/store';
-import { utils, materialTheme } from '../shared/constants';
+import { materialTheme } from '../shared/constants';
 import { HeaderHeight } from "../shared/constants/utils";
 import { Images } from "../shared/constants";
 import appsettings from '../../appsettings.json'
@@ -19,24 +19,20 @@ const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
 export default View = props => {
-    const [currentUser, setUser] = useContext(UserContext);
-    const [inProgress, setInProgress] = useState(false);
+    const [currentUser] = useContext(UserContext);
     const [image, setImage] = useState(currentUser && currentUser.avatar);
-    const [cachedAvatar, cacheAvatar]= useState(image);
 
     useEffect(() => {
         if (currentUser && currentUser.avatar == '') onInfo('Update your profile image.');
         if(!currentUser) props.navigation.navigate('Login');
     }, []);
 
-    CacheManager.get(image, cachedAvatar => cacheAvatar(cachedAvatar));
-
     return (
         <Block flex style={styles.profile}>
             <Block flex>
-                <TouchableOpacity onPress={() => imageUtils._pickImage(setImage, currentUser, setInProgress)}>
+                <TouchableOpacity onPress={() => imageUtils._pickImage(setImage, currentUser)}>
                     <ImageBackground
-                        source={image ? {uri: cachedAvatar} : Images.user }
+                        source={image ? {uri: image} : Images.user }
                         style={styles.profileContainer}
                         imageStyle={styles.profileImage}>
                         <Block flex style={styles.profileDetails}>

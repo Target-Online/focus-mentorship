@@ -13,28 +13,28 @@ export const FoldersContext = React.createContext()
 export const StateContext = React.createContext()
 
 const initalState = {
-    data: [],
+    collection: [],
     search: '',
-    inProgress: true
+    inProgress: false
 }
 
 const Store = ({ children }) => {
-    const [announcements, setAnnouncements] = useReducer(rootReducer.setStateReducer, initalState)
-    const [courses, setCourses] = useReducer(rootReducer.setStateReducer, initalState)
-    const [studentCourse, setStudentCourse] = useReducer(rootReducer.setStateReducer, initalState)
-    const [documents, setDocuments] = useReducer(rootReducer.setStateReducer, initalState)
-    const [students, setStudents] = useReducer(rootReducer.setStateReducer, initalState)
-    const [messages, setMessages] = useReducer(rootReducer.setStateReducer, initalState)
-    const [folders, setFolders] = useReducer(rootReducer.setStateReducer, initalState)
+    const [announcements, setAnnouncements] = useReducer(rootReducer.observerReducer, initalState)
+    const [courses, setCourses] = useReducer(rootReducer.observerReducer, initalState)
+    const [studentCourse, setStudentCourse] = useReducer(rootReducer.observerReducer, initalState)
+    const [documents, setDocuments] = useReducer(rootReducer.observerReducer, initalState)
+    const [students, setStudents] = useReducer(rootReducer.observerReducer, initalState)
+    const [messages, setMessages] = useReducer(rootReducer.observerReducer, initalState)
+    const [folders, setFolders] = useReducer(rootReducer.observerReducer, initalState)
 
     useEffect(() => {
-        firestoreApi.getCollection('announcements', setAnnouncements);
-        firestoreApi.getCollection('courses', setCourses);
-        firestoreApi.getCollection('studentCourse', setStudentCourse);
-        firestoreApi.getCollection('documents', setDocuments);
-        firestoreApi.getCollection('users', setStudents);
-        firestoreApi.getCollection('messages', setMessages);
-        firestoreApi.getCollection('folders', setFolders);
+        firestoreApi.collectionObserver('announcements', setAnnouncements);
+        firestoreApi.collectionObserver('courses', setCourses);
+        firestoreApi.collectionObserver('studentCourse', setStudentCourse);
+        firestoreApi.collectionObserver('documents', setDocuments);
+        firestoreApi.collectionObserver('users', setStudents);
+        firestoreApi.collectionObserver('messages', setMessages);
+        firestoreApi.collectionObserver('folders', setFolders);
     }, []);
 
     return (

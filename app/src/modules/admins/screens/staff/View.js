@@ -14,14 +14,13 @@ const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
 export default View = props => {
-    const [currentUser, setUser] = useContext(UserContext);
+    const [currentUser] = useContext(UserContext);
     const { student } = props.navigation.state.params;
-    const [inProgress, setInProgress] = useState(false);
     const [image, setImage] = useState(student.avatar);
 
     const updateProfile = () => {
         if (student.id == currentUser.id || currentUser.isAdmin){
-            imageUtils._pickImage(setImage, currentUser, setInProgress)
+            imageUtils._pickImage(setImage, currentUser)
         }
     }
 

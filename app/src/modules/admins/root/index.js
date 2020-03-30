@@ -9,22 +9,22 @@ export const MessagesContext = React.createContext()
 export const ClientsContext = React.createContext()
 
 const initalState = {
-    data: [],
+    collection: [],
     search: '',
-    inProgress: true
+    inProgress: false
 }
 
 const Store = ({ children }) => {
-    const [announcements, dispatchAnnouncements] = useReducer(rootReducer.setStateReducer, initalState)
-    const [documents, dispatchDocuments] = useReducer(rootReducer.setStateReducer, initalState)
-    const [messages, dispatchMessages] = useReducer(rootReducer.setStateReducer, initalState)
-    const [clients, dispatchClients] = useReducer(rootReducer.setStateReducer, initalState)
+    const [announcements, dispatchAnnouncements] = useReducer(rootReducer.observerReducer, initalState)
+    const [documents, dispatchDocuments] = useReducer(rootReducer.observerReducer, initalState)
+    const [messages, dispatchMessages] = useReducer(rootReducer.observerReducer, initalState)
+    const [clients, dispatchClients] = useReducer(rootReducer.observerReducer, initalState)
 
     useEffect(() => {
-        firestoreApi.getCollection('announcements', dispatchAnnouncements);
-        firestoreApi.getCollection('documents', dispatchDocuments);
-        firestoreApi.getCollection('messages', dispatchMessages);
-        firestoreApi.getCollection('clients', dispatchClients);
+        firestoreApi.collectionObserver('announcements', dispatchAnnouncements);
+        firestoreApi.collectionObserver('documents', dispatchDocuments);
+        firestoreApi.collectionObserver('messages', dispatchMessages);
+        firestoreApi.collectionObserver('clients', dispatchClients);
     }, []);
 
     return (

@@ -1,5 +1,5 @@
 import moment from 'moment'
-import React, { useReducer, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import {
     StyleSheet,
     Text,
@@ -12,15 +12,10 @@ import { Block } from 'galio-framework';
 
 import { Spinner } from '../../../../../../shared/components';
 import { AnnouncementsContext } from '../../../../root/store';
-import { rootReducer } from '../../../../../../shared/utils';
-import { firestoreApi } from '../../../../../../api';
 
 export default Announcements = props => {
     const [announcements] = useContext(AnnouncementsContext);
-    const [state, dispatch] = useReducer(rootReducer.observerReducer, {'collection': announcements.data});
-    const data = state.collection.filter(d => d.parentId == props.id)
-
-    useEffect(() => firestoreApi.collectionObserver('announcements', dispatch), []);
+    const data = announcements.collection.filter(d => d.parentId == props.id)
 
     return (
         <Spinner inProgress={announcements.inProgress} >
@@ -43,7 +38,7 @@ export default Announcements = props => {
                     }} />
             </View>
             <Block center style={{ marginTop: 10 }}>
-                {data.length == 0 && !announcements.inProgress && <Text>No announcements.</Text>}
+                {data.length == 0 && <Text>No announcements.</Text>}
             </Block>
         </Spinner>
     );

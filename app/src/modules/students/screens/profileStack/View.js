@@ -8,29 +8,27 @@ import { UserContext } from '../../../../root/store';
 import { imageUtils } from '../../../../shared/utils';
 import { Images } from '../../../../shared/constants';
 import { onInfo } from '../../shared/utils/notifications';
-import { utils, materialTheme } from '../../shared/constants';
+import { materialTheme } from '../../shared/constants';
 import { HeaderHeight } from "../../shared/constants/utils";
 
 const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
 export default View = props => {
-    const [currentUser, setUser] = useContext(UserContext);
-    const [inProgress, setInProgress] = useState(false);
+    const [currentUser] = useContext(UserContext);
     const [image, setImage] = useState(currentUser && currentUser.avatar);
 
     useEffect(() => {
-        if (currentUser) {
-            if (currentUser.avatar == '') 
+        if (currentUser && currentUser.avatar == ''){ 
                 onInfo('Update your profile image.');
         }
-        else  props.navigation.navigate('Login');
+        if(!currentUser)  props.navigation.navigate('Login');
     }, []);
 
     return (
         <Block flex style={styles.profile}>
             <Block flex>
-                <TouchableOpacity onPress={() => imageUtils._pickImage(setImage, currentUser, setInProgress)}>
+                <TouchableOpacity onPress={() => imageUtils._pickImage(setImage, currentUser)}>
                     <ImageBackground
                         source={image ? {uri: image} : Images.user }
                         style={styles.profileContainer}
