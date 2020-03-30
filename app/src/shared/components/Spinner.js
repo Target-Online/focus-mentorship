@@ -4,7 +4,7 @@ import React from 'react';
 import { ActivityIndicator, ScrollView, StyleSheet } from 'react-native';
 
 export const Spinner = ({ inProgress, children }) => (
-    <ScrollView >
+    <ScrollView>
       {inProgress 
         ? <ActivityIndicator size="large" color="#0000ff" style={styles.activityIndicator} />
         : children
@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
        flex: 1,
        justifyContent: 'center',
        alignItems: 'center',
-       minHeight: 114
+       minHeight: 114,
+       height: 500
     }
  })
 
