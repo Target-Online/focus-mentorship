@@ -2,7 +2,7 @@
   "expo": {
     "name": "Focus Mentorship",
     "description": "Focus Mentorship",
-    "slug": "focus-mentorship",
+    "slug": "focus-matric-mentor",
     "privacy": "unlisted",
     "platforms": [
       "ios",
@@ -23,7 +23,7 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "co.za.targetonline.focusmentorship",
+      "bundleIdentifier": "com.targetonline.focus",
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "This app uses the camera to allow users to update profile prictures. Your photos wont be shared without your permission.",
@@ -31,7 +31,7 @@
       }
     },
     "android": {
-      "package": "co.za.targetonline.focusmentorship",
+      "package": "com.targetonline.focus",
       "versionCode": 11
     }
   }

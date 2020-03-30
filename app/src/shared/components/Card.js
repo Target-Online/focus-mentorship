@@ -4,6 +4,7 @@ import { StyleSheet, Dimensions, Image, ActivityIndicator } from 'react-native';
 import { Block, Text, theme } from 'galio-framework';
 
 import TabBarIcon from './TabBarIcon';
+import { materialTheme } from '../constants'
 
 const { width } = Dimensions.get('screen');
 
@@ -22,7 +23,7 @@ class Product extends React.Component {
         </Block>
         <Block flex space="evenly" style={styles.productDescription}>
           <Text center size={14} style={styles.productTitle}>{product.title}</Text>
-          {inProgress && <ActivityIndicator style={styles.productTitle} size="small" color="red" />}
+          {inProgress && <ActivityIndicator style={styles.productTitle} size="small" color={materialTheme.COLORS.PRIMARY} />}
         </Block>
       </Block>
     );

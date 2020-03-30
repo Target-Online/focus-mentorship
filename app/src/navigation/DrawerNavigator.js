@@ -8,6 +8,7 @@ import { HomeScreen, LoginScreen, SignupScreen, ChatRoomScreen } from '../screen
 import ProfileScreen from '../screens/Profile';
 import Menu from './Menu';
 import { Drawer, Header } from '../shared/components';
+import appsettings from '../../appsettings.json'
 
 const transitionConfig = (transitionProps, prevTransitionProps) => ({
   transitionSpec: {
@@ -83,7 +84,7 @@ const AdminStack = createStackNavigator({
   Admin: {
     screen: AdminsModule,
     navigationOptions: ({ navigation }) => ({
-      header: <Header black navigation={navigation} title='' />,
+      header: <Header black navigation={navigation} title={appsettings.appName} />,
       headerTransparent: true,
     })
   },
