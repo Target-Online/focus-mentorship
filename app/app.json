@@ -32,7 +32,7 @@
     },
     "android": {
       "package": "com.targetonline.focus",
-      "versionCode": 12
+      "versionCode": 13
     }
   }
 }
