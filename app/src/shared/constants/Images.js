@@ -6,8 +6,7 @@ export const sliderImages = [
   require('../assets/images/slider-images/tutor.jpeg'),
   require('../assets/images/slider-images/2.jpeg'),
   require('../assets/images/slider-images/3.jpeg'),
-  require('../assets/images/slider-images/4.jpeg'),
-  require('../assets/images/slider-images/5.jpeg')
+  require('../assets/images/slider-images/4.jpeg')
 ]
 
 export const user = require('../assets/images/user.png')

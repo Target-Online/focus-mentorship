@@ -1,26 +1,16 @@
 import { SliderBox } from "react-native-image-slider-box";
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import { firebaseStorageApi } from '../../api';
-import Spinner from './Spinner';
+import { Images } from '../constants/'
 
-export const ImagesSlider = () => {
-  const [images] = useState([])
-  const [inProgress, setInProgress] = useState(true)
-
-  useEffect(() => firebaseStorageApi.getFolderImages("SliderImages", images, setInProgress), [])
-
-  return (
-    <Spinner inProgress={inProgress}>
-      <SliderBox
-        sliderBoxHeight={550}
-        images={images}
-        resizeMode={'contain'}
-        autoplay
-        circleLoop
-      />
-    </Spinner>
-  )
-}
+export const ImagesSlider = () => (
+  <SliderBox
+    sliderBoxHeight={600}
+    images={Images.sliderImages}
+    resizeMode={'contain'}
+    autoplay
+    circleLoop
+  />
+);
 
 export default ImagesSlider;

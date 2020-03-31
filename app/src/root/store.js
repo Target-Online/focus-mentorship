@@ -25,7 +25,7 @@ const Store = ({ children }) => {
 		firebase.auth().onAuthStateChanged(user => {
 			if(user){
 				firestoreApi.getDocument('users', user.email, setUser);
-				pushNotifications.registerForPushNotificationsAsync(user.uid)
+				pushNotifications.registerForPushNotificationsAsync(user.email)
 			}
 		});
 	}, []);
