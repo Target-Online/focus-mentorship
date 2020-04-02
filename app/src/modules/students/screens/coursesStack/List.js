@@ -10,7 +10,7 @@ const { height } = Dimensions.get('window');
 
 export default Courses = () => {
   const [courses] = useContext(CoursesContext);
-  const data = courses.collection.sort((a, b) => b.createdAt - a.createdAt)
+  const data = courses.data.sort((a, b) => b.createdAt - a.createdAt)
   const noData = data.length == 0;
 
   return (

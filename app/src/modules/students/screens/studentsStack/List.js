@@ -11,11 +11,11 @@ import {
 import { Block } from 'galio-framework';
 
 import { Images } from '../../../../shared/constants';
-import { StudentsContext } from '../../root/store';
+import { UsersContext } from '../../../../root/store';
 
 export default Students = props => {
-    const [students] = useContext(StudentsContext);
-
+    const [users] = useContext(UsersContext);
+    //const users = []
     const renderItem = ({ item }) => {
         return (
             <TouchableOpacity onPress={() => props.navigation.navigate('View', { student: item })}>
@@ -34,8 +34,8 @@ export default Students = props => {
             </TouchableOpacity>
         );
     }
-    
-    const data = students.collection.filter(s => s.name.toLowerCase().includes(students.search) && s.isStudent);
+
+    const data = users.data.filter(s => s.name.toLowerCase().includes(users.search) && s.isStudent);
     return (
         <ScrollView>
             <FlatList

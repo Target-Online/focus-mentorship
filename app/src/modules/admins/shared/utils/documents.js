@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 import * as DocumentPicker from 'expo-document-picker';
 
-import { firestoreApi } from '../../api';
+import { realTimedbApi } from '../../api';
 import { onError } from '../../../../shared/utils/notifications'
 import appsettings from '../../../../../appsettings.json'
 
@@ -35,13 +35,13 @@ export const _documentPicker = async (
 
     const result = await DocumentPicker.getDocumentAsync({});
     const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-    
+
     if (result.type != "cancel") {
         if (result.name.split('.')[1] != 'pdf') {
             onError('Incorrect file type, pdf only allowed.');
         }
         else {
-            firestoreApi.setDocument('documents', id, {
+            realTimedbApi.setData('documents', {
                 name: result.name.split('.')[0],
                 url: await getResourceUrl(result.uri, appsettings.environment + "/documents/" + id),
                 parentId: parentId

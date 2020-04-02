@@ -12,10 +12,11 @@ import { Block } from 'galio-framework';
 
 import { Filter } from '../../../../../../shared/components';
 import { Images } from '../../../../../../shared/constants';
-import { StudentsContext, StudentCourseContext } from '../../../../root/store';
+import { StudentCourseContext } from '../../../../root/store';
+import { UsersContext } from '../../../../../../root/store';
 
 export default Users = props => {
-    const [students] = useContext(StudentsContext);
+    const [students] = useContext(UsersContext);
     const [studentCourse] = useContext(StudentCourseContext);
 
     const renderItem = ({ item }) => {
@@ -38,12 +39,12 @@ export default Users = props => {
         );
     }
  
-    const studentsOnThisCourse = studentCourse.collection.filter(sc => sc.courseId == props.course.id)
+    const studentsOnThisCourse = studentCourse.data.filter(sc => sc.courseId == props.course.id)
     return (
         <ScrollView>
             <FlatList
                 data={
-                    students.collection.filter(s =>
+                    students.data.filter(s =>
                         studentsOnThisCourse
                         .map(es => es.studentId)
                         .includes(s.id))

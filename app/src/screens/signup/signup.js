@@ -87,7 +87,7 @@ export default AddUser = props => {
                         iconContent={<Icon size={16} color={theme.COLORS.ICON} name="home" family="SimpleLineIcons" />}
                         onChangeText={value => setUser({
                             ...user,
-                            'suburb/township': value
+                            'suburb_township': value
                         })}
                     />
                 </Block>

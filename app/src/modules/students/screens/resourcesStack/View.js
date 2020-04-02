@@ -28,7 +28,7 @@ export default Documents = props => {
         );
     }
 
-    const data = documents.collection.filter(d => 
+    const data = documents.data.filter(d => 
         d.parentId == product.id &&
         d.name.toLowerCase().includes(documents.search)
     );

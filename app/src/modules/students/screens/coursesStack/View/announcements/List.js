@@ -15,7 +15,7 @@ import { AnnouncementsContext } from '../../../../root/store';
 
 export default Announcements = props => {
     const [announcements] = useContext(AnnouncementsContext);
-    const data = announcements.collection.filter(d => d.parentId == props.id)
+    const data = announcements.data.filter(d => d.parentId == props.id)
 
     return (
         <Spinner inProgress={announcements.inProgress} >

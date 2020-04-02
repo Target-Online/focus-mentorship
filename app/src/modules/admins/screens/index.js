@@ -6,9 +6,9 @@ import { ConfirmDialog } from 'react-native-simple-dialogs';
 import { SimpleLineIcons } from '@expo/vector-icons';
 
 import { UserContext } from '../../../root/store';
-import { StudentsContext } from '../../students/root/store';
+import { UsersContext } from '../../../root/store';
 import { ClientsContext } from '../root';
-import { firestoreApi } from '../api';
+import { realTimedbApi, secretApi } from '../api';
 import { imageUtils, documentPicker} from '../shared/utils';
 import { pushNotifications } from '../../../shared/utils';
 import { onInfo } from '../../../shared/utils/notifications';
@@ -28,7 +28,7 @@ const thumbMeasure = (width - 48 - 32) / 3;
 
 export default CourseView = props => {
     const [clients] = useContext(ClientsContext);
-    const client = clients.collection.filter(c => c.name == appsettings.appName)[0] 
+    const client = clients.data.filter(c => c.name == appsettings.appName)[0] 
 
     const [currentUser] = useContext(UserContext);
     const isAdmin = currentUser && currentUser.isAdmin;
@@ -44,13 +44,13 @@ export default CourseView = props => {
     const [editDescription, setEditDescription] = useState(false);
     const [description, setDescription] = useState(client.description);
 
-    const [users] = useContext(StudentsContext);
+    const [users] = useContext(UsersContext);
 
     const updateClient = () => {
         if (isAdmin) imageUtils._updateDocumentImage(setImage, client.id);
     }
 
-    const staff = users.collection.filter(user => user.isAdmin)
+    const staff = users.data.filter(user => user.isAdmin)
 
     const AddAnnouncement = (
         <ConfirmDialog
@@ -60,8 +60,7 @@ export default CourseView = props => {
             positiveButton={{
                 title: "Submit",
                 onPress: () => {
-                    const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-                    firestoreApi.setDocument('announcements', id, {
+                    realTimedbApi.setData('announcements', {
                         parentId: client.id,
                         message: announcement
                     })
@@ -100,7 +99,7 @@ export default CourseView = props => {
             positiveButton={{
                 title: "Submit",
                 onPress: () => {
-                    firestoreApi.updateDocument('clients', client.id, {
+                    realTimedbApi.updateData('clients', client.id, {
                         description: description
                     })
                     setEditDescription(false);
@@ -128,7 +127,8 @@ export default CourseView = props => {
 
     useEffect(() => {
         if (isAdmin && client.avatar == '') onInfo('Update client profile image.');
-        //else props.navigation.navigate('Login');
+
+        realTimedbApi.login(currentUser);
     }, []);
 
     const redirect = () => {

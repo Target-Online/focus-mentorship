@@ -1,7 +1,7 @@
 import React, { useState, useReducer, useEffect } from 'react'
 import firebase from "firebase";
 
-import { firestoreApi } from '../api';
+import { realTimedbApi } from '../api';
 import appsettings from '../../appsettings.json'
 import { pushNotifications, rootReducer } from '../shared/utils';
 
@@ -9,7 +9,7 @@ export const UserContext = React.createContext()
 export const UsersContext = React.createContext()
 
 const initalState = {
-	collection: [],
+	data: [],
 	search: '',
 	inProgress: true
 }
@@ -21,11 +21,13 @@ const Store = ({ children }) => {
 	const [users, dispatchUsers] = useReducer(rootReducer.setStateReducer, initalState)
 
 	useEffect(() => {
-		firestoreApi.getCollection('users', dispatchUsers);
+		realTimedbApi.getCollection('users', dispatchUsers);
+
 		firebase.auth().onAuthStateChanged(user => {
 			if(user){
-				firestoreApi.getDocument('users', user.email, setUser);
-				pushNotifications.registerForPushNotificationsAsync(user.email)
+				const userId = user.email.replace(/[^0-9a-z]/gi, '')
+				realTimedbApi.getData('users/' + userId, setUser);
+				pushNotifications.registerForPushNotificationsAsync(userId)
 			}
 		});
 	}, []);

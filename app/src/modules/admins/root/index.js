@@ -1,6 +1,6 @@
 import React, { useState, useReducer, useEffect } from 'react'
 
-import { firestoreApi } from '../api';
+import { realTimedbApi } from '../api';
 import { rootReducer } from '../../../shared/utils';
 
 export const AnnouncementsContext = React.createContext()
@@ -9,22 +9,22 @@ export const MessagesContext = React.createContext()
 export const ClientsContext = React.createContext()
 
 const initalState = {
-    collection: [],
+    data: [],
     search: '',
     inProgress: false
 }
 
 const Store = ({ children }) => {
-    const [announcements, dispatchAnnouncements] = useReducer(rootReducer.observerReducer, initalState)
-    const [documents, dispatchDocuments] = useReducer(rootReducer.observerReducer, initalState)
-    const [messages, dispatchMessages] = useReducer(rootReducer.observerReducer, initalState)
-    const [clients, dispatchClients] = useReducer(rootReducer.observerReducer, initalState)
+    const [announcements, dispatchAnnouncements] = useReducer(rootReducer.setStateReducer, initalState)
+    const [documents, dispatchDocuments] = useReducer(rootReducer.setStateReducer, initalState)
+    const [messages, dispatchMessages] = useReducer(rootReducer.setStateReducer, initalState)
+    const [clients, dispatchClients] = useReducer(rootReducer.setStateReducer, initalState)
 
     useEffect(() => {
-        firestoreApi.collectionObserver('announcements', dispatchAnnouncements);
-        firestoreApi.collectionObserver('documents', dispatchDocuments);
-        firestoreApi.collectionObserver('messages', dispatchMessages);
-        firestoreApi.collectionObserver('clients', dispatchClients);
+        realTimedbApi.getCollection('announcements', dispatchAnnouncements);
+        realTimedbApi.getCollection('documents', dispatchDocuments);
+        realTimedbApi.getCollection('messages', dispatchMessages);
+        realTimedbApi.getCollection('clients', dispatchClients);
     }, []);
 
     return (

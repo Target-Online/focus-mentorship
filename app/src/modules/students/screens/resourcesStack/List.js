@@ -10,7 +10,7 @@ const { height } = Dimensions.get('screen');
 
 export default Resources = () => {
   const [resources] = useContext(FoldersContext);
-  const data = resources.collection.sort((a, b) => b.createdAt - a.createdAt)
+  const data = resources.data.sort((a, b) => b.createdAt - a.createdAt)
 
   return (
     <Spinner inProgress={resources.inProgress}>

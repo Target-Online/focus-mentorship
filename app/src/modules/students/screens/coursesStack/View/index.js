@@ -5,9 +5,9 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { ConfirmDialog } from 'react-native-simple-dialogs';
 import { SimpleLineIcons } from '@expo/vector-icons';
 
-import { UserContext } from '../../../../../root/store';
-import { StudentCourseContext, StudentsContext } from '../../../root/store';
-import { firestoreApi } from '../../../../../api';
+import { UserContext, UsersContext } from '../../../../../root/store';
+import { StudentCourseContext } from '../../../root/store';
+import { realTimedbApi } from '../../../../../api';
 import { imageUtils, pushNotifications, documentPicker } from '../../../../../shared/utils';
 import { onInfo, onSuccess } from '../../../shared/utils/notifications';
 import { materialTheme, colors } from '../../../shared/constants';
@@ -39,15 +39,15 @@ export default CourseView = props => {
     const [editDescription, setEditDescription] = useState(false);
     const [description, setDescription] = useState(product.description);
 
-    const [students] = useContext(StudentsContext);
+    const [students] = useContext(UsersContext);
     const [studentCourse] = useContext(StudentCourseContext);
 
     const updateCourse = () => {
         if (isAdmin) imageUtils._updateDocumentImage(setImage, product.id);
     }
 
-    const studentsEnrolledForThisCourse = students.collection.filter(s =>
-        studentCourse.collection.filter(sc => sc.courseId == product.id)
+    const studentsEnrolledForThisCourse = students.data.filter(s =>
+        studentCourse.data.filter(sc => sc.courseId == product.id)
             .map(es => es.studentId)
             .includes(s.id))
 
@@ -59,8 +59,7 @@ export default CourseView = props => {
             positiveButton={{
                 title: "Submit",
                 onPress: () => {
-                    const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-                    firestoreApi.setDocument('announcements', id, {
+                    realTimedbApi.setData('announcements', {
                         parentId: product.id,
                         message: announcement
                     })
@@ -99,7 +98,7 @@ export default CourseView = props => {
             positiveButton={{
                 title: "Submit",
                 onPress: () => {
-                    firestoreApi.updateDocument('courses', product.id, {
+                    realTimedbApi.updateData('courses', product.id, {
                         description: description
                     })
                     setEditDescription(false);
@@ -193,7 +192,7 @@ export default CourseView = props => {
                         <Block row style={{ height: height }}>
                             <Block style={styles.title}>
                                 <Text muted size={12}>
-                                    {product.description}
+                                    {description}
                                 </Text>
                             </Block>
                         </Block>

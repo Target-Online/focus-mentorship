@@ -2,3 +2,4 @@
 /app/.expo-shared
 /app/.expo
 /app/package-lock.json
+/app/src/modules/admins/api/secret.js

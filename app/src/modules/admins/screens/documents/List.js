@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { Block } from 'galio-framework';
 
-import { FontAwesomeIcons } from '../../../../shared/components';
+import { FontAwesomeIcons, Spinner } from '../../../../shared/components';
 import { DocumentsContext } from '../../root';
 
 export default Documents = props => {
@@ -29,9 +29,9 @@ export default Documents = props => {
         );
     }
 
-    const data = documents.collection.filter(d => d.parentId == props.id)
+    const data = documents.data.filter(d => d.parentId == props.id)
     return (
-        <ScrollView>
+        <Spinner inProgress={documents.inProgress}>
             <FlatList
                 data={data}
                 keyExtractor={item => item.id.toString()}
@@ -40,7 +40,7 @@ export default Documents = props => {
             <Block center style={{ marginTop: 10 }}>
                 {data.length == 0  && <Text>No documents.</Text>}
             </Block>
-        </ScrollView>
+        </Spinner>
     );
 }
 

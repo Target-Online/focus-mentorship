@@ -27,6 +27,7 @@
     "firebase": "^7.12.0",
     "galio-framework": "^0.6.3",
     "lodash": "^4.17.15",
+    "object-to-array-convert": "^1.1.0",
     "react": "16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz",
     "react-native-expo-image-cache": "^4.1.0",

@@ -1,40 +1,37 @@
 import React, { useReducer, useEffect } from 'react'
 
-import { firestoreApi } from '../../../api';
+import { realTimedbApi } from '../../../api';
 import { rootReducer } from '../../../shared/utils';
 
 export const AnnouncementsContext = React.createContext()
 export const CoursesContext = React.createContext()
 export const StudentCourseContext = React.createContext()
 export const DocumentsContext = React.createContext()
-export const StudentsContext = React.createContext()
 export const MessagesContext = React.createContext()
 export const FoldersContext = React.createContext()
 export const StateContext = React.createContext()
 
 const initalState = {
-    collection: [],
+    data: [],
     search: '',
-    inProgress: false
+    inProgress: true
 }
 
 const Store = ({ children }) => {
-    const [announcements, setAnnouncements] = useReducer(rootReducer.observerReducer, initalState)
-    const [courses, setCourses] = useReducer(rootReducer.observerReducer, initalState)
-    const [studentCourse, setStudentCourse] = useReducer(rootReducer.observerReducer, initalState)
-    const [documents, setDocuments] = useReducer(rootReducer.observerReducer, initalState)
-    const [students, setStudents] = useReducer(rootReducer.observerReducer, initalState)
-    const [messages, setMessages] = useReducer(rootReducer.observerReducer, initalState)
-    const [folders, setFolders] = useReducer(rootReducer.observerReducer, initalState)
+    const [announcements, setAnnouncements] = useReducer(rootReducer.setStateReducer, initalState)
+    const [courses, setCourses] = useReducer(rootReducer.setStateReducer, initalState)
+    const [studentCourse, setStudentCourse] = useReducer(rootReducer.setStateReducer, initalState)
+    const [documents, setDocuments] = useReducer(rootReducer.setStateReducer, initalState)
+    const [messages, setMessages] = useReducer(rootReducer.setStateReducer, initalState)
+    const [folders, setFolders] = useReducer(rootReducer.setStateReducer, initalState)
 
     useEffect(() => {
-        firestoreApi.collectionObserver('announcements', setAnnouncements);
-        firestoreApi.collectionObserver('courses', setCourses);
-        firestoreApi.collectionObserver('studentCourse', setStudentCourse);
-        firestoreApi.collectionObserver('documents', setDocuments);
-        firestoreApi.collectionObserver('users', setStudents);
-        firestoreApi.collectionObserver('messages', setMessages);
-        firestoreApi.collectionObserver('folders', setFolders);
+        realTimedbApi.getCollection('announcements', setAnnouncements);
+        realTimedbApi.getCollection('courses', setCourses);
+        realTimedbApi.getCollection('studentCourse', setStudentCourse);
+        realTimedbApi.getCollection('documents', setDocuments);
+        realTimedbApi.getCollection('messages', setMessages);
+        realTimedbApi.getCollection('folders', setFolders);
     }, []);
 
     return (
@@ -42,13 +39,11 @@ const Store = ({ children }) => {
             <CoursesContext.Provider value={[courses, setCourses]}>
                 <StudentCourseContext.Provider value={[studentCourse, setStudentCourse]}>
                     <DocumentsContext.Provider value={[documents, setDocuments]}>
-                        <StudentsContext.Provider value={[students, setStudents]}>
-                            <MessagesContext.Provider value={[messages, setMessages]}>
-                                <FoldersContext.Provider value={[folders, setFolders]}>
-                                    {children}
-                                </FoldersContext.Provider>
-                            </MessagesContext.Provider>
-                        </StudentsContext.Provider>
+                        <MessagesContext.Provider value={[messages, setMessages]}>
+                            <FoldersContext.Provider value={[folders, setFolders]}>
+                                {children}
+                            </FoldersContext.Provider>
+                        </MessagesContext.Provider>
                     </DocumentsContext.Provider>
                 </StudentCourseContext.Provider>
             </CoursesContext.Provider>

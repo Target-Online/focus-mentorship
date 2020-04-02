@@ -1,7 +1,7 @@
 import { Notifications } from 'expo';
 import * as Permissions from 'expo-permissions';
 
-import { firestoreApi, expoApi } from '../../api';
+import { realTimedbApi, expoApi } from '../../api';
 
 const registerForPushNotificationsAsync = async userId => {
   const { status: existingStatus } = await Permissions.getAsync(
@@ -14,24 +14,20 @@ const registerForPushNotificationsAsync = async userId => {
     finalStatus = status;
   }
 
-  if (finalStatus !== 'granted') {
-    return;
-  }
+  if (finalStatus !== 'granted') return;
 
-  firestoreApi.updateDocument(
-    'users',
-    userId,
-    { deviceId: await Notifications.getExpoPushTokenAsync()}
-  );
+  realTimedbApi.updateData('users', userId.replace(/[^0-9a-z]/gi, ''), {
+    deviceId: await Notifications.getExpoPushTokenAsync()
+  });
 }
 
 
 const sendPushNotifications = (users, title, message) => {
   var notifications = [];
   users.map((user) => {
-       user.deviceId && notifications.push({"to": user.deviceId, "title": title, "body": message, "sound": "default"});
-   });
-   expoApi.sendPushNotifications(notifications);
+    user.deviceId && notifications.push({ "to": user.deviceId, "title": title, "body": message, "sound": "default" });
+  });
+  expoApi.sendPushNotifications(notifications);
 }
 
 export {

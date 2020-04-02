@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { Block } from 'galio-framework';
 
-import { firestoreApi } from '../../../../api';
+import { realTimedbApi } from '../../../../api';
 import { Spinner } from '../../../../shared/components';
 import { Images } from '../../../../shared/constants';
 import { UsersContext } from '../../../../root/store';
@@ -19,7 +19,7 @@ export default users = props => {
     const [users] = useContext(UsersContext);
 
     const addStudent = userId =>{
-        firestoreApi.updateDocument('users', userId, { isAdmin: true });
+        realTimedbApi.updateData('users', userId.replace(/[^0-9a-z]/gi, ''), { isAdmin: true });
         props.navigation.goBack();
     }
 
@@ -42,7 +42,7 @@ export default users = props => {
         );
     }
 
-    const data = users.collection.filter(s => s.name.toLowerCase().includes(users.search) && s.isStudent)
+    const data = users.data.filter(s => s.name.toLowerCase().includes(users.search) && !s.isAdmin)
     return (
         <ScrollView>
             <FlatList

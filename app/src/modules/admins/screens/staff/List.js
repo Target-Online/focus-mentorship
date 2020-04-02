@@ -11,10 +11,10 @@ import {
 import { Block } from 'galio-framework';
 
 import { Images } from '../../../../shared/constants';
-import { StudentsContext } from '../../../students/root/store';
+import { UsersContext } from '../../../../root/store';
 
 export default Users = props => {
-    const [users] = useContext(StudentsContext);
+    const [users] = useContext(UsersContext);
         
     const renderItem = ({ item }) => {
         return (
@@ -38,12 +38,12 @@ export default Users = props => {
     return (
         <ScrollView>
             <FlatList
-                data={users.collection.filter(user => user.isAdmin)}
+                data={users.data.filter(user => user.isAdmin)}
                 keyExtractor={item => item.id.toString()}
                 renderItem={item => renderItem(item)}
             />
             <Block center style={{ marginTop: 10 }}>
-                {users.collection.filter(user => user.isAdmin).length == 0 && <Text>No admins.</Text>}
+                {users.data.filter(user => user.isAdmin).length == 0 && <Text>No admins.</Text>}
             </Block>
         </ScrollView>
     );

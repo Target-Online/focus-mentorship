@@ -5,8 +5,8 @@ import { Button, Block, NavBar, Input, Text, theme } from 'galio-framework';
 
 import Icon from './Icon';
 import materialTheme from '../constants/Theme';
-import { UserContext } from '../../../../root/store';
-import { StudentsContext, DocumentsContext } from '../../root/store';
+import { DocumentsContext } from '../../root/store';
+import { UsersContext, UserContext } from '../../../../root/store';
 import { documentPicker } from '../../../../shared/utils';
 
 const { height, width } = Dimensions.get('window');
@@ -70,7 +70,7 @@ const SearchButton = ({ isWhite, style, navigation }) => (
 
 const Header = props => {
   const [currentUser] = useContext(UserContext)
-  const [students, dispatchStudents] = useContext(StudentsContext)
+  const [students, dispatchStudents] = useContext(UsersContext)
   const [documents, dispatchDocuments] = useContext(DocumentsContext)
 
   handleLeftPress = () => {

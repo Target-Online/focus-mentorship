@@ -2,7 +2,7 @@ import firebase from 'firebase';
 import * as ImagePicker from 'expo-image-picker';
 import * as Permissions from 'expo-permissions';
 
-import { firestoreApi } from '../../api';
+import { realTimedbApi } from '../../api';
 import { onError } from './notifications'
 import appsettings from '../../../appsettings.json'
 
@@ -28,8 +28,8 @@ export const _pickImage = async (setImage, currentUser) => {
         var url = await upload(result.uri, currentUser);
         setImage(url);
         if (currentUser) {
-          firestoreApi.updateAuthUser({ photoURL: url })
-          firestoreApi.updateDocument('users', currentUser.id, { avatar: url })
+          realTimedbApi.updateAuthUser({ photoURL: url })
+          realTimedbApi.updateData('users', currentUser.id.replace(/[^0-9a-z]/gi, ''), { avatar: url })
         }
       }
     }
@@ -56,7 +56,7 @@ export const _updateDocumentImage = async (setImage, id) => {
         setImage(result.uri);
         var url = await upload(result.uri, false);
         setImage(url);
-        firestoreApi.updateDocument('courses', id, { avatar: url })
+        realTimedbApi.updateData('courses', id, { avatar: url })
       }
     }
     else onError('Camera roll permission not granted');

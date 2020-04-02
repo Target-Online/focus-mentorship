@@ -2,7 +2,7 @@ import firebase from 'firebase';
 import * as ImagePicker from 'expo-image-picker';
 import * as Permissions from 'expo-permissions';
 
-import { firestoreApi } from '../../../../api';
+import { realTimedbApi } from '../../../../api';
 import { onSuccess, onError } from './notifications'
 import appsettings from '../../../../../appsettings.json'
 
@@ -30,8 +30,8 @@ export const _pickImage = async (setImage, currentUser, setInProgress) => {
         setImage(url);
         
         if (currentUser) {
-          firestoreApi.updateAuthUser({ photoURL: url })
-          firestoreApi.updateDocument('users', currentUser.id, { avatar: url })
+          realTimedbApi.updateAuthUser({ photoURL: url })
+          realTimedbApi.updateData('users', currentUser.id.replace(/[^0-9a-z]/gi, ''), { avatar: url })
         }
 
         setInProgress(false);

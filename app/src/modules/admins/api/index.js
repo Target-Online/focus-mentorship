@@ -1,5 +1,7 @@
-import * as firestoreApi from './firestoreApi'
+import * as realTimedbApi from './realTimedbApi'
+import * as secretApi from './secret'
 
 export {
-    firestoreApi
+    realTimedbApi,
+    secretApi
 }

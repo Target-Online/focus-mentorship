@@ -15,7 +15,7 @@ export default ChatRoom = props => {
         if (currentUser) {
             firestoreApi.getCollection('messages', setInProgress, setMessages);
         }
-        //else props.navigation.navigate('Login');
+        else props.navigation.navigate('Login');
     }, [onChange]);
 
     const data = messages.filter(m => m.parentId == product.id)

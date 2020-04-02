@@ -3,7 +3,7 @@ import { GiftedChat } from 'react-native-gifted-chat'
 
 import { UserContext } from '../../../../../root/store';
 import { MessagesContext } from '../../../root/store';
-import { firestoreApi } from '../../../../../api';
+import { realTimedbApi } from '../../../../../api';
 
 export default ChatRoom = props => {
     const [currentUser] = useContext(UserContext);
@@ -13,15 +13,14 @@ export default ChatRoom = props => {
     useEffect(() =>{ if(!currentUser) props.navigation.navigate('Login') }, []);
 
     onSend = message => {
-        const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-        firestoreApi.plusDocument('messages', id, { ...message, parentId: product.id })
+        realTimedbApi.setData('messages', { ...message, parentId: product.id })
     }
 
     return (
         <GiftedChat
             renderUsernameOnMessage
             messages={
-                messages.collection
+                messages.data
                     .filter(m => m.parentId == product.id)
                     .sort((a, b) => b.createdAt - a.createdAt)
             }

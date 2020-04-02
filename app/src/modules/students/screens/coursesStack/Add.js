@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { materialTheme, utils } from '../../shared/constants';
 import { imageUtils, validation } from '../../../../shared/utils';
 import { Images } from '../../../../shared/constants';
-import { firestoreApi } from '../../../../api';
+import { realTimedbApi } from '../../../../api';
 
 const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
@@ -66,7 +66,7 @@ export default AddCourse = props => {
                     onPress={() => {
                         const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
                         if(validation(course, ['name', 'description'])){
-                            firestoreApi.setDocument('courses', id, {...course, avatar: image})
+                            realTimedbApi.setData('courses', {...course, avatar: image})
                             navigation.goBack();
                         }
                     }}>

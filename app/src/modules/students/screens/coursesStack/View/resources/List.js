@@ -28,7 +28,7 @@ export default Documents = props => {
         );
     }
 
-    const data = documents.collection.filter(d => d.parentId == props.id)
+    const data = documents.data.filter(d => d.parentId == props.id)
     return (
         <Spinner inProgress={documents.inProgress}>
             <FlatList

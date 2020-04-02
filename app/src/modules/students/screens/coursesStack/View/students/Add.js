@@ -11,18 +11,19 @@ import {
 import { Block } from 'galio-framework';
 
 import { pushNotifications } from '../../../../../../shared/utils';
-import { firestoreApi } from '../../../../../../api';
+import { realTimedbApi } from '../../../../../../api';
 import { Images } from '../../../../../../shared/constants';
-import { StudentsContext, StudentCourseContext } from '../../../../root/store';
+import { StudentCourseContext } from '../../../../root/store';
+import { UsersContext } from '../../../../../../root/store';
 
 export default Students = props => {
-    const [students] = useContext(StudentsContext);
+    const [students] = useContext(UsersContext);
     const [studentCourse] = useContext(StudentCourseContext);
     const { course } = props.navigation.state.params;
 
     const addStudent = (student, course) =>{
         const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-        firestoreApi.setDocument('studentCourse', id, { courseId: course.id, studentId: student.id });
+        realTimedbApi.setData('studentCourse', { courseId: course.id, studentId: student.id });
         props.navigation.goBack();
 
         pushNotifications.sendPushNotifications(
@@ -50,7 +51,7 @@ export default Students = props => {
         );
     }
 
-    const data = students.collection.filter(s => s.name.toLowerCase().includes(students.search) && s.isStudent && !studentCourse.collection.some(sc => sc.courseId == course.id && sc.studentId == s.id))
+    const data = students.data.filter(s => s.name.toLowerCase().includes(students.search) && s.isStudent && !studentCourse.data.some(sc => sc.courseId == course.id && sc.studentId == s.id))
     return (
         <ScrollView>
             <FlatList

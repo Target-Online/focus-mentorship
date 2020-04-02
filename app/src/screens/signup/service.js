@@ -5,8 +5,7 @@ import appsettings from '../../../appsettings.json'
 
 if (!firebase.apps.length) firebase.initializeApp(appsettings.firebaseConfig);
 
-const db = firebase.firestore();
-
+const db = firebase.database();
 const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 export const signup = (user, navigation, setInprogress) => {
@@ -18,8 +17,7 @@ export const signup = (user, navigation, setInprogress) => {
             updateDetails(user, navigation);
 
             const uid = response.user.email;
-            db.collection('users').doc(uid)
-            .set({
+            db.ref('users').child(uid.replace(/[^0-9a-z]/gi, '')).set({
                 ...user, 
                 id: uid,
                 uid: response.user.uid,

@@ -30,7 +30,7 @@ export default View = props => {
     return (
         <Block flex style={styles.profile}>
             <Block flex>
-                <TouchableOpacity onPress={() => imageUtils._pickImage(setImage, currentUser)}>
+                <TouchableOpacity onPress={() => _pickImage(setImage, currentUser)}>
                     <ImageBackground
                         source={image ? {uri: image} : Images.user }
                         style={styles.profileContainer}

@@ -1,4 +1,3 @@
-import React from 'react';
 import StudentsModule from './students/navigation/BottomTabNavigator'
 import AdminsModule from './admins/screens'
 import AddAdmin from './admins/screens/staff/Add'
