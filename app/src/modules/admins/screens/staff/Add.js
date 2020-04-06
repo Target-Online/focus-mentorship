@@ -19,7 +19,7 @@ export default users = props => {
     const [users] = useContext(UsersContext);
 
     const addStudent = userId =>{
-        realTimedbApi.updateData('users', userId.replace(/[^0-9a-z]/gi, ''), { isAdmin: true });
+        realTimedbApi.updateData('users', userId.replace(/[^0-9a-z]/gi, ''), { isAdmin: true, isStudent: false });
         props.navigation.goBack();
     }
 
@@ -42,7 +42,7 @@ export default users = props => {
         );
     }
 
-    const data = users.data.filter(s => s.name.toLowerCase().includes(users.search) && !s.isAdmin)
+    const data = users.data.filter(s => s.name.toLowerCase().includes(users.search) && !s.isAdmin && s.isStudent)
     return (
         <ScrollView>
             <FlatList

@@ -19,16 +19,14 @@ export default View = props => {
     const [image, setImage] = useState(currentUser && currentUser.avatar);
 
     useEffect(() => {
-        if (currentUser && currentUser.avatar == ''){ 
-                onInfo('Update your profile image.');
-        }
+        if (currentUser && currentUser.avatar == '')onInfo('Update your profile image.');
         if(!currentUser)  props.navigation.navigate('Login');
     }, []);
 
     return (
         <Block flex style={styles.profile}>
             <Block flex>
-                <TouchableOpacity onPress={() => imageUtils._pickImage(setImage, currentUser)}>
+                <TouchableOpacity onPress={() => imageUtils._updateUserAvatar(setImage, currentUser)}>
                     <ImageBackground
                         source={image ? {uri: image} : Images.user }
                         style={styles.profileContainer}

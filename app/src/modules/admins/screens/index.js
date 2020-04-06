@@ -46,8 +46,8 @@ export default CourseView = props => {
 
     const [users] = useContext(UsersContext);
 
-    const updateClient = () => {
-        if (isAdmin) imageUtils._updateDocumentImage(setImage, client.id);
+    const _updateClientAvatar = () => {
+        if (isAdmin) imageUtils._updateClientAvatar(setImage, client.id);
     }
 
     const staff = users.data.filter(user => user.isAdmin)
@@ -134,7 +134,7 @@ export default CourseView = props => {
     const redirect = () => {
         if (section == 'staff') props.navigation.navigate('AddAdmin');
         if (section == 'announcements') setAnnouncements(true)
-        if (section == 'description') setEditDescription(true)
+        if (section == 'description' && currentUser.isSuperUser) setEditDescription(true)
         if (section == 'documents') documentPicker(client.id, disatchDocuments)
     }
 
@@ -157,17 +157,12 @@ export default CourseView = props => {
             {AddAnnouncement}
             {EditDescripton}
             <Block flex>
-                <TouchableOpacity onPress={() => updateClient()}>
+                <TouchableOpacity onPress={() => _updateClientAvatar()}>
                     <ImageBackground
                         source={image == '' ? Images.placeholder : { uri: image }}
                         style={styles.profileContainer}
                         imageStyle={styles.profileImage}>
                         <Block flex style={styles.profileDetails}>
-                            <Block style={styles.profileTexts}>
-                                {/*<Text center color="white" size={28} style={{ paddingBottom: 10 }}>
-                                    {client.name}
-                                </Text> */}
-                            </Block>
                             <LinearGradient colors={['rgba(0,0,0,0)', 'rgba(0,0,0,1)']} style={styles.gradient} />
                         </Block>
                     </ImageBackground>

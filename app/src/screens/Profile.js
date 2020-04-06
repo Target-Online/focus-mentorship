@@ -11,7 +11,7 @@ import { HeaderHeight } from "../shared/constants/utils";
 import { Images } from "../shared/constants";
 import appsettings from '../../appsettings.json'
 import { onInfo } from '../shared/utils/notifications'
-import { _pickImage } from '../shared/utils/imageUtils'
+import { _updateUserAvatar } from '../shared/utils/imageUtils'
 
 if (!firebase.apps.length) firebase.initializeApp(appsettings.firebaseConfig);
 
@@ -30,7 +30,7 @@ export default View = props => {
     return (
         <Block flex style={styles.profile}>
             <Block flex>
-                <TouchableOpacity onPress={() => _pickImage(setImage, currentUser)}>
+                <TouchableOpacity onPress={() => _updateUserAvatar(setImage, currentUser)}>
                     <ImageBackground
                         source={image ? {uri: image} : Images.user }
                         style={styles.profileContainer}

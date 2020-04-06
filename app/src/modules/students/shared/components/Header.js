@@ -26,7 +26,7 @@ const ChatButton = ({ isWhite, style, navigation, redirect }) => {
 }
 
 const AddRedirectButton = ({ family, name, redirect, isWhite, style, navigation }) => (
-  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate(redirect)}>
+  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate(redirect, { product: navigation.state.params.product })}>
     <Icon
       family={family}
       size={16}
@@ -98,11 +98,15 @@ const Header = props => {
           return ([
             <ChatButton key='chat-search' navigation={navigation} isWhite={white} redirect={'CourseChat'} />,
           ]);
-      case 'ResourcesList':
+      case 'Folders':
         return ([
-          isAdmin && <AddRedirectButton family='Entypo' name='plus' redirect='ResourcesAdd' navigation={navigation} isWhite={white} />,
+          isAdmin && <AddRedirectButton family='Entypo' name='plus' redirect='AddFolder' navigation={navigation} isWhite={white} />,
         ]);
-      case 'ResourcesView':
+      case 'SubFolders':
+        return ([
+          isAdmin && <AddRedirectButton family='Entypo' name='plus' redirect='AddSubFolder' navigation={navigation} isWhite={white} />,
+        ]);
+      case 'SubFolderDocuments':
         return ([
           isAdmin && 
           <TouchableOpacity onPress={() => documentPicker(navigation.state.params.product.id, dispatchDocuments)}>

@@ -98,16 +98,6 @@ const Header = props => {
           return ([
             <ChatButton key='chat-search' navigation={navigation} isWhite={white} redirect={'CourseChat'} />,
           ]);
-      case 'ResourcesList':
-        return ([
-          <AddRedirectButton family='Entypo' name='plus' redirect='ResourcesAdd' navigation={navigation} isWhite={white} />,
-        ]);
-      case 'ResourcesView':
-        return ([
-          <TouchableOpacity onPress={() => documentPicker(navigation.state.params.product.id, dispatchDocuments)}>
-            <AddIcon family='Entypo' name='plus' isWhite={white} />
-          </TouchableOpacity>,
-        ]);
       case 'Product':
         return ([
           <SearchButton key='search-product' navigation={navigation} isWhite={white} />,

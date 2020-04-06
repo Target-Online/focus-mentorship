@@ -30,7 +30,7 @@ export const setData = (ref, data) => {
     })
 }
 
-export const getData = (ref, setData) => db.ref(ref).on("value", data => setData(data.val()));
+export const getData = (ref, id, setData) => db.ref(ref).child(id).on("value", data => setData(data.val()));
 
 export const updateData = (ref, id, data) => db.ref(ref).child(id).update({ ...data })
 

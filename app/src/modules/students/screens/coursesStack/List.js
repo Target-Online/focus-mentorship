@@ -16,7 +16,7 @@ export default Courses = () => {
   return (
     <Spinner inProgress={courses.inProgress}>
     <Block flex style={[styles.options, !noData && { height: height }]}>
-      <ScrollView showsVerticalScrollIndicator={true}>
+      <Block>
           {data.map(c =>
             <Card
               key={c.name}
@@ -27,7 +27,7 @@ export default Courses = () => {
               horizontal
             />
           )}
-        </ScrollView>
+        </Block>
         <Block center>
             {noData && <Text>No courses.</Text>}
         </Block>

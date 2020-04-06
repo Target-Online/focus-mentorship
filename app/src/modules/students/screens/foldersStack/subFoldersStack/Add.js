@@ -3,76 +3,81 @@ import { StyleSheet, Dimensions, ActivityIndicator, TouchableOpacity, ScrollView
 import { Button, Block, Input, theme } from 'galio-framework';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { materialTheme, utils } from '../../shared/constants';
-import { imageUtils, validation } from '../../../../shared/utils';
-import { Images } from '../../../../shared/constants';
-import { realTimedbApi } from '../../../../api';
+import { materialTheme, utils } from '../../../shared/constants';
+import { imageUtils, validation } from '../../../../../shared/utils';
+import { Images } from '../../../../../shared/constants';
+import { realTimedbApi } from '../../../../../api';
+import { Spinner, Product } from '../../../../../shared/components';
 
 const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
-export default ResourcesAdd = props => {
+export default AddSubFolder = props => {
     const { navigation } = props;
+    const { product } = props.navigation.state.params;
     const [image, setImage] = useState('');
     const [resource, setResource] = useState({});
+    const [avatarUpload, setAvatarStatus] = useState(false);
 
     return (
         <ScrollView style={styles.container}>
             <Block>
-                <TouchableOpacity onPress={() => imageUtils._pickImage(setImage, null)}>
-                    <ImageBackground
-                        source={image != '' ? { uri: image } : Images.placeholder }
-                        style={styles.profileContainer}
-                        imageStyle={styles.profileImage}>
-                        <Block flex style={styles.profileDetails}>
-                            <LinearGradient colors={['rgba(0,0,0,0)', 'rgba(0,0,0,1)']} style={styles.gradient} />
-                        </Block>
-                    </ImageBackground>
+                <TouchableOpacity onPress={() => imageUtils._pickImage(setImage, setAvatarStatus)}>
+                    <Spinner inProgress={avatarUpload}>
+                        <ImageBackground
+                            source={image != '' ? { uri: image } : Images.placeholder}
+                            style={styles.profileContainer}
+                            imageStyle={styles.profileImage}>
+                            <Block flex style={styles.profileDetails}>
+                                <LinearGradient colors={['rgba(0,0,0,0)', 'rgba(0,0,0,1)']} style={styles.gradient} />
+                            </Block>
+                        </ImageBackground>
+                    </Spinner>
                 </TouchableOpacity>
             </Block>
             <ScrollView style={{ minHeight: height }}>
-            <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-                <Input
-                    right
-                    placeholder="Label"
-                    color={materialTheme.COLORS.PRIMARY}
-                    placeholderTextColor={materialTheme.COLORS.DEFAULT}
-                    style={{ borderRadius: 3, borderColor: materialTheme.COLORS.INPUT }}
-                    onChangeText={value => setResource({
-                        ...resource,
-                        name: value
-                    })}
-                />
-            </Block>
-            <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-                <TextInput
-                    multiline
-                    placeholder="Description"
-                    numberOfLines={5}
-                    placeholderTextColor={materialTheme.COLORS.DEFAULT}
-                    style={{ minHeight: 150, padding: 10, backgroundColor: '#ffff', borderRadius: 3, borderColor: materialTheme.COLORS.DEFAULT, borderWidth: 1 }}
-                    onChangeText={value => setResource({
-                        ...resource,
-                        description: value
-                    })}
-                />
-            </Block>
-            
-            <Block center >
-                <Button
-                    shadowless
-                    color={materialTheme.COLORS.PRIMARY}
-                    style={[styles.button, styles.shadow]}
-                    onPress={() => {
-                        const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-                        if(validation(resource, ['name', 'description'])){
-                            realTimedbApi.setData('folders', {...resource, avatar: image})
-                            navigation.goBack();
-                        }
-                    }}>
-                    Submit
+                <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+                    <Input
+                        right
+                        placeholder="Label"
+                        color={materialTheme.COLORS.PRIMARY}
+                        placeholderTextColor={materialTheme.COLORS.DEFAULT}
+                        style={{ borderRadius: 3, borderColor: materialTheme.COLORS.INPUT }}
+                        onChangeText={value => setResource({
+                            ...resource,
+                            name: value
+                        })}
+                    />
+                </Block>
+                <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
+                    <TextInput
+                        multiline
+                        placeholder="Description"
+                        numberOfLines={5}
+                        placeholderTextColor={materialTheme.COLORS.DEFAULT}
+                        style={{ minHeight: 150, padding: 10, backgroundColor: '#ffff', borderRadius: 3, borderColor: materialTheme.COLORS.DEFAULT, borderWidth: 1 }}
+                        onChangeText={value => setResource({
+                            ...resource,
+                            description: value
+                        })}
+                    />
+                </Block>
+
+                <Block center >
+                    <Button
+                        shadowless
+                        color={materialTheme.COLORS.PRIMARY}
+                        style={[styles.button, styles.shadow]}
+                        onPress={() => {
+                            const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+                            if (validation(resource, ['name', 'description'])) {
+                                realTimedbApi.setData('subFolders', { ...resource, avatar: image, parentId: product.id  })
+                                navigation.goBack();
+                            }
+                        }}>
+                        Submit
                 </Button>
-            </Block>
+                </Block>
             </ScrollView>
         </ScrollView>
     )

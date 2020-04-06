@@ -1,33 +1,30 @@
 import React, { useState } from 'react';
-import { StyleSheet, Dimensions, ActivityIndicator, TouchableOpacity, ScrollView, Image, ImageBackground, Platform } from 'react-native';
-import { Button, Block, Text, Input, theme } from 'galio-framework';
+import { StyleSheet, Dimensions, ActivityIndicator, TouchableOpacity, ScrollView, TextInput, ImageBackground, Platform } from 'react-native';
+import { Button, Block, Input, theme } from 'galio-framework';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { materialTheme, utils, Images } from '../../shared/constants';
-import { imageUtils } from '../../shared/utils';
-import { Icon, Spinner } from '../../shared/components';
-import { signup, validation } from './service';
+import { materialTheme, utils } from '../../shared/constants';
+import { imageUtils, validation } from '../../../../shared/utils';
+import { Images } from '../../../../shared/constants';
+import { realTimedbApi } from '../../../../api';
+import { Spinner } from '../../../../shared/components';
 
 const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
-export default AddUser = props => {
+export default AddFolder = props => {
     const { navigation } = props;
     const [image, setImage] = useState('');
-    const [user, setUser] = useState({
-        isAdmin: false,
-        isStudent: true
-    });
-    const [inProgress, setInprogress] = useState(false);
-    const [avatarUpload, setAavatarStatus] = useState(false);
+    const [resource, setResource] = useState({});
+    const [avatarUpload, setAvatarStatus] = useState(false);
 
     return (
         <ScrollView style={styles.container}>
             <Block>
-                <TouchableOpacity onPress={() => imageUtils._pickImage(setImage, setAavatarStatus)}>
+                <TouchableOpacity onPress={() => imageUtils._pickImage(setImage, setAvatarStatus)}>
                     <Spinner inProgress={avatarUpload}>
                         <ImageBackground
-                            source={image != '' ? { uri: image } : Images.user}
+                            source={image != '' ? { uri: image } : Images.placeholder}
                             style={styles.profileContainer}
                             imageStyle={styles.profileImage}>
                             <Block flex style={styles.profileDetails}>
@@ -41,92 +38,44 @@ export default AddUser = props => {
                 <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
                     <Input
                         right
-                        placeholder="Name"
+                        placeholder="Label"
                         color={materialTheme.COLORS.PRIMARY}
                         placeholderTextColor={materialTheme.COLORS.DEFAULT}
                         style={{ borderRadius: 3, borderColor: materialTheme.COLORS.INPUT }}
-                        iconContent={<Icon size={16} color={theme.COLORS.ICON} name="user" family="font-awesome" />}
-                        onChangeText={value => setUser({
-                            ...user,
+                        onChangeText={value => setResource({
+                            ...resource,
                             name: value
                         })}
                     />
                 </Block>
                 <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-                    <Input
-                        right
-                        placeholder="Email"
-                        color={materialTheme.COLORS.PRIMARY}
+                    <TextInput
+                        multiline
+                        placeholder="Description"
+                        numberOfLines={5}
                         placeholderTextColor={materialTheme.COLORS.DEFAULT}
-                        style={{ borderRadius: 3, borderColor: materialTheme.COLORS.INPUT }}
-                        iconContent={<Icon size={16} color={theme.COLORS.ICON} name="envelope" family="font-awesome" />}
-                        onChangeText={value => setUser({
-                            ...user,
-                            email: value
-                        })}
-                    />
-                </Block>
-                <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-                    <Input
-                        right
-                        placeholder="City"
-                        color={materialTheme.COLORS.PRIMARY}
-                        placeholderTextColor={materialTheme.COLORS.DEFAULT}
-                        style={{ borderRadius: 3, borderColor: materialTheme.COLORS.INPUT }}
-                        iconContent={<Icon size={16} color={theme.COLORS.ICON} name="location-city" family="MaterialIcons" />}
-                        onChangeText={value => setUser({
-                            ...user,
-                            city: value
-                        })}
-                    />
-                </Block>
-                <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-                    <Input
-                        right
-                        placeholder="Suburb/Township"
-                        color={materialTheme.COLORS.PRIMARY}
-                        placeholderTextColor={materialTheme.COLORS.DEFAULT}
-                        style={{ borderRadius: 3, borderColor: materialTheme.COLORS.INPUT }}
-                        iconContent={<Icon size={16} color={theme.COLORS.ICON} name="home" family="SimpleLineIcons" />}
-                        onChangeText={value => setUser({
-                            ...user,
-                            'suburb_township': value
-                        })}
-                    />
-                </Block>
-                <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
-                    <Input
-                        right
-                        password={true}
-                        placeholder="Password"
-                        color={materialTheme.COLORS.PRIMARY}
-                        placeholderTextColor={materialTheme.COLORS.DEFAULT}
-                        style={{ borderRadius: 3, borderColor: materialTheme.COLORS.INPUT }}
-                        iconContent={<Icon size={16} color={theme.COLORS.ICON} name="lock" family="Entypo" />}
-                        onChangeText={value => setUser({
-                            ...user,
-                            'password': value
+                        style={{ minHeight: 150, padding: 10, backgroundColor: '#ffff', borderRadius: 3, borderColor: materialTheme.COLORS.DEFAULT, borderWidth: 1 }}
+                        onChangeText={value => setResource({
+                            ...resource,
+                            description: value
                         })}
                     />
                 </Block>
 
-                <Block center>
+                <Block center >
                     <Button
                         shadowless
-                        disabled={inProgress}
                         color={materialTheme.COLORS.PRIMARY}
                         style={[styles.button, styles.shadow]}
                         onPress={() => {
-                            if (validation(user)) signup({ ...user, avatar: image }, navigation, setInprogress)
+                            const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+                            if (validation(resource, ['name', 'description'])) {
+                                realTimedbApi.setData('folders', { ...resource, avatar: image })
+                                navigation.goBack();
+                            }
                         }}>
-                        {inProgress ? <ActivityIndicator size="small" color="#00ff00" /> : 'Submit'}
-                    </Button>
-                    <Text
-                        size={12}
-                        color={materialTheme.COLORS.PRIMARY}
-                        onPress={() => !inProgress && navigation.navigate('Login')}>
-                        Login
-                </Text>
+                        Submit
+                </Button>
                 </Block>
             </ScrollView>
         </ScrollView>

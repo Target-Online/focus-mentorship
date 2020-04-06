@@ -9,24 +9,24 @@ import { FoldersContext } from '../../root/store';
 const { height } = Dimensions.get('screen');
 
 export default Resources = () => {
-  const [resources] = useContext(FoldersContext);
-  const data = resources.data.sort((a, b) => b.createdAt - a.createdAt)
+  const [folders] = useContext(FoldersContext);
+  const data = folders.data.sort((a, b) => b.createdAt - a.createdAt)
 
   return (
-    <Spinner inProgress={resources.inProgress}>
+    <Spinner inProgress={folders.inProgress}>
       <Block flex style={[styles.options, !data.length == 0 && { height: height }]}>
-        <ScrollView showsVerticalScrollIndicator={true}>
-          {data.map(resource =>
+        <Block>
+          {data.map(folder =>
             <Card
-              key={resource.name}
-              title={resource.name}
-              image={resource.avatar == '' ? Images.folder : { uri: resource.avatar }}
-              product={resource}
-              redirect={'ResourcesView'}
+              key={folder.name}
+              title={folder.name}
+              image={folder.avatar == '' ? Images.folder : { uri: folder.avatar }}
+              product={folder}
+              redirect={'SubFolders'}
               horizontal
             />
           )}
-        </ScrollView>
+        </Block>
         <Block center style={{ marginTop: 10 }}>
           {data.length == 0 && <Text>No folders.</Text>}
         </Block>

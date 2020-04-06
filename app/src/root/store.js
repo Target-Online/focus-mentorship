@@ -26,7 +26,7 @@ const Store = ({ children }) => {
 		firebase.auth().onAuthStateChanged(user => {
 			if(user){
 				const userId = user.email.replace(/[^0-9a-z]/gi, '')
-				realTimedbApi.getData('users/' + userId, setUser);
+				realTimedbApi.getUser('users', userId, setUser)
 				pushNotifications.registerForPushNotificationsAsync(userId)
 			}
 		});

@@ -7,9 +7,9 @@ import {
     FlatList,
 } from 'react-native';
 
-import { Spinner, FontAwesomeIcons } from '../../../../shared/components';
+import { Spinner, FontAwesomeIcons } from '../../../../../shared/components';
 import { Block, Text } from 'galio-framework';
-import { DocumentsContext } from '../../root/store';
+import { DocumentsContext } from '../../../root/store';
 
 export default Documents = props => {
     const [documents] = useContext(DocumentsContext);

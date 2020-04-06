@@ -9,7 +9,7 @@ export const StudentCourseContext = React.createContext()
 export const DocumentsContext = React.createContext()
 export const MessagesContext = React.createContext()
 export const FoldersContext = React.createContext()
-export const StateContext = React.createContext()
+export const SubFoldersContext = React.createContext()
 
 const initalState = {
     data: [],
@@ -24,6 +24,7 @@ const Store = ({ children }) => {
     const [documents, setDocuments] = useReducer(rootReducer.setStateReducer, initalState)
     const [messages, setMessages] = useReducer(rootReducer.setStateReducer, initalState)
     const [folders, setFolders] = useReducer(rootReducer.setStateReducer, initalState)
+    const [subFolders, setSubFolders] = useReducer(rootReducer.setStateReducer, initalState)
 
     useEffect(() => {
         realTimedbApi.getCollection('announcements', setAnnouncements);
@@ -32,6 +33,7 @@ const Store = ({ children }) => {
         realTimedbApi.getCollection('documents', setDocuments);
         realTimedbApi.getCollection('messages', setMessages);
         realTimedbApi.getCollection('folders', setFolders);
+        realTimedbApi.getCollection('subFolders', setSubFolders);
     }, []);
 
     return (
@@ -41,7 +43,9 @@ const Store = ({ children }) => {
                     <DocumentsContext.Provider value={[documents, setDocuments]}>
                         <MessagesContext.Provider value={[messages, setMessages]}>
                             <FoldersContext.Provider value={[folders, setFolders]}>
-                                {children}
+                                <SubFoldersContext.Provider value={[subFolders, setSubFolders]}>
+                                    {children}
+                                </SubFoldersContext.Provider>
                             </FoldersContext.Provider>
                         </MessagesContext.Provider>
                     </DocumentsContext.Provider>

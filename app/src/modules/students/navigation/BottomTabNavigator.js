@@ -9,7 +9,8 @@ import { materialTheme } from '../shared/constants'
 import { StudentsList, StudentsView } from '../screens/studentsStack';
 import { ProfileView } from '../screens/profileStack';
 import { CoursesList, CoursesAdd, CoursesView, AddStudent, CoursesChat } from '../screens/coursesStack';
-import { ResourcesList, ResourcesAdd, ResourcesView } from '../screens/resourcesStack';
+import { Folders, AddFolder } from '../screens/foldersStack';
+import { SubFolders, AddSubFolder, SubFolderDocuments } from '../screens/foldersStack/subFoldersStack';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -74,7 +75,7 @@ const CoursesStack = createStackNavigator({
   CourseChat: {
     screen: CoursesChat,
     navigationOptions: ({ navigation }) => ({
-      header: <Header back black navigation={navigation} />,
+      header: <Header back black title="Chat" navigation={navigation} />,
       headerTransparent: false,
     })
   },
@@ -91,23 +92,37 @@ const CoursesStack = createStackNavigator({
   config,
 });
 
-const ResourcesStack = createStackNavigator({
-  ResourcesList: {
-    screen: ResourcesList,
+const FoldersStack = createStackNavigator({
+  Folders: {
+    screen: Folders,
     navigationOptions: ({ navigation }) => ({
       header: <Header title="Folders" navigation={navigation} />,
       headerTransparent: false,
     })
   },
-  ResourcesAdd: {
-    screen: ResourcesAdd,
+  AddFolder: {
+    screen: AddFolder,
     navigationOptions: ({ navigation }) => ({
       header: <Header back black title="Add folder" navigation={navigation} />,
       headerTransparent: false,
     })
   },
-  ResourcesView: {
-    screen: ResourcesView,
+  SubFolders: {
+    screen: SubFolders,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header back title="Sub Folders" navigation={navigation} />,
+      headerTransparent: false,
+    })
+  },
+  AddSubFolder: {
+    screen: AddSubFolder,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header back black title="Add Sub Folder" navigation={navigation} />,
+      headerTransparent: false,
+    })
+  },
+  SubFolderDocuments: {
+    screen: SubFolderDocuments,
     navigationOptions: ({ navigation }) => ({
       header: <Header back search black title="Documents" navigation={navigation} />,
       headerTransparent: false,
@@ -117,7 +132,6 @@ const ResourcesStack = createStackNavigator({
   cardStyle: { backgroundColor: 'white', },
   config,
 });
-
 
 const tabNavigator = createBottomTabNavigator({
   Students: {
@@ -138,8 +152,8 @@ const tabNavigator = createBottomTabNavigator({
       tabBarOptions: { activeTintColor: materialTheme.COLORS.PRIMARY }
     }
   },
-  Resources: {
-    screen: ResourcesStack,
+  Folders: {
+    screen: FoldersStack,
     navigationOptions: {
       tabBarIcon: ({ focused }) => (
         <TabBarIcon focused={focused} name={'folder'} />

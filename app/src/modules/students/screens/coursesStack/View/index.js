@@ -17,7 +17,7 @@ import { Images } from '../../../../../shared/constants';
 
 import StudentsList from './students/List'
 import Announcements from './announcements/List';
-import Documents from './resources/List';
+import Documents from './documents/List';
 import { DocumentsContext } from '../../../root/store';
 
 const { width, height } = Dimensions.get('screen');
@@ -180,7 +180,7 @@ export default CourseView = props => {
                     </Block>
                     <Block middle>
                         <Tab name={'folder'} addname={'note'} sec={'resources'} />
-                        <Text muted size={12}>Resources</Text>
+                        <Text muted size={12}>Documents</Text>
                     </Block>
                     <Block middle>
                         <Tab name={'bell'} addname={'note'} sec={'announcements'} />
