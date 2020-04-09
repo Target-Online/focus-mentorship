@@ -26,7 +26,7 @@ const ChatButton = ({ isWhite, style, navigation, redirect }) => {
 }
 
 const AddRedirectButton = ({ family, name, redirect, isWhite, style, navigation }) => (
-  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate(redirect, { product: navigation.state.params.product })}>
+  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate(redirect, { product: redirect == 'AddSubFolder' ? navigation.state.params.product : {} })}>
     <Icon
       family={family}
       size={16}

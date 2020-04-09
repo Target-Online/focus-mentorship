@@ -8,13 +8,13 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 import { UserContext, UsersContext } from '../../../../../root/store';
 import { StudentCourseContext } from '../../../root/store';
 import { realTimedbApi } from '../../../../../api';
-import { imageUtils, pushNotifications, documentPicker } from '../../../../../shared/utils';
+import { pushNotifications, documentPicker } from '../../../../../shared/utils';
 import { onInfo, onSuccess } from '../../../shared/utils/notifications';
 import { materialTheme, colors } from '../../../shared/constants';
 import { HeaderHeight } from "../../../shared/constants/utils";
 import { Filter } from '../../../../../shared/components';
 import { Images } from '../../../../../shared/constants';
-
+import { imageUtils } from '../../../shared/utils'
 import StudentsList from './students/List'
 import Announcements from './announcements/List';
 import Documents from './documents/List';
@@ -43,7 +43,7 @@ export default CourseView = props => {
     const [studentCourse] = useContext(StudentCourseContext);
 
     const updateCourse = () => {
-        if (isAdmin) imageUtils._updateDocumentImage(setImage, product.id);
+        if (isAdmin) imageUtils._updateCourseAvatar(setImage, product.id);
     }
 
     const studentsEnrolledForThisCourse = students.data.filter(s =>

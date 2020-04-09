@@ -1,0 +1,13 @@
+/* ._loading_overlay_wrapper {
+    height: -webkit-fill-available !important
+} */
+
+.css-42igfv {
+    margin-top: 36vh !important;
+    height: auto;
+}
+
+._loading_overlay_wrapper._loading_overlay_wrapper--active.css-79elbk {
+    position: fixed;
+    min-width: 100%;
+}

@@ -46,7 +46,7 @@ export default users = props => {
     return (
         <ScrollView>
             <FlatList
-                data={data}
+                data={data.sort((a, b) => b.createdAt - a.createdAt)}
                 keyExtractor={item => item.id.toString()}
                 renderItem={item => renderItem(item)}
             />

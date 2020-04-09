@@ -69,7 +69,6 @@ export default AddSubFolder = props => {
                         color={materialTheme.COLORS.PRIMARY}
                         style={[styles.button, styles.shadow]}
                         onPress={() => {
-                            const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
                             if (validation(resource, ['name', 'description'])) {
                                 realTimedbApi.setData('subFolders', { ...resource, avatar: image, parentId: product.id  })
                                 navigation.goBack();
