@@ -176,6 +176,7 @@ const AppStack = createDrawerNavigator(
     Login: {
       screen: LoginStack,
       navigationOptions: {
+        tabBarIcon: null,
         drawerLabel: ({ focused }) => (
           <Drawer focused={focused} screen="Login" title="Login"/>
         )

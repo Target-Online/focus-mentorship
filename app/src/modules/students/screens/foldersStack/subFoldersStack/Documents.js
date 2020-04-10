@@ -37,7 +37,7 @@ export default Documents = props => {
         <Spinner inProgress={documents.inProgress}>
             <Block>
                 <FlatList
-                    data={data}
+                    data={data.sort((a, b) => b.createdAt - a.createdAt)}
                     keyExtractor={item => item.id.toString()}
                     renderItem={item => renderItem(item)}
                 />

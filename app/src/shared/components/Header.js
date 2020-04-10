@@ -183,11 +183,13 @@ const Header = props => {
         leftStyle={{ flex: 0.3, paddingTop: 2 }}
         leftIconFamily={title == 'Home' ? "EvilIcons" : "AntDesign"}
         leftIconName={title == 'Home' ? "navicon" : "left"}
-        leftIconColor={title == 'Home' ? theme.COLORS.ICON : materialTheme.COLORS.PRIMARY}
+        leftIconColor={title == 'Home' ? theme.COLORS.ICON : title == "Login" ? "transparent" : materialTheme.COLORS.PRIMARY }
+        
         titleStyle={[
           styles.title,
           { color: theme.COLORS[white ? 'WHITE' : 'ICON'] },
         ]}
+        
         onLeftPress={handleLeftPress}
       />
       {renderHeader()}
