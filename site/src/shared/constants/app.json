@@ -1,9 +1,0 @@
-{
-    "MapsApiKey": "AIzaSyD5tBlEAAuORuwz2uIhlcpNA-NOmvHH3to",
-    "Environment": "Production",
-    "ApiRestWebServer": {
-        "Development": "http://localhost:5206",
-        "Production": "https://targetonline-api.co.za:5206"
-    }
-
-}
