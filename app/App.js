@@ -44,10 +44,8 @@ export default function App(props) {
             <Store>
               <StudentsStore>
               <AdminsStore>
-
                 <AppContainer />
                 </AdminsStore>
-
               </StudentsStore>
             </Store>
         </Block>

@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 import * as DocumentPicker from 'expo-document-picker';
 
-import { realTimedbApi } from '../../api';
+import * as realTimedbApi from '../../api';
 import { onError } from '../../../../shared/utils/notifications'
 import appsettings from '../../../../../appsettings.json'
 

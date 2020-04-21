@@ -1,7 +1,8 @@
 import { Notifications } from 'expo';
 import * as Permissions from 'expo-permissions';
 
-import { realTimedbApi, expoApi } from '../../api';
+import * as realTimedbApi from '../../api';
+import * as expoApi from '../../api/expoApi';
 
 const registerForPushNotificationsAsync = async userId => {
   const { status: existingStatus } = await Permissions.getAsync(

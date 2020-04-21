@@ -1,7 +1,7 @@
 import React, { useState, useReducer, useEffect } from 'react'
 import firebase from "firebase";
 
-import { realTimedbApi } from '../api';
+import * as realTimedbApi from '../api';
 import appsettings from '../../appsettings.json'
 import { pushNotifications, rootReducer } from '../shared/utils';
 

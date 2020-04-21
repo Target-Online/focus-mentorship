@@ -1,16 +1,13 @@
-import { SliderBox } from "react-native-image-slider-box";
+import Slideshow  from "react-native-image-slider";
 import React from 'react';
 
 import { Images } from '../constants/'
 
-export const ImagesSlider = () => (
-  <SliderBox
-    sliderBoxHeight={600}
-    images={Images.sliderImages}
-    resizeMode={'contain'}
-    autoplay
-    circleLoop
-  />
+
+export const ImagesSlider = () =>(
+    <Slideshow 
+      images={Images.sliderImages}
+    />
 );
 
 export default ImagesSlider;

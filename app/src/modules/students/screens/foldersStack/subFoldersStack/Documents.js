@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {
     StyleSheet,
     View,
@@ -32,6 +32,10 @@ export default Documents = props => {
         d.parentId == product.id &&
         d.name.toLowerCase().includes(documents.search)
     );
+
+    // useEffect(() => {
+
+    // },[]); 
 
     return (
         <Spinner inProgress={documents.inProgress}>

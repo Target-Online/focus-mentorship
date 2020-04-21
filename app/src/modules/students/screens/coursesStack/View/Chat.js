@@ -3,7 +3,7 @@ import { GiftedChat } from 'react-native-gifted-chat'
 
 import { UserContext } from '../../../../../root/store';
 import { MessagesContext } from '../../../root/store';
-import { realTimedbApi } from '../../../../../api';
+import * as realTimedbApi from '../../../../../api';
 
 export default ChatRoom = props => {
     const [currentUser] = useContext(UserContext);

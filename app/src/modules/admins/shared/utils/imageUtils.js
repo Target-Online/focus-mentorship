@@ -2,7 +2,7 @@ import firebase from 'firebase';
 import * as ImagePicker from 'expo-image-picker';
 import * as Permissions from 'expo-permissions';
 
-import { realTimedbApi } from '../../api';
+import * as realTimedbApi from '../../api';
 import { notifications, imageUtils } from '../../../../shared/utils'
 import appsettings from '../../../../../appsettings.json'
 

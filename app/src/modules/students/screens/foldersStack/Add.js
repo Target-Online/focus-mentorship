@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { materialTheme, utils } from '../../shared/constants';
 import { imageUtils, validation } from '../../../../shared/utils';
 import { Images } from '../../../../shared/constants';
-import { realTimedbApi } from '../../../../api';
+import * as realTimedbApi from '../../../../api';
 import { Spinner } from '../../../../shared/components';
 
 const { width, height } = Dimensions.get('screen');

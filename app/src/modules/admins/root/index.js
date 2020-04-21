@@ -1,6 +1,6 @@
 import React, { useState, useReducer, useEffect } from 'react'
 
-import { realTimedbApi } from '../api';
+import * as realTimedbApi from '../api';
 import { rootReducer } from '../../../shared/utils';
 
 export const AnnouncementsContext = React.createContext()

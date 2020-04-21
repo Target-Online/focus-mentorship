@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import {
     StyleSheet,
     Text,
@@ -10,8 +10,7 @@ import {
 } from 'react-native';
 import { Block } from 'galio-framework';
 
-import { realTimedbApi } from '../../../../api';
-import { Spinner } from '../../../../shared/components';
+import * as realTimedbApi from '../../../../api';
 import { Images } from '../../../../shared/constants';
 import { UsersContext } from '../../../../root/store';
 
@@ -19,7 +18,7 @@ export default users = props => {
     const [users] = useContext(UsersContext);
 
     const addStudent = userId =>{
-        realTimedbApi.updateData('users', userId.replace(/[^0-9a-z]/gi, ''), { isAdmin: true, isStudent: false });
+        realTimedbApi.updateData('users', userId.replace(/[^0-9a-z]/gi, ''), { isAdmin: true, isStudent: false, title: "Admin" });
         props.navigation.goBack();
     }
 

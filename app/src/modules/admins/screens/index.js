@@ -8,7 +8,7 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 import { UserContext } from '../../../root/store';
 import { UsersContext } from '../../../root/store';
 import { ClientsContext } from '../root';
-import { realTimedbApi, secretApi } from '../api';
+import * as realTimedbApi from '../api';
 import { imageUtils, documentPicker} from '../shared/utils';
 import { pushNotifications } from '../../../shared/utils';
 import { onInfo } from '../../../shared/utils/notifications';
@@ -128,7 +128,7 @@ export default CourseView = props => {
     useEffect(() => {
         if (isAdmin && client.avatar == '') onInfo('Update client profile image.');
 
-        realTimedbApi.login(currentUser);
+        realTimedbApi.login();
     }, []);
 
     const redirect = () => {

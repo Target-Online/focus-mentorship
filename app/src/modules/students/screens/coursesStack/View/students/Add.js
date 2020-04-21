@@ -11,7 +11,7 @@ import {
 import { Block } from 'galio-framework';
 
 import { pushNotifications } from '../../../../../../shared/utils';
-import { realTimedbApi } from '../../../../../../api';
+import * as realTimedbApi from '../../../../../../api';
 import { Images } from '../../../../../../shared/constants';
 import { StudentCourseContext } from '../../../../root/store';
 import { UsersContext } from '../../../../../../root/store';

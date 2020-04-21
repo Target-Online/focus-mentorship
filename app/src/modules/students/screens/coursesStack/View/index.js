@@ -7,7 +7,7 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 
 import { UserContext, UsersContext } from '../../../../../root/store';
 import { StudentCourseContext } from '../../../root/store';
-import { realTimedbApi } from '../../../../../api';
+import * as realTimedbApi from '../../../../../api';
 import { pushNotifications, documentPicker } from '../../../../../shared/utils';
 import { onInfo, onSuccess } from '../../../shared/utils/notifications';
 import { materialTheme, colors } from '../../../shared/constants';
