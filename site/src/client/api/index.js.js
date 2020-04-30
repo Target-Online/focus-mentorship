@@ -1,5 +1,6 @@
 import firebase from "firebase";
 import { O2A } from "object-to-array-convert";
+import { toast } from "react-toastify";
 
 import appsettings from "../../appsettings.json";
 
@@ -69,13 +70,18 @@ export const updateAuthUser = async data =>
     ...data
   });
 
-export const login = (user, props) => {
-  console.log("login-props", props);
+export const login = (user, props, setInProgress) => {
   return firebase
     .auth()
     .signInWithEmailAndPassword(user.email, user.password)
     .then(
-      () => props.history.push("/folders"),
-      error => console.log("ERROR", error.message)
+      () => {
+        setInProgress(false);
+        props.history.push("/folders");
+      },
+      error => {
+        setInProgress(false);
+        toast.error(error.message);
+      }
     );
 };

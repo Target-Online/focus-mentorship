@@ -8,7 +8,7 @@
       "ios",
       "android"
     ],
-    "version": "3.0.3",
+    "version": "3.0.4",
     "orientation": "portrait",
     "icon": "./assets/icons/icon.png",
     "splash": {
@@ -25,6 +25,7 @@
     "ios": {
       "bundleIdentifier": "com.targetonline.focus",
       "supportsTablet": true,
+      "usesIcloudStorage": true,
       "infoPlist": {
         "NSCameraUsageDescription": "This app uses the camera to allow users to update profile prictures. Your photos wont be shared without your permission.",
         "NSPhotoLibraryUsageDescription": "This app uses the camera to allow users to update profile prictures. Your photos wont be shared without your permission."
@@ -32,7 +33,7 @@
     },
     "android": {
       "package": "com.targetonline.focus",
-      "versionCode": 18
+      "versionCode": 19
     }
   }
 }

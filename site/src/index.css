@@ -1,0 +1,26 @@
+.Toastify__toast--success {
+    background: #f8f9fa;
+    color: #486B00
+  }
+  
+  .Toastify__close-button--success {
+    color: #486B00;
+  }
+  
+  .Toastify__progress-bar--success {
+    background-color: #92D400;
+  }
+  
+  .Toastify__toast--error {
+    background: #f8f9fa;
+    color: #470000;
+    height: 100
+  }
+  
+  .Toastify__close-button--error {
+    color: #470000;
+  }
+  
+  .Toastify__progress-bar--error {
+    background-color: #C9190B;
+  }

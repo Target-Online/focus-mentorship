@@ -33,23 +33,17 @@ export const pick = async (parentId, dispath) => {
 const publish = (result, parentId) => {
   return new Promise(() =>
     Object.entries(result.output).map(async file => {
-      const id =
-        Math.random()
-          .toString(36)
-          .substring(2, 15) +
-        Math.random()
-          .toString(36)
-          .substring(2, 15);
+      const docName = result.name.split(".")[0]
       setTimeout(async () => {
         realTimedbApi.setData("documents", {
-          name: result.name.split(".")[0],
+          name: docName,
           url: await getResourceUrl(
             file[1],
-            appsettings.environment + "/documents/" + id
+            appsettings.environment + "/documents/" + docName
           ),
           parentId: parentId
         });
-      }, 10000);
+      }, 15000);
     })
   );
 };

@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+import React, { useState, useEffect, useContext } from "react";
 //import { Link } from "react-router-dom";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import Icon from "@material-ui/core/Icon";
+import CircularProgress from "@material-ui/core/CircularProgress";
+
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
 
-import { Spinner } from "react-bootstrap";
+//import { Spinner } from "react-bootstrap";
 
 // core components
 import Footer from "shared/components/Footer/Footer.js";
@@ -22,10 +25,13 @@ import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/bg.jpg";
 import { login } from "../api/index.js";
+import { CurrentUserContext } from "client/root/index.js";
 
 const useStyles = makeStyles(styles);
 
 const Login = props => {
+  const [inProgress, setInProgress] = useState(false);
+  const [currentUser] = useContext(CurrentUserContext);
   const [userDetails, setUserDetails] = useState({
     email: "",
     password: ""
@@ -35,6 +41,10 @@ const Login = props => {
     setCardAnimation("");
   }, 700);
   const classes = useStyles();
+
+  useEffect(() => {
+    if (currentUser) props.history.push("/folders");
+  });
 
   return (
     <div>
@@ -103,14 +113,21 @@ const Login = props => {
                     />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Button
-                      simple
-                      color="primary"
-                      size="lg"
-                      onClick={() => login(userDetails, props)}
-                    >
-                      <Spinner animation="border" variant="primary" /> Login
-                    </Button>
+                    {inProgress ? (
+                      <CircularProgress />
+                    ) : (
+                      <Button
+                        simple
+                        color="primary"
+                        size="lg"
+                        onClick={() => {
+                          setInProgress(true);
+                          login(userDetails, props, setInProgress);
+                        }}
+                      >
+                        Login
+                      </Button>
+                    )}
                   </CardFooter>
                 </form>
               </Card>

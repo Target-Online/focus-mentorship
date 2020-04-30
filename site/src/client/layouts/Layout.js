@@ -1,6 +1,6 @@
 import React from "react";
 // creates a beautiful scrollbar
-import "perfect-scrollbar/css/perfect-scrollbar.css";
+//import "perfect-scrollbar/css/perfect-scrollbar.css";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // core components

@@ -5,3 +5,4 @@
 /app/src/modules/admins/api/secret.js
 /site/src/appsettings.json
 /site/src/shared/constants/app.json
+/app/debug.log

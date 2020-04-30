@@ -6,7 +6,6 @@ import appsettings from "../../appsettings.json";
 import { rootReducer } from "../shared/utils/rootReducer";
 
 export const CurrentUserContext = React.createContext();
-export const StateContext = React.createContext();
 export const FoldersContext = React.createContext();
 export const SubFoldersContext = React.createContext();
 export const DocumentsContext = React.createContext();
@@ -25,12 +24,10 @@ const Store = ({ children }) => {
   const [folders, dispatchFolders] = useReducer(rootReducer, initalState);
   const [subFolders, dispatchSubFolders] = useReducer(rootReducer, initalState);
   const [documents, dispatchDocuments] = useReducer(rootReducer, initalState);
-  const [state, dispatchState] = useReducer(rootReducer, initalState);
 
   useEffect(() => {
     realTimedbApi.getCollection("folders", dispatchFolders);
     realTimedbApi.getCollection("subFolders", dispatchSubFolders);
-    realTimedbApi.getCollection("state", dispatchState);
     realTimedbApi.getCollection("documents", dispatchDocuments);
 
     firebase.auth().onAuthStateChanged(user => {
@@ -42,7 +39,7 @@ const Store = ({ children }) => {
   }, []);
 
   return (
-    <StateContext.Provider value={[state, dispatchState]}>
+    <CurrentUserContext.Provider value={[currentUser, setUser]}>
       <CurrentUserContext.Provider value={[currentUser, setUser]}>
         <FoldersContext.Provider value={[folders, dispatchFolders]}>
           <SubFoldersContext.Provider value={[subFolders, dispatchSubFolders]}>
@@ -52,7 +49,7 @@ const Store = ({ children }) => {
           </SubFoldersContext.Provider>
         </FoldersContext.Provider>
       </CurrentUserContext.Provider>
-    </StateContext.Provider>
+    </CurrentUserContext.Provider>
   );
 };
 export default Store;
