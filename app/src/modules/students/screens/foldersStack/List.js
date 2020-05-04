@@ -20,7 +20,7 @@ export default Resources = () => {
             <Card
               key={folder.name}
               title={folder.name}
-              image={folder.avatar == '' ? Images.folder : { uri: folder.avatar }}
+              image={Images.class2020}
               product={folder}
               redirect={'SubFolders'}
               horizontal

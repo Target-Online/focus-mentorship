@@ -155,11 +155,12 @@ export default CourseView = props => {
             {AddAnnouncement}
             {EditDescripton}
             <Block flex>
-                <TouchableOpacity onPress={() => updateCourse()}>
+                <TouchableOpacity>
                     <ImageBackground
-                        source={image == '' ? Images.placeholder : { uri: image }}
+                        source={Images.classOf2020}
                         style={styles.profileContainer}
-                        imageStyle={styles.profileImage}>
+                        //imageStyle={styles.profileImage}
+                        >
                         <Block flex style={styles.profileDetails}>
                             <Block style={styles.profileTexts}>
                             </Block>

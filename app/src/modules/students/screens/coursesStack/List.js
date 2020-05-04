@@ -21,7 +21,7 @@ export default Courses = () => {
             <Card
               key={c.name}
               title={c.name}
-              image={c.avatar == '' ? Images.placeholder : {uri: c.avatar}}
+              image={Images.classOf2020}
               product={c}
               redirect={'ViewCourse'}
               horizontal

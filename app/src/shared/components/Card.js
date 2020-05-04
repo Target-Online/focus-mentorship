@@ -16,10 +16,7 @@ class Product extends React.Component {
     return (
       <Block row={horizontal} card flex style={[styles.product, styles.shadow, style]}>
         <Block flex style={[styles.imageContainer, styles.shadow]}>
-          {product.image 
-            ? <Image source={product.image} style={imageStyles} />
-            : <TabBarIcon focused={true} name={'user'} />
-          }
+            <Image source={product.image} resizeMode="contain" style={imageStyles} />
         </Block>
         <Block flex space="evenly" style={styles.productDescription}>
           <Text center size={14} style={styles.productTitle}>{product.title}</Text>

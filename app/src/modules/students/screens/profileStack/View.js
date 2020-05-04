@@ -28,7 +28,7 @@ export default View = props => {
             <Block flex>
                 <TouchableOpacity onPress={() => imageUtils._updateUserAvatar(setImage, currentUser)}>
                     <ImageBackground
-                        source={image ? {uri: image} : Images.user }
+                        source={image ? { uri: image } : Images.user }
                         style={styles.profileContainer}
                         imageStyle={styles.profileImage}>
                         <Block flex style={styles.profileDetails}>

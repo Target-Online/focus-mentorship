@@ -1,23 +1,31 @@
 {
+  "announcements" : {
+    "-M6TbfaH3poR89_yXr2G" : {
+      "createdAt" : 1588577873277,
+      "id" : "-M6TbfaH3poR89_yXr2G",
+      "message" : "Focus app is now available on istore",
+      "parentId" : "8a4lrxcg2tiaailh9xb54v"
+    }
+  },
   "courses" : {
     "8a4lrxcg2tiaailh9xb54v" : {
       "avatar" : "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=709&q=80",
       "createdAt" : 1585545431083,
-      "description" : "PART TIME COURSE\n- Monday - Thurs 8am -4pm\n- Friday 8am - 12pm\n\nFEES\n- R60 per learner per month\n\nVENUE\n- Luthayi high school\n\nCURRICULUM\n- Mathematics Lit and Pure\n- English First and Second\n- Geography \n- Physical Science \n- Accounting \n- History \n- Zulu",
+      "description" : "PART TIME COURSE\n- Monday - Thurs 8am -4pm\n- Friday 8am - 12pm\n\nFEES\n- None \n\nVENUE\n- Luthayi high school\n\nCURRICULUM\n- Mathematics Lit and Pure\n- English First and Second\n- Geography \n- Physical Science \n- Accounting \n- History \n- Zulu",
       "id" : "8a4lrxcg2tiaailh9xb54v",
       "name" : "Grade 10"
     },
     "9gwk6as3d5b773m39gxgzk" : {
       "avatar" : "https://source.unsplash.com/jCIMcOpFHig/840x840",
       "createdAt" : 1585545431082,
-      "description" : "PART TIME COURSE\n- Monday - Thurs 8am -4pm\n- Friday - 8am - 12pm\n\nFEES\n- R60 per learner per month\n\nVENUE\n- Luthayi high school\n\nCURRICULUM\n- Mathematics Lit and Pure\n- English First and Second\n- Geography \n- Physical Science \n- Accounting \n- History \n- Zulu",
+      "description" : "PART TIME COURSE\n- Monday - Thurs 8am -4pm\n- Friday - 8am - 12pm\n\nFEES\n- None \n\nVENUE\n- Luthayi high school\n\nCURRICULUM\n- Mathematics Lit and Pure\n- English First and Second\n- Geography \n- Physical Science \n- Accounting \n- History \n- Zulu",
       "id" : "9gwk6as3d5b773m39gxgzk",
       "name" : "Grade 11"
     },
     "ktzk9dfh3094d8lpqn3i9k" : {
       "avatar" : "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
       "createdAt" : 1585545431081,
-      "description" : "PART TIME COURSE\n- Monday - Thurs 8am -4pm\n- Friday 8am - 12pm\n\nFEES\n- R60 per learner per month\n\nVENUE\n- Luthayi high school\n\nCURRICULUM\n- Mathematics Lit and Pure\n- English First and Second\n- Geography \n- Physical Science \n- Accounting \n- History \n- Zulu",
+      "description" : "PART TIME COURSE\n- Monday - Thurs 8am -4pm\n- Friday 8am - 12pm\n\nFEES\n- None \n\nVENUE\n- Luthayi high school\n\nCURRICULUM\n- Mathematics Lit and Pure\n- English First and Second\n- Geography \n- Physical Science \n- Accounting \n- History \n- Zulu",
       "id" : "ktzk9dfh3094d8lpqn3i9k",
       "name" : "Matric"
     }
@@ -4265,13 +4273,6 @@
       "parentId" : "-M4DDUFlvKXEaV0dLmWz",
       "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F7thttqwfewoe8mom01g237?alt=media&token=e8929501-2eab-42b5-a61d-0d5bce5f49a2"
     },
-    "-M4Ll-FYudPpZhuxY7RK" : {
-      "createdAt" : 1586298619362,
-      "id" : "-M4Ll-FYudPpZhuxY7RK",
-      "name" : "IsiZulu FAL P1 May-June 2018 Memo TESTING",
-      "parentId" : "-M4LkY72exDpL7Yywl8a",
-      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Development%2Fdocuments%2Fz4tzc73xfh38j5sp21oe7?alt=media&token=5fab7fe6-37e6-4ba5-93e2-2074da677a21"
-    },
     "-M4QlrM1PJ6EQ_jbm6bx" : {
       "createdAt" : 1586382730518,
       "id" : "-M4QlrM1PJ6EQ_jbm6bx",
@@ -4328,13 +4329,6 @@
       "parentId" : "-M465knQNnRkGKHpnkFw",
       "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Producton%2Fdocuments%2F25j9xdkcsn16tcci1csb0f?alt=media&token=0e93a4e8-e7ba-4c4f-9a7e-5e12e75aadea"
     },
-    "-M4VnWRauIZL6lcSlvpD" : {
-      "createdAt" : 1586467051575,
-      "id" : "-M4VnWRauIZL6lcSlvpD",
-      "name" : "IsiZulu FAL P1 May-June 2018 Memo TESTING",
-      "parentId" : "-M465knQNnRkGKHpnkFw",
-      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fznlg80emb4dl3djr4kjaaq?alt=media&token=20c5e5f7-2f66-41bf-bbb0-146c96b63de7"
-    },
     "-M4VzAPCsq8bw24h1NwD" : {
       "createdAt" : 1586470106907,
       "id" : "-M4VzAPCsq8bw24h1NwD",
@@ -4348,6 +4342,104 @@
       "name" : "TreeSized - Copy",
       "parentId" : "-M4Vyos95tjtYvCp9G3e",
       "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fciq638tj9kqfeldt972zw7?alt=media&token=a906f7f8-e5ca-4b49-afab-0ba1d55077da"
+    },
+    "-M4YGZzGwPzzl0mEmS4a" : {
+      "createdAt" : 1586508481553,
+      "id" : "-M4YGZzGwPzzl0mEmS4a",
+      "name" : "Progressed learners document final",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fw1d903ffjxix42odrdzf?alt=media&token=587ef973-7f74-4a9b-87b8-320877185541"
+    },
+    "-M5aK_JbQ0FEc9Rt0DRF" : {
+      "createdAt" : 1587633604557,
+      "id" : "-M5aK_JbQ0FEc9Rt0DRF",
+      "name" : "1b MTG Accounting EN 18 Sept 2014",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F824m3dmgpsca3swy489655?alt=media&token=f8f65a8b-2e5e-47f4-b08a-54b20972bd51"
+    },
+    "-M5aZ_xA8z-Mct6XY0sS" : {
+      "createdAt" : 1587637540971,
+      "id" : "-M5aZ_xA8z-Mct6XY0sS",
+      "name" : "MTG EFAL P3",
+      "parentId" : "-M5aRRFye9I_1GTczOnF",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F0ksq1h23omznoyqbf4aksbn?alt=media&token=f48762a5-d361-4ca6-8deb-57d575946879"
+    },
+    "-M5aZmIARAwk-V2aG6L5" : {
+      "createdAt" : 1587637591531,
+      "id" : "-M5aZmIARAwk-V2aG6L5",
+      "name" : "MTG EFAL P1 LANGUAGE 19_01_2015 WEB",
+      "parentId" : "-M5aRRFye9I_1GTczOnF",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F3hoh10k3xihffegr7xl51e?alt=media&token=8a85ef36-8b2d-4cd4-aaf8-3e61bd7ec918"
+    },
+    "-M5aZvxlARxkkXNL2HCG" : {
+      "createdAt" : 1587637631121,
+      "id" : "-M5aZvxlARxkkXNL2HCG",
+      "name" : "1b MTG Accounting EN 18 Sept 2014",
+      "parentId" : "-M5aRRFye9I_1GTczOnF",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fk3lbgdt9uynh9r4f6gqib6?alt=media&token=4a879aee-ac8b-4bc8-ab80-b7b83c876bd1"
+    },
+    "-M5a_3lYn2gXBnOmwESS" : {
+      "createdAt" : 1587637667203,
+      "id" : "-M5a_3lYn2gXBnOmwESS",
+      "name" : "2b MTG Econ EN 18 Sept 2014",
+      "parentId" : "-M5aRRFye9I_1GTczOnF",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fucn22lsku9h5rpys13wgz8?alt=media&token=3c018eec-b9c6-4e70-a1a6-92eed3d08372"
+    },
+    "-M5b1-nneV2o44OU6S1R" : {
+      "createdAt" : 1587645253117,
+      "id" : "-M5b1-nneV2o44OU6S1R",
+      "name" : "4b MTG LifeSci EN 18 Sept 2014",
+      "parentId" : "-M5aRRFye9I_1GTczOnF",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fmnchdlpuayhuif8qh8rykg?alt=media&token=02b2d255-62ef-4408-bbee-d81079f56f7a"
+    },
+    "-M5b18fX6ty30bQMCf3K" : {
+      "createdAt" : 1587645289450,
+      "id" : "-M5b18fX6ty30bQMCf3K",
+      "name" : "MTG Maths_Lit_Gr12_web",
+      "parentId" : "-M5aRRFye9I_1GTczOnF",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fqgw2f6rw6xn9ovc9f7okvm?alt=media&token=cb2f3743-a0b3-4b3d-acd2-416a0d2f4a79"
+    },
+    "-M5b3z8BmNmeCG-iW5sY" : {
+      "createdAt" : 1587646032800,
+      "id" : "-M5b3z8BmNmeCG-iW5sY",
+      "name" : "MTG Physics Gr 12 Web",
+      "parentId" : "-M5aRRFye9I_1GTczOnF",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Frgpf412fpslu7uulm22k9?alt=media&token=0cdc1366-4706-4364-980c-019d9f6ac4d7"
+    },
+    "-M5b8c1LreRLiNV6y_g8" : {
+      "createdAt" : 1587647248833,
+      "id" : "-M5b8c1LreRLiNV6y_g8",
+      "name" : "MTG Geography FullColour Maps-small-18mb 18 Sept 2014",
+      "parentId" : "-M5aRRFye9I_1GTczOnF",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fgshpqvhtmwb5l5i913tcax?alt=media&token=bd19b5f8-f218-4291-b224-cc13af8db49d"
+    },
+    "-M5bLy7qiqlsnRWoeUch" : {
+      "createdAt" : 1587650746128,
+      "id" : "-M5bLy7qiqlsnRWoeUch",
+      "name" : "3b MTG Geog EN 18 Sept 2014",
+      "parentId" : "-M5aRRFye9I_1GTczOnF",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fxmd1fkb9611bdqwl1p0ez?alt=media&token=a1a83aa4-6450-4cc2-894a-607fe259ff08"
+    },
+    "-M5bMF97j8tVz0e4D3CA" : {
+      "createdAt" : 1587650819940,
+      "id" : "-M5bMF97j8tVz0e4D3CA",
+      "name" : "MTG Chemistry Gr 12 Web",
+      "parentId" : "-M5aRRFye9I_1GTczOnF",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fmn6dwsvsdiotfu2jnnje1?alt=media&token=4e8abb51-ff9e-4cea-895d-4576ac06d24b"
+    },
+    "-M5bfnPmEO5dAdB3Vbf4" : {
+      "createdAt" : 1587656207705,
+      "id" : "-M5bfnPmEO5dAdB3Vbf4",
+      "name" : "MTG Geography FullColour Maps-small-25mb 18 Sept 2014",
+      "parentId" : "-M5aRRFye9I_1GTczOnF",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fwb369wxxdxp5zkhxfrndd?alt=media&token=d3cc441b-7172-4285-995a-b19ff142c2c6"
+    },
+    "-M5bgP_KCt0ovG4zmYIJ" : {
+      "createdAt" : 1587656368117,
+      "id" : "-M5bgP_KCt0ovG4zmYIJ",
+      "name" : "MTG Math Gr 12 Web",
+      "parentId" : "-M5aRRFye9I_1GTczOnF",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F4xtv9bldpu5q78g29oyocl?alt=media&token=ce8760ed-3bad-4e68-9c84-a0c07175701e"
     },
     "0ax4992mjtxofka189kujx5" : {
       "createdAt" : 1585565732484,
@@ -9384,6 +9476,13 @@
     }
   },
   "folders" : {
+    "-M6RdQFy31XH_CuB0Vgi" : {
+      "avatar" : "",
+      "createdAt" : 1588544776288,
+      "description" : "Motivation and study tips",
+      "id" : "-M6RdQFy31XH_CuB0Vgi",
+      "name" : "2019 Focus scholars"
+    },
     "ividnmz76r9k6um0z4df6" : {
       "avatar" : "https://images.unsplash.com/photo-1468779036391-52341f60b55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "createdAt" : 1585557104933,
@@ -9429,6 +9528,29 @@
         "title" : "Founder & Developer",
         "uid" : "6lsmgEqC8Uep0Y9N8LNejIM5rXC2"
       }
+    },
+    "-M6TbohaC9JkI76sKBss" : {
+      "_id" : "6984ae1a-3786-4f65-9234-f2fe2bf5267f",
+      "createdAt" : 1588577910604,
+      "id" : "-M6TbohaC9JkI76sKBss",
+      "parentId" : "8a4lrxcg2tiaailh9xb54v",
+      "text" : "Grade @0s",
+      "user" : {
+        "_id" : "bahlechonco97gmailcom",
+        "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2Fyz8c2iq7xeg50a9ktwv0fa?alt=media&token=d9692f7f-6567-45b8-81d0-6e07a8645ddd",
+        "city" : "Durban",
+        "createdAt" : 1585491218034,
+        "deviceId" : "ExponentPushToken[lPIunRMNzuF2IVSVTkcSHN]",
+        "email" : "bahlechonco97@gmail.com",
+        "id" : "bahlechonco97gmailcom",
+        "isAdmin" : true,
+        "isStudent" : false,
+        "name" : "Crackit",
+        "password" : "*********",
+        "suburb_township" : "",
+        "title" : "Founder & Developer",
+        "uid" : "6lsmgEqC8Uep0Y9N8LNejIM5rXC2"
+      }
     }
   },
   "subFolders" : {
@@ -9436,6 +9558,14 @@
       "avatar" : "",
       "id" : "-M465knQNnRkGKHpnkFw",
       "name" : "Subjects' Guide",
+      "parentId" : "oyx8zzsd0zbjlg7cqvy5i"
+    },
+    "-M5aRRFye9I_1GTczOnF" : {
+      "avatar" : "",
+      "createdAt" : 1587635403591,
+      "description" : "For Notes assistance and tests or exams preparation.. ",
+      "id" : "-M5aRRFye9I_1GTczOnF",
+      "name" : "All Subjects Study Guide",
       "parentId" : "oyx8zzsd0zbjlg7cqvy5i"
     },
     "grade-11-subject-guid" : {
@@ -9490,6 +9620,21 @@
       "password" : "*********",
       "uid" : "YX6nFgkAE0bAH0iyyprR548ScvI3"
     },
+    "219034716stuukznacza" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fwjh8b74qmgd6aio9rel3te?alt=media&token=19854834-fc08-4f0b-9a9b-62ced7a839c3",
+      "city" : "Durban",
+      "createdAt" : 1586636854248,
+      "deviceId" : "ExponentPushToken[cg0RwvE1Gs-fiFEPFhpKrw]",
+      "email" : "219034716@stu.ukzn.ac.za",
+      "id" : "219034716@stu.ukzn.ac.za",
+      "isAdmin" : true,
+      "isStudent" : false,
+      "name" : "Nkosingiphile",
+      "password" : "*********",
+      "suburb_township" : "Glenmore ",
+      "title" : "Admin",
+      "uid" : "PIpRymM50zOoOWUC6ocE2tv6cSb2"
+    },
     "adlamini0416gmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -9543,10 +9688,25 @@
       "suburb_township" : "",
       "uid" : "MhLZRuhVFOXIAWMoP1eJYfVdRXT2"
     },
+    "amahlefocgmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fd79oiaorq7dwhozrorfdxk?alt=media&token=f071b636-13bb-4f8c-b3d0-b4f41e0020ed",
+      "city" : "Durban",
+      "createdAt" : 1588438872805,
+      "deviceId" : "ExponentPushToken[_pMH6xEFKtcXhXYg5WTOqS]",
+      "email" : "amahle.foc@gmail.com",
+      "id" : "amahle.foc@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Akayla",
+      "password" : "*********",
+      "suburb_township" : "Hammarsdale",
+      "uid" : "Ae0aTVQ7CwgtmfLFpK98WFVlJWu2"
+    },
     "amahlefundi94gmailcom" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2F00wz29g18wewk0brb9ilprs?alt=media&token=aeeb3ec1-39f7-46f4-83f6-6c55d0b28557",
       "city" : "Durban",
       "createdAt" : 1585490983604,
+      "deviceId" : "ExponentPushToken[FH9sIQHa1CPfUxMmOwM03g]",
       "email" : "Amahlefundi94@gmail.com",
       "id" : "amahlefundi94@gmail.com",
       "isAdmin" : false,
@@ -9555,6 +9715,20 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "b3Utv7GJQOZL2OPKfttSEY1mSUr2"
+    },
+    "amahlenomonde99gmailcom" : {
+      "avatar" : "",
+      "city" : "Hammarsdale",
+      "createdAt" : 1586527120842,
+      "deviceId" : "ExponentPushToken[5bNu1WCZKKvFPOAvPUJ8Lj]",
+      "email" : "amahlenomonde99@gmail.com",
+      "id" : "amahlenomonde99@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Nomonde",
+      "password" : "*********",
+      "suburb_township" : "Mophela",
+      "uid" : "dYI0TIL0Xgax1PssDb9FVlsGGPN2"
     },
     "amylindsay551gmailcom" : {
       "avatar" : "",
@@ -9645,6 +9819,34 @@
       "suburb_township" : "",
       "uid" : "jR1JAnci5nZxkUOOToB0Sx8bVuc2"
     },
+    "asandezikalala416gmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fvk0auefzyi3q7n27cvsbw?alt=media&token=caf75633-2491-42b5-bf27-4038231fa355",
+      "city" : "Ladysmith ",
+      "createdAt" : 1588033459469,
+      "deviceId" : "ExponentPushToken[Gd-euwHXJU7R0gxqgEkDzU]",
+      "email" : "asandezikalala416@gmail.com",
+      "id" : "asandezikalala416@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Asande Zikalala",
+      "password" : "*********",
+      "suburb_township" : "Township ",
+      "uid" : "G1p18WZlwQWsy4MbekTKQ0h9iHk2"
+    },
+    "asibongenkosingphilegmailcom" : {
+      "avatar" : "",
+      "city" : "Durban ",
+      "createdAt" : 1587396308770,
+      "deviceId" : "ExponentPushToken[MyKDMDPYjU26IS_wM9bDxV]",
+      "email" : "asibongenkosingphile@gmail.com",
+      "id" : "asibongenkosingphile@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Asibonge ",
+      "password" : "*********",
+      "suburb_township" : "New  Germany ",
+      "uid" : "HMj4gs52gAarBTPROyH2yP3EDnG2"
+    },
     "asmaaakram17gmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -9684,11 +9886,24 @@
       "password" : "*********",
       "uid" : "0xr83VAiI2XjLpCN2r6ZkihZUw23"
     },
+    "bacekecekza123gmailcom" : {
+      "avatar" : "",
+      "city" : "Pietermaritzburg",
+      "createdAt" : 1587655718910,
+      "email" : "bacekecekza123@gmail.com",
+      "id" : "bacekecekza123@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Celimpilo Chonco",
+      "password" : "*********",
+      "suburb_township" : "Newcastle",
+      "uid" : "we6diqor4hN7Iru7k6DucGspLhZ2"
+    },
     "bahlechonco97gmailcom" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2Fyz8c2iq7xeg50a9ktwv0fa?alt=media&token=d9692f7f-6567-45b8-81d0-6e07a8645ddd",
       "city" : "Durban",
       "createdAt" : 1585491218034,
-      "deviceId" : "ExponentPushToken[1j_InoN1aD1vUV8aYXaGul]",
+      "deviceId" : "ExponentPushToken[BdCJfkATyJkXBkXqUKBVOv]",
       "email" : "bahlechonco97@gmail.com",
       "id" : "bahlechonco97@gmail.com",
       "isAdmin" : true,
@@ -9755,6 +9970,7 @@
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2F47gh7cn2grh19kw18do6fm?alt=media&token=3a1582f9-6b15-4141-94bf-a9a9540e5042",
       "city" : "Durban",
       "createdAt" : 1585494725496,
+      "deviceId" : "ExponentPushToken[edq_h9D5OsnRfjSyMKV-DK]",
       "email" : "Bongumusaxasi@gmail.com",
       "id" : "bongumusaxasi@gmail.com",
       "isAdmin" : false,
@@ -9775,6 +9991,20 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "MrnbtsYTTeVLDspuIvZzgROZ6gQ2"
+    },
+    "buhlaluzoliswagmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fyplqzkud4jn64if6hb8ls?alt=media&token=e026a8fa-e941-4a89-95cb-801ae19a395a",
+      "city" : "Durban",
+      "createdAt" : 1588099988052,
+      "deviceId" : "ExponentPushToken[IWhEecE-hQIF4ukO-ePhVh]",
+      "email" : "buhlaluzoliswa@gmail.com",
+      "id" : "buhlaluzoliswa@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Zoliswa",
+      "password" : "*********",
+      "suburb_township" : "Mpumalanga township",
+      "uid" : "TjNQ4oCY6CTlWKNp535UMzSoDLL2"
     },
     "ceboluthuligmailcom" : {
       "avatar" : "",
@@ -9800,6 +10030,20 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "4vhISMjWovaOk496AgMWFfCgFz83"
+    },
+    "chiloanewellcomegmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fufpcjskr8wphijw0egktf?alt=media&token=968f2108-ed1c-48aa-a6f0-dc8f42354e0c",
+      "city" : "Acornhoek",
+      "createdAt" : 1588243300365,
+      "deviceId" : "ExponentPushToken[No3YK0J8ZsQUl3fh7HvwC5]",
+      "email" : "chiloanewellcome@gmail.com",
+      "id" : "chiloanewellcome@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Wellcome",
+      "password" : "*********",
+      "suburb_township" : "Greenvalley",
+      "uid" : "DoDNcd2jq2UqvJLe9l5VRupweQv1"
     },
     "cpheer00gmailcom" : {
       "avatar" : "",
@@ -9839,6 +10083,48 @@
       "suburb_township" : "",
       "uid" : "mIFKFABe1eZmWVJszPtz4pcRiBE3"
     },
+    "emceersa1gmailcom" : {
+      "avatar" : "",
+      "city" : "Richards bay",
+      "createdAt" : 1587679498579,
+      "deviceId" : "ExponentPushToken[IeX5frFWP1rrNnVmPVJw0t]",
+      "email" : "emceersa1@gmail.com",
+      "id" : "emceersa1@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Syanda mabaso",
+      "password" : "*********",
+      "suburb_township" : "Eskhawini",
+      "uid" : "LXXnQxwPJ3a6UBNfLF2ALtsaIWD2"
+    },
+    "enerstbongumusa5gmailcom" : {
+      "avatar" : "",
+      "city" : "Pinetown",
+      "createdAt" : 1588241357146,
+      "deviceId" : "ExponentPushToken[AGdJTbPAwz7osKB6hiH_hu]",
+      "email" : "enerstbongumusa5@gmail.com",
+      "id" : "enerstbongumusa5@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Nobuhle",
+      "password" : "*********",
+      "suburb_township" : "Durban",
+      "uid" : "7pLXTLi8G1aum093WTlaAAFLLIr1"
+    },
+    "epikaizomanganyigmailcom" : {
+      "avatar" : "",
+      "city" : "Polokwane",
+      "createdAt" : 1588076015859,
+      "deviceId" : "ExponentPushToken[VxVeMEJtpBh2COKAwrnDET]",
+      "email" : "epikaizomanganyi@gmail.com",
+      "id" : "epikaizomanganyi@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Bongani",
+      "password" : "*********",
+      "suburb_township" : "Elim",
+      "uid" : "FZMHlU8y2yceN04tzZ8v4jA3jh73"
+    },
     "faheemamanjee8gmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -9851,6 +10137,20 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "C3RUmSbtvBR3jzjt8xWJTMMHCxH2"
+    },
+    "faithsnegugu30gmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2F6leiuw0zyorw9xvbei97jd?alt=media&token=c0640d56-791f-4b58-8e1f-0d361c80bd15",
+      "city" : "Pongola",
+      "createdAt" : 1587644816204,
+      "deviceId" : "ExponentPushToken[Y-Ni4fIN4cUU30nLujALL8]",
+      "email" : "faithsnegugu30@gmail.com",
+      "id" : "faithsnegugu30@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Snegugu",
+      "password" : "*********",
+      "suburb_township" : "Madanyini",
+      "uid" : "X2NribyW8VTR0nPW41RnpEhgGTC2"
     },
     "fufu3305gmailcom" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2Fg8bhz5pkifal4gva71rd2c?alt=media&token=86755e10-17bf-43cc-9ffc-5c301ca47122",
@@ -9878,6 +10178,20 @@
       "password" : "*********",
       "suburb_township" : "Hammarsdale",
       "uid" : "oU8FDupAZXV92JXvRReUhpqP5Go2"
+    },
+    "gladnesstiyiselani118gmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fgdd4qher9d5poayf9gb3ne?alt=media&token=da2ef702-ba85-4496-bda9-20a6294b7a17",
+      "city" : "Polokwane",
+      "createdAt" : 1588550496393,
+      "deviceId" : "ExponentPushToken[5yVgqJAvmRBTB588OCQ104]",
+      "email" : "gladnesstiyiselani118@gmail.com",
+      "id" : "gladnesstiyiselani118@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Gladness",
+      "password" : "*********",
+      "suburb_township" : "Malamulele",
+      "uid" : "p7gIxpxe7vNcO71AAnbS9cKbZDO2"
     },
     "gumedemusabengmailcom" : {
       "avatar" : "",
@@ -9969,6 +10283,20 @@
       "suburb_township" : "",
       "uid" : "3zl8lS5r7Zf0o421jO7yPkXGwZm2"
     },
+    "jessicakhanyisilejkr04gmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2F8h1dyqqurjl2xgcb5iu8aa?alt=media&token=4129568a-7b85-437f-80a1-0247121d3f73",
+      "city" : "Johannesburg ",
+      "createdAt" : 1587888629699,
+      "deviceId" : "ExponentPushToken[AuyJbEJgGOtykXh49ENHxR]",
+      "email" : "jessica.khanyisilejkr04@gmail.com",
+      "id" : "jessica.khanyisilejkr04@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Jessica Malapela",
+      "password" : "*********",
+      "suburb_township" : "Benoni",
+      "uid" : "BZld9qrNQDOb4rWh3uFoebZ64wz1"
+    },
     "joemmonwagmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -10018,6 +10346,20 @@
       "name" : "Kamogelo Gwai",
       "password" : "*********",
       "uid" : "htf9S6G4rUYEhh87hc3p2qfn5yl1"
+    },
+    "karabokaydenscottgmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Flpbzzbdlmpif1v5gu7hfk?alt=media&token=c3ed75be-1885-4255-ab9f-fe9313009fc5",
+      "city" : "Polokwane",
+      "createdAt" : 1587657562408,
+      "deviceId" : "ExponentPushToken[Z4tESxA5vpLZNMRQgnf3x2]",
+      "email" : "KARABOKAYDENSCOTT@GMAIL.COM",
+      "id" : "karabokaydenscott@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Karabo Mathope (Kayden-Scott purple)",
+      "password" : "*********",
+      "suburb_township" : "Jane furse",
+      "uid" : "WItoQc7W5NO0a7eQPRWJ7nxosVc2"
     },
     "keletsom709gmailcom" : {
       "avatar" : "",
@@ -10069,6 +10411,33 @@
       "suburb_township" : "",
       "uid" : "TTQpfSQqIhYsz2Kto33fWO5CygF2"
     },
+    "khulekani98ntshingilagmailcom" : {
+      "avatar" : "",
+      "city" : "Durban ",
+      "createdAt" : 1587648518409,
+      "deviceId" : "ExponentPushToken[tbUZ7AIG8ZRFrbfBdyeP8E]",
+      "email" : "Khulekani98ntshingila@gmail.com",
+      "id" : "khulekani98ntshingila@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Wandile Ntshingila ",
+      "password" : "*********",
+      "suburb_township" : "KwaMashu ",
+      "uid" : "LCSZx9IKVQY0WMGYGB1uV97tJ4m1"
+    },
+    "khulekanikub909gmailcom" : {
+      "avatar" : "",
+      "city" : "Richards Bay ",
+      "createdAt" : 1586863909482,
+      "email" : "Khulekanikub909@gmail.com",
+      "id" : "khulekanikub909@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Khulekani kubheka ",
+      "password" : "*********",
+      "suburb_township" : "Meerensee ",
+      "uid" : "DyEOdzpUUDQxjTTtjgL0RLb1AxM2"
+    },
     "khwezikwandagmailcom" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2Fz66vtp1zf7slt3jbu5r94?alt=media&token=bd19e392-f600-4700-af79-c34ac729a2e0",
       "city" : "Durban",
@@ -10092,6 +10461,20 @@
       "name" : "Mbuso",
       "password" : "*********",
       "uid" : "zo9Fj14UaXSRH9jb50akMW6J9Ay1"
+    },
+    "komalan7gmailcom" : {
+      "avatar" : "",
+      "city" : "Durban ",
+      "createdAt" : 1586544544508,
+      "deviceId" : "ExponentPushToken[5Q6WdqKVMa1Z3-iFBPjD5V]",
+      "email" : "komalan7@gmail.com",
+      "id" : "komalan7@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Komalan naidoo ",
+      "password" : "*********",
+      "suburb_township" : "Isipingo ",
+      "uid" : "T3cnA02YW3Pnc5Sf5Alvt7q2AYu1"
     },
     "kuhlemtsharegmailcom" : {
       "avatar" : "",
@@ -10170,6 +10553,20 @@
       "password" : "*********",
       "uid" : "qq2uNB4WKkc51SJqkSyGeeyadwH2"
     },
+    "licioussmomogmailcom" : {
+      "avatar" : "",
+      "city" : "Durban",
+      "createdAt" : 1587678202504,
+      "deviceId" : "ExponentPushToken[MDP9RrPrnKG8ha0Cd8qcZa]",
+      "email" : "licioussmomo@gmail.com",
+      "id" : "licioussmomo@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Zukisa",
+      "password" : "*********",
+      "suburb_township" : "Hammarsdale",
+      "uid" : "pY9uwEtqQJNqHNh5wk4FOpo6pGl2"
+    },
     "lindozuma8gmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -10182,6 +10579,20 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "VY5yU1FKmybgF0Mivr4Hj5Nw2yh2"
+    },
+    "lisamaseti596gmailcom" : {
+      "avatar" : "",
+      "city" : "Port Elizabeth",
+      "createdAt" : 1587762807226,
+      "deviceId" : "ExponentPushToken[_CyXlfM97ENLVTN8gOFv-o]",
+      "email" : "lisamaseti596@gmail.com",
+      "id" : "lisamaseti596@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Lisa Maseti",
+      "password" : "*********",
+      "suburb_township" : "Motherwell",
+      "uid" : "jDPpSEfzo5OKj28eL2mb5Vu8W3P2"
     },
     "londiwehlophe44gmailcom" : {
       "avatar" : "",
@@ -10196,6 +10607,20 @@
       "suburb_township" : "",
       "uid" : "O9xnzFLrZ6hUd5L5dBH4K9vSCOr1"
     },
+    "lungynhlegmailcom" : {
+      "avatar" : "",
+      "city" : "Delmas",
+      "createdAt" : 1586517162362,
+      "deviceId" : "ExponentPushToken[ifTyuZHE7QyYR3Y4O2A05K]",
+      "email" : "lungynhle@gmail.com",
+      "id" : "lungynhle@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Khabs",
+      "password" : "*********",
+      "suburb_township" : "Delmas",
+      "uid" : "1HFj4PaO4GbJLwq9YS0Ax1x9yaw1"
+    },
     "luthandotieedo211gmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -10207,6 +10632,34 @@
       "name" : "Luthando",
       "password" : "*********",
       "uid" : "ab7YJfGkgTbpbctNoGarqwE2gZP2"
+    },
+    "luyalilly55gmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Producton%2Fimages%2Fsignup%2F8wievjgia5fu0nmcec6lrg?alt=media&token=a92c5c39-9b97-4725-94f2-7c96075f561a",
+      "city" : "Durban",
+      "createdAt" : 1586544656833,
+      "deviceId" : "ExponentPushToken[e1oxvQGoZF182vtVC-7OQN]",
+      "email" : "Luyalilly55@gmail.com",
+      "id" : "luyalilly55@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Luyanda ",
+      "password" : "*********",
+      "suburb_township" : "Nazareth",
+      "uid" : "NeUSwURGsGWWoEBfTCRnsCQSh6I3"
+    },
+    "luyandasamkelo83gmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fp4s0yf2ex0ohefnqbrn8g9?alt=media&token=3ff0d9b8-a387-4c12-bdef-5956628b88a4",
+      "city" : "Hlabisa",
+      "createdAt" : 1587945134098,
+      "deviceId" : "ExponentPushToken[IJ4RQDLvCydR-4s1_lF8R_]",
+      "email" : "luyandasamkelo83@gmail.com",
+      "id" : "luyandasamkelo83@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Luyanda",
+      "password" : "*********",
+      "suburb_township" : "Mpembeni",
+      "uid" : "91QROLvK48OcHrGimg20BxfZ4Wa2"
     },
     "luyolodouw38gmailcom" : {
       "avatar" : "",
@@ -10246,6 +10699,20 @@
       "password" : "*********",
       "uid" : "OD7afZY4ENVAexAj4fm7fBtHZQw1"
     },
+    "magasenghappygmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fbwe2d9mt0purv06413j8ar?alt=media&token=a10012aa-82e9-4391-b902-3a093635a1c4",
+      "city" : "Apel",
+      "createdAt" : 1588556165754,
+      "deviceId" : "ExponentPushToken[zyKujGDwTFgXMmr45lIsgY]",
+      "email" : "Magasenghappy@gmail.com",
+      "id" : "magasenghappy@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Happiness",
+      "password" : "*********",
+      "suburb_township" : "Township",
+      "uid" : "G1t7dMKJSPe7ya1ZqWu9C5efY552"
+    },
     "magobodimandygmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -10270,6 +10737,34 @@
       "password" : "*********",
       "uid" : "8nXs64vXtMSh1hZ6hBEJykZTJbm1"
     },
+    "majolaandiswagmailcom" : {
+      "avatar" : "",
+      "city" : "Durban",
+      "createdAt" : 1587016874828,
+      "deviceId" : "ExponentPushToken[2D83BxNS5FRsFT78tUmWGT]",
+      "email" : "Majolaandiswa@gmail.com",
+      "id" : "majolaandiswa@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Andiswa majola",
+      "password" : "*********",
+      "suburb_township" : "Hammasdale",
+      "uid" : "kE5hU1Ua1vbhJTxkD95ZFN2tjtz1"
+    },
+    "makhabeniludwegmailcom" : {
+      "avatar" : "",
+      "city" : "Khayelitsha ",
+      "createdAt" : 1587471744547,
+      "deviceId" : "ExponentPushToken[FSy0ZYCGyxgNJyvUGg6Jnl]",
+      "email" : "Makhabeniludwe@gmail.com",
+      "id" : "makhabeniludwe@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Ludwe Anthony Makhabeni ",
+      "password" : "*********",
+      "suburb_township" : "Khayelitsha",
+      "uid" : "P8L458kq9gSp0oBnoiuotKU2seb2"
+    },
     "makhosidlamini45gmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -10282,6 +10777,20 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "0dTY9tRCJUZHWu3KkK15w21X2Rn1"
+    },
+    "makhosinidelanigmailcom" : {
+      "avatar" : "",
+      "city" : "Richards bay",
+      "createdAt" : 1587651505570,
+      "deviceId" : "ExponentPushToken[CawvncI9AFtW_Fh3p0AWH3]",
+      "email" : "makhosinidelani@gmail.com",
+      "id" : "makhosinidelani@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Makhosini",
+      "password" : "*********",
+      "suburb_township" : "Nseleni",
+      "uid" : "rAdPrjHAa3MBOYznw4bBJDSqcsq2"
     },
     "malickjappiegmailcom" : {
       "avatar" : "",
@@ -10321,6 +10830,20 @@
       "password" : "*********",
       "uid" : "0yyR0inKcGepDNirtAJsapHHwx82"
     },
+    "mapulaphasuanegmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fzns8pceff6e84qdnh19f6k?alt=media&token=1d922530-df98-46c2-8ac9-88893afd12e6",
+      "city" : "Waterberg",
+      "createdAt" : 1587714422011,
+      "deviceId" : "ExponentPushToken[BETQ0ZEqhScLUf2sWUvvzN]",
+      "email" : "mapulaphasuane@gmail.com",
+      "id" : "mapulaphasuane@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Mapule",
+      "password" : "*********",
+      "suburb_township" : "Bela Bela ",
+      "uid" : "AkMvZX8WKcTOTXI3ZnygmHoFyF62"
+    },
     "marifizaklelogmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -10358,6 +10881,34 @@
       "name" : "Mpho Buthelezi",
       "password" : "*********",
       "uid" : "7QxcQB9bqwdeN5RYPNcbWrWsqhV2"
+    },
+    "matlailacecil8gmailcom" : {
+      "avatar" : "",
+      "city" : "Limpopo",
+      "createdAt" : 1588246891104,
+      "deviceId" : "ExponentPushToken[jDnH8XHL6AocFgrgshn_cv]",
+      "email" : "matlailacecil8@gmail.com",
+      "id" : "matlailacecil8@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "MATLAILA Cecil ",
+      "password" : "*********",
+      "suburb_township" : "Mathibela",
+      "uid" : "hidWOgSvKZhgRlYYl3oj3EXkHK33"
+    },
+    "mavimbelazodumogmailcom" : {
+      "avatar" : "",
+      "city" : "ESHOWE ",
+      "createdAt" : 1587792857652,
+      "deviceId" : "ExponentPushToken[MDb6VZJACVuBk0SpV7zu7k]",
+      "email" : "mavimbelazodumo@gmail.com",
+      "id" : "mavimbelazodumo@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Zodumo ",
+      "password" : "*********",
+      "suburb_township" : "ESHOWE ",
+      "uid" : "GUEwC8sobwV6oMH4UDv34n1cCBE3"
     },
     "mayyakhonagmailcom" : {
       "avatar" : "",
@@ -10423,6 +10974,20 @@
       "suburb_township" : "",
       "uid" : "XBgUsHQWZ1McDG7Ry1wRN8RT84K3"
     },
+    "melissanhlekogmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Producton%2Fimages%2Fsignup%2Fwj4j8h19oyphi194eqh9?alt=media&token=16db10a7-5880-4932-b801-d90e92f446f0",
+      "city" : "KwaZulu",
+      "createdAt" : 1586523403536,
+      "deviceId" : "ExponentPushToken[sqUSacAC_1HNjG4x0QNIwM]",
+      "email" : "Melissanhleko@gmail.com",
+      "id" : "melissanhleko@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Melissa",
+      "password" : "*********",
+      "suburb_township" : "Hluhluwe",
+      "uid" : "jB3zsQ2U93S8fMNXmRRKkMIHiJc2"
+    },
     "mkhizenoluthando14gmailcom" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Producton%2Fimages%2Fsignup%2Ffmc414hzp1fit9stdpj6o?alt=media&token=758cca0e-99de-4bd0-bf6b-dd74b4732f90",
       "city" : "Durban ",
@@ -10437,11 +11002,25 @@
       "suburb_township" : "Hammarsdale ",
       "uid" : "jhfJ9TtnLaeK7Rbx7RKlaNcMttu2"
     },
+    "mkhizesiziphiwe93gmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fdl92yrdp08b0a1bql0k06df?alt=media&token=a3a9b449-f159-40e1-a2ee-e87ea087b56e",
+      "city" : "Durban",
+      "createdAt" : 1587729879811,
+      "deviceId" : "ExponentPushToken[LWN_H5I2QLrnFN05fDIXMG]",
+      "email" : "mkhizesiziphiwe93@gmail.com",
+      "id" : "mkhizesiziphiwe93@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Siziphiwe",
+      "password" : "*********",
+      "suburb_township" : "Scottburgh",
+      "uid" : "8fNJleNRZPaHWir55UIEFDY4JBs2"
+    },
     "mkhskh003myuctacza" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Development%2Fimages%2Fqvu4kh1swicoj04rb0vbcr?alt=media&token=d4a152ea-24db-487f-8a08-c1c494b724ba",
       "city" : "Cape Town ",
       "createdAt" : 1585469893332,
-      "deviceId" : "ExponentPushToken[hmrwsXJoMIz7CiMYCy_4pW]",
+      "deviceId" : "ExponentPushToken[djMsmJMC0h0s5RCJX1Y4aY]",
       "email" : "Mkhskh003@myuct.ac.za",
       "id" : "mkhskh003@myuct.ac.za",
       "isAdmin" : true,
@@ -10465,6 +11044,47 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "iYi2je1wdSWVJ1MlUE8PyPVJkKD2"
+    },
+    "mmcdarlingtongmailcom" : {
+      "avatar" : "",
+      "city" : "Thohoyandou",
+      "createdAt" : 1587770294530,
+      "deviceId" : "ExponentPushToken[UPYc2bBwEPyzIrNMnenOwX]",
+      "email" : "mmcdarlington@gmail.com",
+      "id" : "mmcdarlington@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Musa",
+      "password" : "*********",
+      "suburb_township" : "Malamulele",
+      "uid" : "PuRUcFovAoPgsK8CmoeA3soO8OY2"
+    },
+    "mmelesekhagmailcom" : {
+      "avatar" : "",
+      "city" : "Polokwa ",
+      "createdAt" : 1587651857033,
+      "deviceId" : "ExponentPushToken[f_rxbjHtVHavQ2zogjOH6-]",
+      "email" : "mmelesekha@gmail.com",
+      "id" : "mmelesekha@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Mmele ",
+      "password" : "*********",
+      "suburb_township" : "Mashashane",
+      "uid" : "jw96B9uj55W25mzJy8ppslIP40X2"
+    },
+    "mofokengmakamane2003gmailcom" : {
+      "avatar" : "",
+      "city" : "Free State",
+      "createdAt" : 1587834261625,
+      "email" : "mofokengmakamane2003@gmail.com",
+      "id" : "mofokengmakamane2003@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Thabang",
+      "password" : "*********",
+      "suburb_township" : "Qwaqwa",
+      "uid" : "cHyPz7nxv0ZpMZO8JqhNx2VlNFk1"
     },
     "mokobori2togmailcom" : {
       "avatar" : "",
@@ -10529,6 +11149,20 @@
       "name" : "Moses Luthuli",
       "password" : "*********",
       "uid" : "TfOMI2WElmYyRdRjamdL4kGBt722"
+    },
+    "msizizondi0001gmailcom" : {
+      "avatar" : "",
+      "city" : "Johannesburg ",
+      "createdAt" : 1587636759048,
+      "deviceId" : "ExponentPushToken[37TdU5A9QTYbzzZRmFnA7h]",
+      "email" : "msizizondi0001@gmail.com",
+      "id" : "msizizondi0001@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Msizi",
+      "password" : "*********",
+      "suburb_township" : "Parktown ",
+      "uid" : "ZRem4KuzybhvWXS8FWMM3Msiq1r2"
     },
     "mthourbieceegmailcom" : {
       "avatar" : "",
@@ -10622,12 +11256,14 @@
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2Fyxtcz373elfxkmcl7ih1xb?alt=media&token=11a75aa3-889e-4c63-b56b-7ef028487e74",
       "city" : "Durban",
       "createdAt" : 1585475038256,
+      "deviceId" : "ExponentPushToken[yL7OAOIVnlEfYRT7upNlFR]",
       "email" : "ngibasphesihle@gmail.com",
       "id" : "ngibasphesihle@gmail.com",
-      "isAdmin" : false,
-      "isStudent" : true,
+      "isAdmin" : true,
+      "isStudent" : false,
       "name" : "Sphesihle",
       "password" : "*********",
+      "title" : "Admin",
       "uid" : "FrFCoMFaeLOAOYiRDfflcOJO7Op2"
     },
     "ngubanenomusa8gmailcom" : {
@@ -10654,6 +11290,33 @@
       "password" : "*********",
       "uid" : "DhZZRBWhz2coi3OaZhslujJmhYw1"
     },
+    "nhlayisoduncan384gmalcom" : {
+      "avatar" : "",
+      "city" : "Polokwane",
+      "createdAt" : 1587862582511,
+      "deviceId" : "ExponentPushToken[-foe4PMOTZ93EYVklYShPo]",
+      "email" : "Nhlayisoduncan384@gmal.com",
+      "id" : "nhlayisoduncan384@gmal.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Nhlayiso",
+      "password" : "*********",
+      "suburb_township" : "Elim",
+      "uid" : "u6w27fGRrOUWbpnqoQegNTdH0n13"
+    },
+    "nhlokzen777gmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fkg26phxef0fput8f3ecyo?alt=media&token=43f7c586-9dbc-477a-b54b-7b640f82e043",
+      "city" : "Durban",
+      "createdAt" : 1586988610888,
+      "email" : "nhlokzen777@gmail.com",
+      "id" : "nhlokzen777@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Nhlonipho ",
+      "password" : "*********",
+      "suburb_township" : "New west",
+      "uid" : "LzSDLTojmOVG0MJUorhBTVFTrj32"
+    },
     "nikkiparsotamgmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -10666,6 +11329,20 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "EOVKPOpOwUOcXQJNFKKcQzfHREk1"
+    },
+    "nkambulecelestegmailcom" : {
+      "avatar" : "",
+      "city" : "Limpopo",
+      "createdAt" : 1587721600956,
+      "deviceId" : "ExponentPushToken[cBnr5GIgwPCIG8KuTjUEAY]",
+      "email" : "nkambuleceleste@gmail.com",
+      "id" : "nkambuleceleste@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Celeste Nkambule",
+      "password" : "*********",
+      "suburb_township" : "Burgersfort ",
+      "uid" : "gNTAmPJkLlNE9MdsEYHj9vwyOIp2"
     },
     "nkosingiphilekarlkhuzwayo11gmailcom" : {
       "avatar" : "",
@@ -10684,6 +11361,7 @@
       "avatar" : "",
       "city" : "Durban",
       "createdAt" : 1585485987809,
+      "deviceId" : "ExponentPushToken[L6rUr0E_2LZV5oeAyYid6C]",
       "email" : "nkweyana52@gmail.com",
       "id" : "nkweyana52@gmail.com",
       "isAdmin" : false,
@@ -10705,6 +11383,20 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "Hxw7Ym6hHcNQxEXbIYlP3tH3FY12"
+    },
+    "nodoloyolandagmailcom" : {
+      "avatar" : "",
+      "city" : "Cape Town ",
+      "createdAt" : 1587986797429,
+      "deviceId" : "ExponentPushToken[f72hKbBBBiOUdt5-x2yXYL]",
+      "email" : "nodoloyolanda@gmail.com",
+      "id" : "nodoloyolanda@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Yolanda Nodolo ",
+      "password" : "*********",
+      "suburb_township" : "Harare",
+      "uid" : "jDhWKMCFk5RgsV8FtkSNdiofJcX2"
     },
     "nokukhanyaleeratogmailcom" : {
       "avatar" : "",
@@ -10743,6 +11435,20 @@
       "suburb_township" : "",
       "uid" : "5lmmyTYTLsaN4P1PQi6TZBav8Mg1"
     },
+    "noluthandongcobo782gmailcom" : {
+      "avatar" : "",
+      "city" : "Hammersdale ",
+      "createdAt" : 1587590132749,
+      "deviceId" : "ExponentPushToken[feCBPdFEtr2LdRO_lcaivd]",
+      "email" : "Noluthandongcobo782@gmail.com",
+      "id" : "noluthandongcobo782@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Noluthando",
+      "password" : "*********",
+      "suburb_township" : "Mpumalanga ",
+      "uid" : "cBevufoI5yQrTDXl40Y3tzff8r73"
+    },
     "nomangaleka2003gmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -10754,6 +11460,20 @@
       "name" : "nomathamsanqa ngaleka",
       "password" : "*********",
       "uid" : "zxY3iPoVcNU28HyQ1KK3O5sTtR83"
+    },
+    "nombulelomchunu77gmailcom" : {
+      "avatar" : "",
+      "city" : "Durban",
+      "createdAt" : 1588277764267,
+      "deviceId" : "ExponentPushToken[Y97HMPJvN_GGYbR8Xkp1KH]",
+      "email" : "nombulelo.mchunu77@gmail.com",
+      "id" : "nombulelo.mchunu77@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Nombulelo",
+      "password" : "*********",
+      "suburb_township" : "Hammarsdale",
+      "uid" : "qJ5wittrIeXRqQmQN9AzSFWXKDu1"
     },
     "nompilontuli06gmailcom" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2Fcllp3agnunrr6vmhy3t8qm?alt=media&token=dfd9402c-4737-4ae1-aafc-9cfbb96835fc",
@@ -10767,6 +11487,20 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "8gHF5gNrfch9zJWToVPGH7yaiuj2"
+    },
+    "nontokozonkosi308gmailcom" : {
+      "avatar" : "",
+      "city" : "Ladysmith ",
+      "createdAt" : 1586596129688,
+      "deviceId" : "ExponentPushToken[6HLvlkB2lHm5Xb3RNSn4eA]",
+      "email" : "NontokozoNkosi308@gmail.com",
+      "id" : "nontokozonkosi308@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Fanele Magudulela",
+      "password" : "*********",
+      "suburb_township" : "eZakheni ",
+      "uid" : "6yYA3JkC0BQTb8fEl78rier9jew2"
     },
     "nosiphowendy20gmailcom" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2Ftuscvggex1toe9o9u79jqc?alt=media&token=a7716669-325b-4670-9648-274371a99118",
@@ -10829,6 +11563,20 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "eioXTfpJqydIQYumuB5zRU8zcOF3"
+    },
+    "ntukx08gmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fxkotx3gwv22dnyt9jpwc2?alt=media&token=1cb472e2-fe49-408f-9aef-a8607a6c5893",
+      "city" : "Hlabisa",
+      "createdAt" : 1587653436801,
+      "deviceId" : "ExponentPushToken[DeUAnGCsl7fVEDbi82_tPl]",
+      "email" : "Ntukx08@gmail.com",
+      "id" : "ntukx08@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Celimpilo",
+      "password" : "*********",
+      "suburb_township" : "Hlabisa",
+      "uid" : "AWiLBjGH6ENSZvK2kSW9cZcDdo23"
     },
     "owenkosi321gmailcom" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2F65mqb0s79034z7jb089yje?alt=media&token=3decf2f5-cac9-4edc-9a4e-1e7c1e2a8611",
@@ -10894,6 +11642,20 @@
       "password" : "*********",
       "uid" : "J0mFdL4RB0fLhqH9WaMRXMLLRkQ2"
     },
+    "phililenomfundo61gmailcom" : {
+      "avatar" : "",
+      "city" : "Eshowe ",
+      "createdAt" : 1587686814210,
+      "deviceId" : "ExponentPushToken[UwwqK0CAWcii5_tR2Ev7ev]",
+      "email" : "phililenomfundo61@gmail.com",
+      "id" : "phililenomfundo61@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Philile",
+      "password" : "*********",
+      "suburb_township" : "Eshowe",
+      "uid" : "gs7r9fAbDkQcOpjzhi81wMQbpK92"
+    },
     "pinkfikisigmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -10931,6 +11693,19 @@
       "suburb_township" : "",
       "uid" : "glUMmNWAB7hZi9VNkZXmslDxt2B2"
     },
+    "qobongwanalisakhanyagmailcom" : {
+      "avatar" : "",
+      "city" : "Cape Town",
+      "createdAt" : 1587672489788,
+      "email" : "qobongwanalisakhanya@gmail.com",
+      "id" : "qobongwanalisakhanya@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Lisakhanya ",
+      "password" : "*********",
+      "suburb_township" : "Kraaifontein ",
+      "uid" : "nanqLewMUjdWrrnlkKWlyuLg9OJ3"
+    },
     "reddymdwsgovza" : {
       "avatar" : "",
       "city" : "Durban",
@@ -10958,6 +11733,20 @@
       "title" : "Admin",
       "uid" : "8aYGzRyv6lMP4WwTqWWvjNsYnqZ2"
     },
+    "rolivhuwaphidzaroliegmailcom" : {
+      "avatar" : "",
+      "city" : "Thohoyandou",
+      "createdAt" : 1587781363779,
+      "deviceId" : "ExponentPushToken[cpWC_PNN69SjW0nMLgMd-J]",
+      "email" : "rolivhuwaphidzarolie@gmail.com",
+      "id" : "rolivhuwaphidzarolie@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Rolivhuwa phidza",
+      "password" : "*********",
+      "suburb_township" : "Makhado",
+      "uid" : "0zkWiyD7T7Mpj2mpYoI5TdwmI3e2"
+    },
     "rumaanahggmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -10970,6 +11759,34 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "k85yEijjNfSBSuX7Aby4rCVbI862"
+    },
+    "sabelomkhize700gmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Producton%2Fimages%2Fsignup%2F0po2tygvdndgxu8enfajf1?alt=media&token=0596e3e4-de3b-4b5d-a69e-3c2b9e9fcdfa",
+      "city" : "Durban",
+      "createdAt" : 1588280955741,
+      "deviceId" : "ExponentPushToken[N3tXKCGLf8-Jy4fCpONY8F]",
+      "email" : "sabelomkhize700@gmail.com",
+      "id" : "sabelomkhize700@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Sabelo Mkhize",
+      "password" : "*********",
+      "suburb_township" : "Hammarsdale",
+      "uid" : "2BHKjzLBvCYkwIEtM0Roz8eKJl03"
+    },
+    "samkelisiwesamke81gmailcom" : {
+      "avatar" : "",
+      "city" : "Hammarsdale ",
+      "createdAt" : 1587726355771,
+      "deviceId" : "ExponentPushToken[8fVGa6Ijs0GzXtv2v6mtmf]",
+      "email" : "samkelisiwesamke81@gmail.com",
+      "id" : "samkelisiwesamke81@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Samkelisiwe ",
+      "password" : "*********",
+      "suburb_township" : "Mpumalanga township",
+      "uid" : "EwiKjJEmjgaIxGKhwMzQiNnhKbv1"
     },
     "samrespectedgmailcom" : {
       "avatar" : "",
@@ -11007,6 +11824,19 @@
       "name" : "Blessed ",
       "password" : "*********",
       "uid" : "mPlKQ6Wl4Aam2Dx6BGAKbRzK7xP2"
+    },
+    "sbongakonkeanele5gmailcom" : {
+      "avatar" : "",
+      "city" : "Mpumalanga",
+      "createdAt" : 1586970535925,
+      "email" : "sbongakonkeanele5@gmail.com",
+      "id" : "sbongakonkeanele5@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Sbongakonke",
+      "password" : "*********",
+      "suburb_township" : "Hammarsdal",
+      "uid" : "l72EuHp2EGcFP7n7ELQ66LNlLzE2"
     },
     "senamilehndlelagmailcom" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2Fsz98i9aulo8t896dpnlom?alt=media&token=a5056729-5778-412a-833e-cea945e74cac",
@@ -11110,6 +11940,34 @@
       "password" : "*********",
       "uid" : "TNTy41lRgBdwsFP07v6pyAUlpBz1"
     },
+    "sibusisiwejamagmailcoza" : {
+      "avatar" : "",
+      "city" : "Umzimkulu",
+      "createdAt" : 1588366031064,
+      "deviceId" : "ExponentPushToken[hEIj5GEL3aSQC0Dl_rKqr3]",
+      "email" : "sibusisiweJama@gmail.co.za",
+      "id" : "sibusisiwejama@gmail.co.za",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Sibusisiwe",
+      "password" : "*********",
+      "suburb_township" : "Umzimkulu",
+      "uid" : "rJ3db92AGAaNcrEOxRFcTOElkiL2"
+    },
+    "sicebisokhayelihlegmailcom" : {
+      "avatar" : "",
+      "city" : "Durban",
+      "createdAt" : 1587647410819,
+      "deviceId" : "ExponentPushToken[93t_hzEp-CZmfdCT0tqh8w]",
+      "email" : "Sicebisokhayelihle@gmail.com",
+      "id" : "sicebisokhayelihle@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Focus",
+      "password" : "*********",
+      "suburb_township" : "Balito",
+      "uid" : "6fFKqeSFq3fI8LcsggAbjiL0e9y2"
+    },
     "sihleallenmgmailcom" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2Ftt9m9r7kcznsygg5dkkqor?alt=media&token=e389d6a0-31ae-4501-84e0-59ee98fec69a",
       "city" : "Durban",
@@ -11146,6 +12004,20 @@
       "name" : "Simphiwe",
       "password" : "*********",
       "uid" : "ckjci6en1xXVyKMpe3qzOTp8Q9F3"
+    },
+    "sinikiwengubane4544gmailcom" : {
+      "avatar" : "",
+      "city" : "Durban ",
+      "createdAt" : 1587585819362,
+      "deviceId" : "ExponentPushToken[G9Xc5JMo4uH8SrOB5mPRn_]",
+      "email" : "sinikiwengubane4544@Gmail.com",
+      "id" : "sinikiwengubane4544@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Sinikiwe ",
+      "password" : "*********",
+      "suburb_township" : "Township ",
+      "uid" : "Hv862uj6iGX0QwzM6Cc1bWEr0Ix1"
     },
     "siphesihletemplemangmailcom" : {
       "avatar" : "",
@@ -11259,6 +12131,20 @@
       "suburb_township" : "",
       "uid" : "n5XsadmbGygE0PMYEyblcYNQVFy2"
     },
+    "sthabilenyawo54gmailcom" : {
+      "avatar" : "",
+      "city" : "Mtubatuba",
+      "createdAt" : 1586531345418,
+      "deviceId" : "ExponentPushToken[DB5ABpOR8tWLAP7VqNJr_P]",
+      "email" : "sthabilenyawo54@gmail.com",
+      "id" : "sthabilenyawo54@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Sithabile",
+      "password" : "*********",
+      "suburb_township" : "Nkodibe",
+      "uid" : "iu1kfa3VpJM21Hkme4Sx01gXjdG3"
+    },
     "sthesthegmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -11284,6 +12170,19 @@
       "password" : "*********",
       "uid" : "tMrbA87h1QazMgqoCSXzCTrH1Cl2"
     },
+    "stylekid0gmailcom" : {
+      "avatar" : "",
+      "city" : "Californi",
+      "createdAt" : 1587206442633,
+      "email" : "Stylekid0@gmail.com",
+      "id" : "stylekid0@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "V",
+      "password" : "*********",
+      "suburb_township" : "La",
+      "uid" : "HGhagBO0FdVZT9uznz8priUXMsl2"
+    },
     "suzannefouchegmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -11301,6 +12200,7 @@
       "avatar" : "",
       "city" : "Durban",
       "createdAt" : 1585484103369,
+      "deviceId" : "ExponentPushToken[Pop6CUCHQr682FXRRW8nZA]",
       "email" : "Syandazikode@gmail.com",
       "id" : "syandazikode@gmail.com",
       "isAdmin" : false,
@@ -11322,6 +12222,19 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "nzWsiK1ZmWUcBkk8Dipi5YuUxt13"
+    },
+    "thabisilencube70gmailcom" : {
+      "avatar" : "",
+      "city" : "Durban ",
+      "createdAt" : 1587925787361,
+      "email" : "Thabisilencube70@gmail.com",
+      "id" : "thabisilencube70@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Nonhlanhla ",
+      "password" : "*********",
+      "suburb_township" : "Hammarsdale ",
+      "uid" : "sWav6WUHFQecDDTokMDYuVrejnr1"
     },
     "thabisolesleychonco10gmailcom" : {
       "avatar" : "",
@@ -11361,6 +12274,34 @@
       "password" : "*********",
       "uid" : "uJ55Fk42KNXbU3fAuDQNexrL0Ns1"
     },
+    "thathothithogmailcom" : {
+      "avatar" : "",
+      "city" : "Mpumalanga",
+      "createdAt" : 1587661576920,
+      "deviceId" : "ExponentPushToken[2IqLkOMC4U4UFJQpZz-mL-]",
+      "email" : "Thathothitho@gmail.com",
+      "id" : "thathothitho@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Cludey",
+      "password" : "*********",
+      "suburb_township" : "Suburb",
+      "uid" : "Jwv8UnUxakgLXkpB2IagKVlY6JC3"
+    },
+    "thatoisaac20gmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fi1stqc4mcmq1t7xhoyhcig?alt=media&token=5d203bb6-904c-470e-9aaa-562b5f535656",
+      "city" : "Hammanskraal ",
+      "createdAt" : 1588451912395,
+      "deviceId" : "ExponentPushToken[My8zNhMprzAiPTz-FnzluF]",
+      "email" : "thatoisaac20@gmail.com",
+      "id" : "thatoisaac20@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "THATO ISAAC",
+      "password" : "*********",
+      "suburb_township" : "Ramotse ",
+      "uid" : "dlF0sjpy7VgOI7dGdcmTgr3pwH12"
+    },
     "theecaptain603gmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -11373,6 +12314,20 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "o1hRrfrNVaYhE760CtNYYDdWSVo1"
+    },
+    "thembaskosana764gmailcom" : {
+      "avatar" : "",
+      "city" : "Pretoria",
+      "createdAt" : 1587595354732,
+      "deviceId" : "ExponentPushToken[41HzbJIg9v-gfl59HnKrdl]",
+      "email" : "thembaskosana764@gmail.com",
+      "id" : "thembaskosana764@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Themba",
+      "password" : "*********",
+      "suburb_township" : "Kwagga fointen",
+      "uid" : "zPiJB5531MgEd69nx2X1AhIEMJf1"
     },
     "thobekahlongsgmailcom" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2Fr916y3bgwusc8dxc7gfrvi?alt=media&token=8f612160-6ca4-4053-ae39-73e72c6043fd",
@@ -11402,6 +12357,7 @@
       "avatar" : "",
       "city" : "Joburg",
       "createdAt" : 1585579255106,
+      "deviceId" : "ExponentPushToken[OnDdRPBPGaegy4pf-VWODR]",
       "email" : "Thuso.bulala@gmail.com",
       "id" : "thuso.bulala@gmail.com",
       "isAdmin" : false,
@@ -11423,6 +12379,34 @@
       "password" : "*********",
       "suburb_township" : "Hammarsdale",
       "uid" : "sHfJg4Mj7FXQ6AM3yc2patll45i2"
+    },
+    "titusmncube99gmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fypd5hdklmgj2o1wnyd3zd5?alt=media&token=fd7cd215-54cf-496f-aaef-373943e7aa9d",
+      "city" : "Nhlazeni",
+      "createdAt" : 1587934223819,
+      "deviceId" : "ExponentPushToken[mP2vKiGOEnZxP4crTAMv1Q]",
+      "email" : "titusmncube99@gmail.com",
+      "id" : "titusmncube99@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Immanuel",
+      "password" : "*********",
+      "suburb_township" : "Elukwatini",
+      "uid" : "GPvi0PQMAHT4x7RgdXshNeMymtD2"
+    },
+    "tsb4aphezohgmailcom" : {
+      "avatar" : "",
+      "city" : "Vryheid ",
+      "createdAt" : 1586522053096,
+      "deviceId" : "ExponentPushToken[H9PG-4BFRE519jouliYemm]",
+      "email" : "tsb4aphezoh@gmail.com",
+      "id" : "tsb4aphezoh@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Thuli",
+      "password" : "*********",
+      "suburb_township" : "Vryheid ",
+      "uid" : "SBwHuZ5kk4Vlb0CUgKfuySyq9qE3"
     },
     "tseekasiphegmailcom" : {
       "avatar" : "",
@@ -11447,6 +12431,20 @@
       "name" : "Tebogo Cynthia",
       "password" : "*********",
       "uid" : "JD0yHH0WI7Ueb00BsWWPnpQkEgg1"
+    },
+    "tumisosetaegmailcom" : {
+      "avatar" : "",
+      "city" : "Mahikeng",
+      "createdAt" : 1588340407564,
+      "deviceId" : "ExponentPushToken[of4E65N0i0cjGyz2q0oh8D]",
+      "email" : "tumisosetae@gmail.com",
+      "id" : "tumisosetae@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Tumiso Setae ",
+      "password" : "*********",
+      "suburb_township" : "Vryburg ",
+      "uid" : "3lLY8ENnB1OZg4w3w8ZqUulUnM13"
     },
     "tyrallhenninggmailcom" : {
       "avatar" : "",
@@ -11486,6 +12484,34 @@
       "suburb_township" : "",
       "uid" : "0qt9LKfJnvZuqJiPNg0izV5AhqD2"
     },
+    "wellcomechiloane24gmailcom" : {
+      "avatar" : "",
+      "city" : "Acornhoek",
+      "createdAt" : 1588241993967,
+      "deviceId" : "ExponentPushToken[No3YK0J8ZsQUl3fh7HvwC5]",
+      "email" : "wellcomechiloane24@gmail.com",
+      "id" : "wellcomechiloane24@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Wellcome ",
+      "password" : "*********",
+      "suburb_township" : "Acornhoek",
+      "uid" : "EgZRh55bnxchGEuGEEW5GXToT6x1"
+    },
+    "withtutoronlinegmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2F6nm56qc8w493euj0vvzws7?alt=media&token=b1b22de2-1bb9-4de8-978a-39ba8f867cee",
+      "city" : "Durban",
+      "createdAt" : 1586717904562,
+      "deviceId" : "ExponentPushToken[BEF0G-BDSWIU2JU5f1ZVjL]",
+      "email" : "withtutoronline@gmail.com",
+      "id" : "withtutoronline@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "With Tutor Online",
+      "password" : "*********",
+      "suburb_township" : "Hammarsdale",
+      "uid" : "KdXg8IRkDiRCnBJr45q3eYt29Ow1"
+    },
     "xolaniiyahoocom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -11497,6 +12523,20 @@
       "name" : "XolaniM",
       "password" : "*********",
       "uid" : "w1pSD0xNj2NCDRaXlumnLxrx8X22"
+    },
+    "xuluanele72gmailcom" : {
+      "avatar" : "",
+      "city" : "Durban",
+      "createdAt" : 1587646875072,
+      "deviceId" : "ExponentPushToken[y868vuE2QxCL7DknjOU-5k]",
+      "email" : "xuluanele72@gmail.com",
+      "id" : "xuluanele72@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Anele",
+      "password" : "*********",
+      "suburb_township" : "Hammarsdale ",
+      "uid" : "4autnkdEOZfYpe4vkSWEjHLoT412"
     },
     "yagi1519gmailcom" : {
       "avatar" : "",
@@ -11510,6 +12550,20 @@
       "password" : "*********",
       "suburb_township" : "",
       "uid" : "jNxYu9Qplig64FF14Vstl4hsz9x2"
+    },
+    "yolandankambule94gmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fmwc1iq3ntco1cjy7h1nuzrj?alt=media&token=5243122a-c3ce-4aa7-ba94-7611af7b8be1",
+      "city" : "Johannesburg ",
+      "createdAt" : 1588353700353,
+      "deviceId" : "ExponentPushToken[YUZDgHAXrl3ZzmZHZafeYw]",
+      "email" : "yolandankambule94@gmail.com",
+      "id" : "yolandankambule94@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Yolanda Nkambule",
+      "password" : "*********",
+      "suburb_township" : "Germiston",
+      "uid" : "nC1kN1vyy8hl6DH1U5nhlsht4yS2"
     },
     "zakesngcobooutlookcom" : {
       "avatar" : "",
@@ -11535,6 +12589,20 @@
       "name" : "Zakhele Musa",
       "password" : "*********",
       "uid" : "aInaAokbNlPhuAyQk3ge2zmwvCZ2"
+    },
+    "zamangethegotsogmailcom" : {
+      "avatar" : "",
+      "city" : "Necastle",
+      "createdAt" : 1587644370699,
+      "deviceId" : "ExponentPushToken[BBQ07jCo7TRgedJxUVj1aW]",
+      "email" : "zamangethegotso@gmail.com",
+      "id" : "zamangethegotso@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Gotso",
+      "password" : "*********",
+      "suburb_township" : "Madadeni",
+      "uid" : "JQARpvQOnjfGoN4RZhK8JD3BQV52"
     },
     "zamingcamugmailcom" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2Fjdqqrxwne7dfv3zh2rtwk?alt=media&token=da9f3c7e-9ba4-4782-a3a6-099f6cfc6172",
@@ -11585,6 +12653,34 @@
       "name" : "Zethe",
       "password" : "*********",
       "uid" : "taSjhDqJxWNtYngLx5h0eFBFWeA3"
+    },
+    "zimezonkemthuligmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fbrgyuj74nue6ylomjc6fne?alt=media&token=77113d60-f7f4-4238-a55a-5099b737d859",
+      "city" : "Durban",
+      "createdAt" : 1587644655735,
+      "deviceId" : "ExponentPushToken[fL-fYEHN4PJB1q9nmoMvbL]",
+      "email" : "zimezonkemthuli@gmail.com",
+      "id" : "zimezonkemthuli@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Zimezonke",
+      "password" : "*********",
+      "suburb_township" : "Verulam",
+      "uid" : "66irvrbWkHS1rwqWuxX30AAscJ62"
+    },
+    "ziphiwothando1999gmailcom" : {
+      "avatar" : "",
+      "city" : "Estcourt ",
+      "createdAt" : 1587063184260,
+      "deviceId" : "ExponentPushToken[z7KsKdOJbZ8B2QiNcxNuA-]",
+      "email" : "Ziphiwothando1999@gmail.com",
+      "id" : "ziphiwothando1999@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Noluthando",
+      "password" : "*********",
+      "suburb_township" : "Loskop",
+      "uid" : "WvmXz2tVMrTIIYXe1KzHdUVoPEQ2"
     },
     "zukiswapitshanagmailcom" : {
       "avatar" : "",
