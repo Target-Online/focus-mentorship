@@ -42,6 +42,7 @@
     "react-native-screens": "^2.4.0",
     "react-native-simple-dialogs": "^1.2.1",
     "react-native-smart-tip": "^2.0.1",
+    "react-native-svg": "^9.13.3",
     "react-navigation": "^3.11.0",
     "rn-nodeify": "^10.2.0",
     "s": "^1.0.0",

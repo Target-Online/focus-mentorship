@@ -20,10 +20,10 @@ export default AddCourse = props => {
     return (
         <ScrollView style={styles.container}>
             <Block>
-                <TouchableOpacity onPress={() => imageUtils._pickImage(setImage, setAvatarStatus)}>
+                <TouchableOpacity>
                     <Spinner inProgress={avatarUpload}>
                         <ImageBackground
-                            source={image != '' ? { uri: image } : Images.placeholder}
+                            source={Images.classOf2020}
                             style={styles.profileContainer}
                             imageStyle={styles.profileImage}>
                             <Block flex style={styles.profileDetails}>

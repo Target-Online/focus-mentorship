@@ -14,7 +14,7 @@ class Card extends React.Component {
       <Block row={horizontal} card flex style={[styles.product, styles.shadow, style]}>
         <TouchableWithoutFeedback onPress={() => navigation.navigate(redirect, { product: product, setInProgress: setInProgress })}>
           <Block flex style={[styles.imageContainer, styles.shadow]}>
-            <Image source={image} style={imageStyles} />
+            <Image source={image} resizeMode="contain" style={imageStyles} />
           </Block>
         </TouchableWithoutFeedback>
         <TouchableWithoutFeedback onPress={() => navigation.navigate(redirect, { product: product })}>

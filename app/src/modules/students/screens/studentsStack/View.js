@@ -21,17 +21,15 @@ export default View = props => {
     const [image, setImage] = useState(student.avatar);
 
     const updateProfile = () => {
-        if (student.email == currentUser.email || currentUser.isAdmin){
+        if (currentUser && (student.email == currentUser.email || currentUser.isAdmin)){
             imageUtils._updateUserAvatar(setImage, currentUser)
         }
     }
 
     useEffect(() => {
-        if (currentUser) {
-            if (student.avatar == '' && currentUser.email == student.email) 
-                onInfo('Update your profile image.');
+        if (currentUser && student.avatar == '' && currentUser.email == student.email){ 
+            onInfo('Update your profile image.');
         }
-        else props.navigation.navigate('Login');
     }, []);
 
     return (

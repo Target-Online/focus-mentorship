@@ -23,7 +23,7 @@ export default SubFolders = props => {
             <Card
               key={subFolder.name}
               title={subFolder.name}
-              image={subFolder.avatar == '' ? Images.folder : { uri: subFolder.avatar }}
+              image={Images.class2020}
               product={subFolder}
               redirect={'SubFolderDocuments'}
               horizontal

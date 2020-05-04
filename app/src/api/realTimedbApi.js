@@ -11,7 +11,7 @@ const db = firebase.database();
 export const getCollection = (
     ref,
     dispatch
-) => db.ref(ref).on("value", data => {
+) => db.ref(ref).once("value", data => {
     data.val() && dispatch({ type: 'setData', data: O2A(data) });
     dispatch({ type: 'setInProgress', inProgress: false });
 }, error => {
@@ -21,7 +21,6 @@ export const getCollection = (
 
 export const setData = (ref, data) => {
     var id = firebase.database().ref().child(ref).push().key;
-
     db.ref(ref).child(id).set({
         ...data,
         id: id,

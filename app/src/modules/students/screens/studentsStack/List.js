@@ -34,8 +34,15 @@ export default Students = props => {
             </TouchableOpacity>
         );
     }
-
-    const data = users.data.filter(s => s.name.toLowerCase().includes(users.search) && s.isStudent);
+    
+    const data = users.data.filter(s => {
+        try{
+            return s.name.toLowerCase().includes(users.search) && s.isStudent
+        }
+        catch(e){
+            console.log("user", s);
+        }
+    });
     return (
         <ScrollView>
             <FlatList

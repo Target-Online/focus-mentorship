@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { StyleSheet, Dimensions, ScrollView, TouchableOpacity, Platform } from 'react-native';
 import { Block, theme } from 'galio-framework';
+import Slideshow  from "react-native-image-slider";
 
-import { ImagesSlider, Product } from '../shared/components';
-import { materialTheme } from '../shared/constants';
+import { Card } from '../shared/components';
+import { materialTheme, Images } from '../shared/constants';
 import { HeaderHeight } from "../../constants/utils";
 import { UserContext, UsersContext } from '../root/store';
 import { onInfo } from '../shared/utils/notifications'
@@ -14,13 +15,15 @@ const thumbMeasure = (width - 48 - 32) / 3;
 const options = [
   {
     title: 'Students',
-    image: require('../shared/assets/images/students-c.jpg'),
-    horizontal: true
+    image: require('../shared/assets/images/card-images/grad.png'),
+    horizontal: true,
+    iconName: 'graduation'
   },
   {
     title: 'Admins',
-    image: require('../shared/assets/images/admins-c.jpg'),
-    horizontal: true
+    image: require('../shared/assets/images/card-images/teacher.png'),
+    horizontal: true,
+    iconName: 'organization'
   }
 ];
 
@@ -32,17 +35,17 @@ export default Home = props => {
   
   return (
     <Block flex style={styles.profile}>
-      <Block flex>
-        <ImagesSlider />
+      <Block flex style={{ marginTop: 30 }}>
+        <Slideshow loopBothSides autoPlayWithInterval={3000} images={Images.sliderImages} />
       </Block>
       <Block flex style={styles.options}>
         <ScrollView showsVerticalScrollIndicator={true}>
             <TouchableOpacity onPress={() => !users.inProgress &&  navigation.navigate('Students')}>
-              <Product product={options[0]} horizontal inProgress={users.inProgress}/>
+              <Card product={options[0]} horizontal inProgress={users.inProgress}/>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => !users.inProgress && (isAdmin ? navigation.navigate('Admins') : onInfo('No access.'))}>
-              <Product product={options[1]} horizontal inProgress={users.inProgress}/>
+              <Card product={options[1]} horizontal inProgress={users.inProgress}/>
             </TouchableOpacity>
         </ScrollView>
       </Block>
@@ -88,7 +91,7 @@ const styles = StyleSheet.create({
     position: 'relative',
     padding: theme.SIZES.BASE,
     marginHorizontal: theme.SIZES.BASE,
-    marginTop: -theme.SIZES.BASE / 2,
+    marginTop: height > 700 ? height > 900 ? 0 : -55 : -100,
     borderTopLeftRadius: 13,
     borderTopRightRadius: 13,
     backgroundColor: theme.COLORS.WHITE,

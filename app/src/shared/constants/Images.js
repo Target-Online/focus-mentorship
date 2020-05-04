@@ -1,5 +1,8 @@
 export const sliderImages = [
   require('../assets/images/slider-images/0A.jpg'),
+  require('../assets/images/slider-images/01.jpeg'),
+  require('../assets/images/slider-images/02.jpeg'),
+  require('../assets/images/slider-images/03.jpeg'),
   require('../assets/images/slider-images/1.jpeg'),
   require('../assets/images/slider-images/class.jpeg'),
   require('../assets/images/slider-images/teaching.jpg'),
@@ -12,10 +15,12 @@ export const sliderImages = [
 
 export const user = require('../assets/images/user.png')
 export const folder = require('../assets/images/folder.png')
-export const placeholder = require('../assets/images/placeholder-c.png')
+export const classOf2020 = require('../assets/images/card-images/classOf2020.png')
+export const class2020 = require('../assets/images/card-images/class2020.png')
 
 export default {
   user,
   folder,
-  placeholder
+  classOf2020,
+  class2020
 }
