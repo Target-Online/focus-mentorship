@@ -32,7 +32,7 @@ export default Home = props => {
   const [users] = useContext(UsersContext);
   const [currentUser] = useContext(UserContext)
   const isAdmin = currentUser && currentUser.isAdmin;
-  
+
   return (
     <Block flex style={styles.profile}>
       <Block flex style={{ marginTop: 30 }}>

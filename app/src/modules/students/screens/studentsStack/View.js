@@ -47,7 +47,7 @@ export default View = props => {
                 </TouchableOpacity>
             </Block>
             <Block flex style={styles.options}>
-                <ScrollView showsVerticalScrollIndicator={true}>
+                <ScrollView>
                     <Block style={styles.title}>
                         <Text bold center size={theme.SIZES.BASE} style={{ paddingBottom: 5 }}>
                             {student.name}
@@ -75,15 +75,15 @@ export default View = props => {
 const styles = StyleSheet.create({
     profile: {
         marginTop: Platform.OS === 'android' ? -HeaderHeight : 0,
-        marginBottom: -HeaderHeight * 2,
+        marginBottom: -height / 2,
     },
     profileImage: {
         width: width * 1.1,
-        height: 'auto',
+        height: height / 1.5,
     },
     profileContainer: {
         width: width,
-        height: height / 2,
+        height: height / 1.5,
     },
     profileDetails: {
         paddingTop: theme.SIZES.BASE * 4,
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 0 },
         shadowRadius: 8,
         shadowOpacity: 0.2,
-        zIndex: 2,
+        zIndex: 2
     },
     thumb: {
         borderRadius: 4,

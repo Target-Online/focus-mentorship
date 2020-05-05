@@ -4221,7 +4221,7 @@
       "createdAt" : 1586155483979,
       "id" : "-M4DE-6MpowwkRcIPcQ-",
       "name" : "2020 WTS 10 MATHEMATICS GUIDE Q & S",
-      "parentId" : "-M4DDUFlvKXEaV0dLmWz",
+      "parentId" : "grade-10-subject-guide",
       "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F5w5g367gxl5yvn1sot8ckm?alt=media&token=abff537c-04ac-4998-ae9c-33534c52ff01"
     },
     "-M4DEPssz3UCIJ82qWi4" : {
@@ -4242,7 +4242,7 @@
       "createdAt" : 1586155651575,
       "id" : "-M4DEd13fczKwKf_KcGG",
       "name" : "2020 WTS 10 PHYSICAL SCIECNCES  GUIDE Q & S",
-      "parentId" : "-M4DDUFlvKXEaV0dLmWz",
+      "parentId" : "grade-10-subject-guide",
       "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F7czbodyjd745bw92y24ye6?alt=media&token=ee8004d7-5540-4ebe-90bb-62ee84d806fd"
     },
     "-M4DEjK5XJq5lNQKjmYo" : {
@@ -4270,7 +4270,7 @@
       "createdAt" : 1586155736256,
       "id" : "-M4DExhCWdwNOlnlwIIV",
       "name" : "2020 WTS MATHS  10 TERM TWO ",
-      "parentId" : "-M4DDUFlvKXEaV0dLmWz",
+      "parentId" : "grade-10-subject-guide",
       "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F7thttqwfewoe8mom01g237?alt=media&token=e8929501-2eab-42b5-a61d-0d5bce5f49a2"
     },
     "-M4QlrM1PJ6EQ_jbm6bx" : {
@@ -4328,20 +4328,6 @@
       "name" : "functions tutorials (Autosaved)",
       "parentId" : "-M465knQNnRkGKHpnkFw",
       "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Producton%2Fdocuments%2F25j9xdkcsn16tcci1csb0f?alt=media&token=0e93a4e8-e7ba-4c4f-9a7e-5e12e75aadea"
-    },
-    "-M4VzAPCsq8bw24h1NwD" : {
-      "createdAt" : 1586470106907,
-      "id" : "-M4VzAPCsq8bw24h1NwD",
-      "name" : "TreeSized - Copy",
-      "parentId" : "-M4Vyos95tjtYvCp9G3e",
-      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fwvoajj7re2k6ckjalcj6c?alt=media&token=249e8b59-3c5b-4be2-a06e-bdda078c7e63"
-    },
-    "-M4VzAPx4f5zrWIQTQtt" : {
-      "createdAt" : 1586470106955,
-      "id" : "-M4VzAPx4f5zrWIQTQtt",
-      "name" : "TreeSized - Copy",
-      "parentId" : "-M4Vyos95tjtYvCp9G3e",
-      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fciq638tj9kqfeldt972zw7?alt=media&token=a906f7f8-e5ca-4b49-afab-0ba1d55077da"
     },
     "-M4YGZzGwPzzl0mEmS4a" : {
       "createdAt" : 1586508481553,
@@ -4440,6 +4426,209 @@
       "name" : "MTG Math Gr 12 Web",
       "parentId" : "-M5aRRFye9I_1GTczOnF",
       "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F4xtv9bldpu5q78g29oyocl?alt=media&token=ce8760ed-3bad-4e68-9c84-a0c07175701e"
+    },
+    "-M6VFxfwzvu9lqYTfMXG" : {
+      "createdAt" : 1588605469596,
+      "id" : "-M6VFxfwzvu9lqYTfMXG",
+      "name" : "2017 Physical Science Grade 10 Support Document (Repaired)",
+      "parentId" : "grade-10-subject-guide",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F2017%20Physical%20Science%20Grade%2010%20Support%20Document%20(Repaired)?alt=media&token=618cf87f-a855-45e9-843b-3f69410a09e3"
+    },
+    "-M6WJGuNkAnbyVvPZs35" : {
+      "createdAt" : 1588623118710,
+      "id" : "-M6WJGuNkAnbyVvPZs35",
+      "name" : "How to do well in Matric",
+      "parentId" : "-M6WIsR3m5EGiVdVh-wI",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fmtg9pbjfpoqs4upeakilzp?alt=media&token=b156c347-f89d-4d88-8d09-452e1c4ad64d"
+    },
+    "-M6WOriqi66gGG-sT-pC" : {
+      "createdAt" : 1588624584649,
+      "id" : "-M6WOriqi66gGG-sT-pC",
+      "name" : "Lwazi Ndwalane",
+      "parentId" : "-M6WIsR3m5EGiVdVh-wI",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fcml72ss2myq0gfc047omz0l?alt=media&token=0b7a54f6-ea1d-475b-8a3e-e7a2956f1807"
+    },
+    "-M6YLkDkhYSptjz0FAnh" : {
+      "createdAt" : 1588657323327,
+      "id" : "-M6YLkDkhYSptjz0FAnh",
+      "name" : "2020 PHYSICAL SCIENCES GR10 JIT TERM1 LEARNER DOCUMENT",
+      "parentId" : "grade-10-subject-guide",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F2020%20PHYSICAL%20SCIENCES%20GR10%20JIT%20TERM1%20LEARNER%20DOCUMENT?alt=media&token=11c38720-9b0b-4867-aa49-9295057f596c"
+    },
+    "-M6YM8GKYj-6_DSm_WDR" : {
+      "createdAt" : 1588657425890,
+      "id" : "-M6YM8GKYj-6_DSm_WDR",
+      "name" : "CLINIC 06",
+      "parentId" : "-M4DDUFlvKXEaV0dLmWz",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2FCLINIC%2006?alt=media&token=6d178d5d-9abc-4579-b88b-4a69569a8add"
+    },
+    "-M6YMmH8NT8jw46bJp69" : {
+      "createdAt" : 1588657593883,
+      "id" : "-M6YMmH8NT8jw46bJp69",
+      "name" : "CLINIC 04",
+      "parentId" : "-M4DDUFlvKXEaV0dLmWz",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2FCLINIC%2004?alt=media&token=9bb86225-aa99-4720-892c-ec35d05f897e"
+    },
+    "-M6YMv1IEUh0ibiM5Jqp" : {
+      "createdAt" : 1588657629734,
+      "id" : "-M6YMv1IEUh0ibiM5Jqp",
+      "name" : "TERM ONE",
+      "parentId" : "-M4DDUFlvKXEaV0dLmWz",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2FTERM%20ONE?alt=media&token=0ec49b7f-81d8-42ba-95de-5a3a68aa8b6f"
+    },
+    "-M6YN3fjDyX-jLVBEgdg" : {
+      "createdAt" : 1588657669250,
+      "id" : "-M6YN3fjDyX-jLVBEgdg",
+      "name" : "TERM ONE MEMO",
+      "parentId" : "-M4DDUFlvKXEaV0dLmWz",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2FTERM%20ONE%20MEMO?alt=media&token=3af7c5b4-d5e6-4fba-b567-aa2be7e428ed"
+    },
+    "-M6YNF27FljxeJQCF6Rz" : {
+      "createdAt" : 1588657715802,
+      "id" : "-M6YNF27FljxeJQCF6Rz",
+      "name" : "CLINIC 01",
+      "parentId" : "-M4DDUFlvKXEaV0dLmWz",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2FCLINIC%2001?alt=media&token=31ae46d9-feb3-4cbb-a1ad-3c812e030064"
+    },
+    "-M6YNs_St-v13FhY9UsJ" : {
+      "createdAt" : 1588657881839,
+      "id" : "-M6YNs_St-v13FhY9UsJ",
+      "name" : "2020 Physical Sciences Grade 11 JIT Term 1 content_Learner Material",
+      "parentId" : "-M4DDUFlvKXEaV0dLmWz",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F2020%20Physical%20Sciences%20Grade%2011%20JIT%20Term%201%20content_Learner%20Material?alt=media&token=ca32f8f1-9568-4be1-bec0-c4fc4e6e093e"
+    },
+    "-M6YO3qT-VQxCq4jariZ" : {
+      "createdAt" : 1588657932081,
+      "id" : "-M6YO3qT-VQxCq4jariZ",
+      "name" : "2017 Physical Sciences Grade 11 Document Tabled",
+      "parentId" : "-M4DDUFlvKXEaV0dLmWz",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F2017%20Physical%20Sciences%20Grade%2011%20Document%20Tabled?alt=media&token=c9f1603b-20e7-45e8-a357-41995087836c"
+    },
+    "-M6YOLLZF0blYAEhgbB-" : {
+      "createdAt" : 1588658003767,
+      "id" : "-M6YOLLZF0blYAEhgbB-",
+      "name" : "WTS TERM TWO CHEMISTRY ",
+      "parentId" : "-M4DDUFlvKXEaV0dLmWz",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2FWTS%20TERM%20TWO%20CHEMISTRY%20?alt=media&token=5a0c6081-b3c2-414c-aae0-8534b3d6d376"
+    },
+    "-M6YOUGmMosIJbzmeff-" : {
+      "createdAt" : 1588658040324,
+      "id" : "-M6YOUGmMosIJbzmeff-",
+      "name" : "TERM ONE-1",
+      "parentId" : "-M4DDUFlvKXEaV0dLmWz",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2FTERM%20ONE-1?alt=media&token=68717faa-1356-4a92-aa8b-4a28c9a129dc"
+    },
+    "-M6YOdFUxg_bmCFHWaR8" : {
+      "createdAt" : 1588658081202,
+      "id" : "-M6YOdFUxg_bmCFHWaR8",
+      "name" : "CLINIC 11",
+      "parentId" : "-M4DDUFlvKXEaV0dLmWz",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2FCLINIC%2011?alt=media&token=e134ed92-6335-4e88-81fa-ac62edb90262"
+    },
+    "-M6YPQ1LBIhkDC2MeEPl" : {
+      "createdAt" : 1588658285097,
+      "id" : "-M6YPQ1LBIhkDC2MeEPl",
+      "name" : "fet-physical-sciences-trainers-guide-term-1-2018",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Ffet-physical-sciences-trainers-guide-term-1-2018?alt=media&token=0c83d058-77ed-4c4e-8b2d-0f00e99a0986"
+    },
+    "-M6YQ5NJPGRfJ4Mngx_v" : {
+      "createdAt" : 1588658462485,
+      "id" : "-M6YQ5NJPGRfJ4Mngx_v",
+      "name" : "AUTUMN CLASSES WEEK 1 PSC;2019",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2FAUTUMN%20CLASSES%20WEEK%201%20PSC%3B2019?alt=media&token=455cef97-4069-4298-9e8c-ed8f5fea50c7"
+    },
+    "-M6YQElDC0Mo2Mlfj9hj" : {
+      "createdAt" : 1588658500941,
+      "id" : "-M6YQElDC0Mo2Mlfj9hj",
+      "name" : "2019 SSIP LN",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F2019%20SSIP%20LN?alt=media&token=b1b41a0e-a241-4456-a13c-df1ed9d0b8b1"
+    },
+    "-M6YQOuWZQ7JDZWyDw6D" : {
+      "createdAt" : 1588658542495,
+      "id" : "-M6YQOuWZQ7JDZWyDw6D",
+      "name" : "IUPAC organic Learner Intervention program",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2FIUPAC%20organic%20Learner%20Intervention%20program?alt=media&token=6805eb19-51cf-4e04-9c74-d46f88ec2f47"
+    },
+    "-M6YQYJrikQC09DIbX02" : {
+      "createdAt" : 1588658581045,
+      "id" : "-M6YQYJrikQC09DIbX02",
+      "name" : "Emailing DOC-20190120-WA0014",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2FEmailing%20DOC-20190120-WA0014?alt=media&token=13326365-9b38-4a2a-a683-af804efd605b"
+    },
+    "-M6YQlcTEaetOkYgDebr" : {
+      "createdAt" : 1588658639645,
+      "id" : "-M6YQlcTEaetOkYgDebr",
+      "name" : "2018 SSIP MEMO",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F2018%20SSIP%20MEMO?alt=media&token=643a8168-63b2-433c-9296-f84fdeaf12d7"
+    },
+    "-M6YQvwX90PztUeXCsaT" : {
+      "createdAt" : 1588658681889,
+      "id" : "-M6YQvwX90PztUeXCsaT",
+      "name" : "100- PHYSCS",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F100-%20PHYSCS?alt=media&token=3a7b1123-4c26-49df-aa2b-9f1041a05340"
+    },
+    "-M6YR3aiBIJZs6VV6X7S" : {
+      "createdAt" : 1588658717357,
+      "id" : "-M6YR3aiBIJZs6VV6X7S",
+      "name" : "2017 Winter & Spring Physical Science Support Doc",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F2017%20Winter%20%26%20Spring%20Physical%20Science%20Support%20Doc?alt=media&token=c380accc-25d7-46be-9ae0-b8cecb4d1b5d"
+    },
+    "-M6YRBymDrCCkJmgFzNY" : {
+      "createdAt" : 1588658751665,
+      "id" : "-M6YRBymDrCCkJmgFzNY",
+      "name" : "2019 SSIP MEMO",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2F2019%20SSIP%20MEMO?alt=media&token=648fc247-80dd-4628-ae3d-576f64fb0da7"
+    },
+    "-M6YRKhqcyB2yVou5Pa4" : {
+      "createdAt" : 1588658787447,
+      "id" : "-M6YRKhqcyB2yVou5Pa4",
+      "name" : "fet-physical-sciences-training-handout-term-1-2018",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Ffet-physical-sciences-training-handout-term-1-2018?alt=media&token=b22acb2f-71cf-4e94-b626-d1a90f28df6a"
+    },
+    "-M6YRUcp2SgmhHXJE0gf" : {
+      "createdAt" : 1588658828083,
+      "id" : "-M6YRUcp2SgmhHXJE0gf",
+      "name" : "ACIDS AND BASES final 2015",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2FACIDS%20AND%20BASES%20final%202015?alt=media&token=670b66bb-01ed-4f7c-a06e-406b01cce63e"
+    },
+    "-M6YRbMtzKsVe4ZGrEcl" : {
+      "createdAt" : 1588658859767,
+      "id" : "-M6YRbMtzKsVe4ZGrEcl",
+      "name" : "fet-physical-sciences-trainers-guide-term-1-2018-1",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Ffet-physical-sciences-trainers-guide-term-1-2018-1?alt=media&token=05e8699a-7ed5-4dae-83be-f72b72553f09"
+    },
+    "-M6YRil4atoo5MfCj7eV" : {
+      "createdAt" : 1588658890052,
+      "id" : "-M6YRil4atoo5MfCj7eV",
+      "name" : "gr-12-term-1-2018-ps-worksheet-booklet",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fgr-12-term-1-2018-ps-worksheet-booklet?alt=media&token=7d789d00-6145-4225-a83e-abee4868d904"
+    },
+    "-M6YS0m0nq1OBBlSQ-Ly" : {
+      "createdAt" : 1588658967938,
+      "id" : "-M6YS0m0nq1OBBlSQ-Ly",
+      "name" : "PHYSCS PAST PAPERS N ANSWERS",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2FPHYSCS%20PAST%20PAPERS%20N%20ANSWERS?alt=media&token=38856b5f-61de-4014-b088-2fc57113e9dd"
+    },
+    "-M6YS7ViQY_iNYgNSl6t" : {
+      "createdAt" : 1588658995502,
+      "id" : "-M6YS7ViQY_iNYgNSl6t",
+      "name" : "gr-12-term-1-2018-physical-sciences-practical-booklet",
+      "parentId" : "-M465knQNnRkGKHpnkFw",
+      "url" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fdocuments%2Fgr-12-term-1-2018-physical-sciences-practical-booklet?alt=media&token=98087493-9d2a-4181-b71f-4ef4fbfcb834"
     },
     "0ax4992mjtxofka189kujx5" : {
       "createdAt" : 1585565732484,
@@ -9560,6 +9749,13 @@
       "name" : "Subjects' Guide",
       "parentId" : "oyx8zzsd0zbjlg7cqvy5i"
     },
+    "-M4DDUFlvKXEaV0dLmWz" : {
+      "avatar" : "",
+      "createdAt" : 1586155349412,
+      "id" : "-M4DDUFlvKXEaV0dLmWz",
+      "name" : "Subjects' Guide",
+      "parentId" : "ividnmz76r9k6um0z4df6"
+    },
     "-M5aRRFye9I_1GTczOnF" : {
       "avatar" : "",
       "createdAt" : 1587635403591,
@@ -9568,17 +9764,18 @@
       "name" : "All Subjects Study Guide",
       "parentId" : "oyx8zzsd0zbjlg7cqvy5i"
     },
-    "grade-11-subject-guid" : {
+    "-M6WIsR3m5EGiVdVh-wI" : {
       "avatar" : "",
-      "createdAt" : 1586155349412,
-      "id" : "-M4DDUFlvKXEaV0dLmWz",
-      "name" : "Subjects' Guide",
-      "parentId" : "ividnmz76r9k6um0z4df6"
+      "createdAt" : 1588623014372,
+      "description" : "Strategies for doing well in grade 10-12",
+      "id" : "-M6WIsR3m5EGiVdVh-wI",
+      "name" : "Motivation",
+      "parentId" : "-M6RdQFy31XH_CuB0Vgi"
     },
-    "grade10-folder-2" : {
-      "avatar" : "https://images.unsplash.com/photo-1527176930608-09cb256ab504?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80",
+    "grade-10-subject-guide" : {
+      "avatar" : "",
       "createdAt" : 1586020803,
-      "id" : "-M4DDUFlvKXEaV0dLmWz",
+      "id" : "grade-10-subject-guide",
       "name" : "Subjects' Guide",
       "parentId" : "y8lmqs2s8zsqk766gplzk"
     },
@@ -9873,6 +10070,20 @@
       "password" : "*********",
       "suburb_township" : "Maboloka",
       "uid" : "s1GG1L8r9BM7Ap0dqh6HUzD95Tr2"
+    },
+    "ayandafocgmailcom" : {
+      "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fsry4tif582hllz4ce1dur?alt=media&token=9f9de612-5dce-4083-ac42-305e57411071",
+      "city" : "Durban",
+      "createdAt" : 1588702172738,
+      "deviceId" : "ExponentPushToken[BlsHhPOoo2sDY0zCvYQcnA]",
+      "email" : "ayanda.foc@gmail.com",
+      "id" : "ayanda.foc@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Ayanda",
+      "password" : "*********",
+      "suburb_township" : "Hammarsdale",
+      "uid" : "2HCWh0tYhQamzRgOpqiKn8PFeWa2"
     },
     "babalwasali27gmailcom" : {
       "avatar" : "",
@@ -10360,6 +10571,20 @@
       "password" : "*********",
       "suburb_township" : "Jane furse",
       "uid" : "WItoQc7W5NO0a7eQPRWJ7nxosVc2"
+    },
+    "keinelwegoodluckgmailcom" : {
+      "avatar" : "",
+      "city" : "Gauteng",
+      "createdAt" : 1588666012444,
+      "deviceId" : "ExponentPushToken[QgTQtfGTpTsfcq4merjO3o]",
+      "email" : "Keinelwegoodluck@gmail.com",
+      "id" : "keinelwegoodluck@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Keinelwe",
+      "password" : "*********",
+      "suburb_township" : "Vosloorus",
+      "uid" : "hUiBEOPbBpT9KwP3MBnVtrxQMR92"
     },
     "keletsom709gmailcom" : {
       "avatar" : "",
@@ -10870,6 +11095,20 @@
       "suburb_township" : "",
       "uid" : "RGVKvVQBmwWxoUj9E3ZnFlFcNvi1"
     },
+    "martingarrixatlondonngmailcom" : {
+      "avatar" : "",
+      "city" : "Nelspruit",
+      "createdAt" : 1588615159743,
+      "deviceId" : "ExponentPushToken[dSpFfJKlGZHgpxzg6Bwb1V]",
+      "email" : "martingarrixatlondonn@gmail.com",
+      "id" : "martingarrixatlondonn@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Wellcome",
+      "password" : "*********",
+      "suburb_township" : "Acornhoek",
+      "uid" : "itBkyiYR9MRsPDzVpL7UakS5ZAu2"
+    },
     "mashenge980609gmailcom" : {
       "avatar" : "",
       "city" : "Durban",
@@ -11308,6 +11547,7 @@
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-mentorship.appspot.com/o/Production%2Fimages%2Fsignup%2Fkg26phxef0fput8f3ecyo?alt=media&token=43f7c586-9dbc-477a-b54b-7b640f82e043",
       "city" : "Durban",
       "createdAt" : 1586988610888,
+      "deviceId" : "ExponentPushToken[62Gx0tOeQ3ne4RDJZ2xbKl]",
       "email" : "nhlokzen777@gmail.com",
       "id" : "nhlokzen777@gmail.com",
       "isAdmin" : false,
@@ -12603,6 +12843,20 @@
       "password" : "*********",
       "suburb_township" : "Madadeni",
       "uid" : "JQARpvQOnjfGoN4RZhK8JD3BQV52"
+    },
+    "zamazulusphokazigmailcom" : {
+      "avatar" : "",
+      "city" : "Durban",
+      "createdAt" : 1588617969040,
+      "deviceId" : "ExponentPushToken[ArBN12F1Wu4zoZ2y57Zbu2]",
+      "email" : "Zamazulusphokazi@gmail.com",
+      "id" : "zamazulusphokazi@gmail.com",
+      "isAdmin" : false,
+      "isStudent" : true,
+      "name" : "Zamazulu .S",
+      "password" : "*********",
+      "suburb_township" : "Pinetown",
+      "uid" : "6kec6TxEDfhZqY3tXEgIQJXvUK73"
     },
     "zamingcamugmailcom" : {
       "avatar" : "https://firebasestorage.googleapis.com/v0/b/focus-ddfc9.appspot.com/o/images%2FProduction%2Fjdqqrxwne7dfv3zh2rtwk?alt=media&token=da9f3c7e-9ba4-4782-a3a6-099f6cfc6172",

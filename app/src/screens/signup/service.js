@@ -1,6 +1,8 @@
 import firebase from "firebase";
 
 import { onSuccess, onError } from '../../shared/utils/notifications'
+import { pushNotifications } from '../../shared/utils';
+
 import appsettings from '../../../appsettings.json'
 
 if (!firebase.apps.length) firebase.initializeApp(appsettings.firebaseConfig);
@@ -8,7 +10,7 @@ if (!firebase.apps.length) firebase.initializeApp(appsettings.firebaseConfig);
 const db = firebase.database();
 const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-export const signup = (user, navigation, setInprogress) => {
+export const signup = (user, users, navigation, setInprogress) => {
     setInprogress(true);
     firebase.auth()
     .createUserWithEmailAndPassword(user.email, user.password)
@@ -24,6 +26,15 @@ export const signup = (user, navigation, setInprogress) => {
                 password: "*********",
                 createdAt: Date.now()
             })
+            
+            if(appsettings.environment == "Production") {
+                console.log()
+                pushNotifications.sendPushNotifications(
+                    users.data.map(u => u.isAdmin && u),
+                    "New Student Has Joined The App",
+                    user.name
+                )
+            }
         },
         error => {
             setInprogress(false);
