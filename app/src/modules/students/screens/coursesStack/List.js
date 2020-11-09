@@ -1,6 +1,7 @@
 import React, { useContext, useReducer, useEffect } from 'react';
 import { StyleSheet, ScrollView, Dimensions, Text } from 'react-native';
 import { Block, theme } from 'galio-framework';
+import { CacheManager } from "react-native-expo-image-cache";
 
 import { Spinner, Card } from '../../shared/components';
 import { Images } from '../../../../shared/constants';

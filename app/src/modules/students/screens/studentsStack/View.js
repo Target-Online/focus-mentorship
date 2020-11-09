@@ -40,12 +40,10 @@ export default View = props => {
                         source={image == '' ? Images.user : { uri: image }}
                         style={styles.profileContainer}
                         imageStyle={styles.profileImage}>
-                        <Block flex style={styles.profileDetails}>
-                            <LinearGradient colors={['rgba(0,0,0,0)', 'rgba(0,0,0,1)']} style={styles.gradient} />
-                        </Block>
                     </ImageBackground>
                 </TouchableOpacity>
             </Block>
+            {/*
             <Block flex style={styles.options}>
                 <ScrollView>
                     <Block style={styles.title}>
@@ -68,22 +66,24 @@ export default View = props => {
                     </Block>
                 </ScrollView>
             </Block>
+            */}
         </Block>
     );
 }
 
 const styles = StyleSheet.create({
     profile: {
-        marginTop: Platform.OS === 'android' ? -HeaderHeight : 0,
+        marginTop: Platform.OS === 'android' ? -HeaderHeight - 30 : 0,
         marginBottom: -height / 2,
     },
     profileImage: {
+        marginTop: (height - width) / 2,
         width: width * 1.1,
-        height: height / 1.5,
+        height: width,
     },
     profileContainer: {
         width: width,
-        height: height / 1.5,
+        height: height,
     },
     profileDetails: {
         paddingTop: theme.SIZES.BASE * 4,

@@ -4,7 +4,7 @@ import firebase from 'firebase';
 import * as DocumentPicker from 'expo-document-picker';
 
 import * as realTimedbApi from '../../api';
-import { onError } from './notifications'
+import { onError, onSuccess } from './notifications'
 import appsettings from '../../../appsettings.json'
 
 if (!firebase.apps.length) firebase.initializeApp(appsettings.adminFirebaseConfig);
@@ -31,7 +31,8 @@ const getResourceUrl = async (uri, location) => {
 
 export const _documentPicker = async (
   parentId,
-  dispath
+  dispath,
+  docs
  ) => {
     dispath({ type: 'setInProgress', inProgress: true });
 
@@ -39,16 +40,21 @@ export const _documentPicker = async (
     const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 
     if (result.type != "cancel") {
-        if (result.name.split('.')[1] != 'pdf') {
-            onError('Incorrect file type, pdf only allowed.');
-        }
-        else {
-            realTimedbApi.setData('documents', {
-                name: result.name.split('.')[0],
+        var fileExtention = result.name.split('.')[1];
+        var fileName = result.name.split('.')[0];
+
+        if (fileExtention === 'pdf' || fileExtention === 'docx')  {
+            var data = realTimedbApi.setData('documents', {
+                name: fileName,
                 url: await getResourceUrl(result.uri, appsettings.environment + "/documents/" + id),
                 parentId: parentId
             });
-        }
+            onSuccess(`Document ${fileName} added successfully.`)
+            docs && dispath({ type: 'setData', data: docs.data.concat(data) });
+          }
+        else {
+          onError('Incorrect file type');
+      }
     }
     dispath({ type: 'setInProgress', inProgress: false });
 }

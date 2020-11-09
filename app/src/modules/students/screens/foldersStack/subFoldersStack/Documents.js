@@ -1,11 +1,14 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import {
     StyleSheet,
     View,
     TouchableOpacity,
     Linking,
     FlatList,
+    Platform
 } from 'react-native';
+import * as FileSystem from 'expo-file-system';
+import * as Print from 'expo-print';
 
 import { Spinner, FontAwesomeIcons } from '../../../../../shared/components';
 import { Block, Text } from 'galio-framework';
@@ -14,12 +17,15 @@ import { DocumentsContext } from '../../../root/store';
 export default Documents = props => {
     const [documents] = useContext(DocumentsContext);
     const { product } = props.navigation.state.params;
+    const [DownloadInProgress, setDownloadState] = useState(false);
 
     const renderItem = ({ item }) => {
         return (
-            <TouchableOpacity onPress={() => Linking.openURL(item.url)}>
+            <TouchableOpacity onPress={() =>
+                Platform.OS === 'ios' ? Linking.openURL(item.url) : Print.printAsync({ uri: item.url })
+            }>
                 <View style={styles.row}>
-                    <FontAwesomeIcons focused={true} name={'file-pdf-o'} />
+                    <FontAwesomeIcons focused={true} name={'file'} />
                     <View style={styles.nameContainer}>
                         <Text style={styles.nameTxt} >{item.name}</Text>
                     </View>
@@ -28,14 +34,10 @@ export default Documents = props => {
         );
     }
 
-    const data = documents.data.filter(d => 
+    const data = documents.data.filter(d =>
         d.parentId == product.id &&
         d.name.toLowerCase().includes(documents.search)
     );
-
-    // useEffect(() => {
-
-    // },[]); 
 
     return (
         <Spinner inProgress={documents.inProgress}>

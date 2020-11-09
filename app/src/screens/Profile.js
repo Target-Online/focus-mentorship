@@ -58,7 +58,7 @@ export default View = props => {
                     </Block>
                     <Block style={styles.title}>
                         <Text center size={12}>
-                            {currentUser && currentUser['suburb/township']}
+                            {currentUser && currentUser.suburb_township}
                         </Text>
                     </Block>
                 </ScrollView>

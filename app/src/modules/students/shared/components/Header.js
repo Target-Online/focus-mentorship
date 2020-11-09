@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { withNavigation } from 'react-navigation';
 import { TouchableOpacity, StyleSheet, Platform, Dimensions } from 'react-native';
 import { Button, Block, NavBar, Input, Text, theme } from 'galio-framework';
@@ -8,6 +8,7 @@ import materialTheme from '../constants/Theme';
 import { DocumentsContext } from '../../root/store';
 import { UsersContext, UserContext } from '../../../../root/store';
 import { documentPicker } from '../../../../shared/utils';
+import CreateLiveStream from "../../screens/liveStreamsStack/Create";
 
 const { height, width } = Dimensions.get('window');
 const iPhoneX = () => Platform.OS === 'ios' && (height === 812 || width === 812 || height === 896 || width === 896);
@@ -109,14 +110,17 @@ const Header = props => {
       case 'SubFolderDocuments':
         return ([
           isAdmin && 
-          <TouchableOpacity onPress={() => documentPicker(navigation.state.params.product.id, dispatchDocuments)}>
+          <TouchableOpacity onPress={() => documentPicker(navigation.state.params.product.id, dispatchDocuments, documents)}>
             <AddIcon family='Entypo' name='plus' isWhite={white} />
           </TouchableOpacity>,
         ]);
-      case 'Product':
+      case 'LiveStreams':
+        const [isVisible, setVisible] = useState(false);
         return ([
-          <SearchButton key='search-product' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-product' navigation={navigation} isWhite={white} />
+          <TouchableOpacity onPress={() => currentUser ? setVisible(true) : navigation.navigate('Login')}>
+            <AddIcon family='Entypo' name='plus' isWhite={white} />
+            <CreateLiveStream isVisible={isVisible} setVisible={setVisible} />
+          </TouchableOpacity>,
         ]);
       case 'Settings':
         return ([

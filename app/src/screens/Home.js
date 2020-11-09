@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     shadowOpacity: 0.2,
     zIndex: 2,
+    backgroundColor: 'transparent'
   },
   thumb: {
     borderRadius: 4,

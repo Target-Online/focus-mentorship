@@ -42,6 +42,8 @@ export default CourseView = props => {
     const [students] = useContext(UsersContext);
     const [studentCourse] = useContext(StudentCourseContext);
 
+    const smallWidth = width <= 360
+    
     const updateCourse = () => {
         if (isAdmin) imageUtils._updateCourseAvatar(setImage, product.id);
     }
@@ -159,8 +161,7 @@ export default CourseView = props => {
                     <ImageBackground
                         source={Images.classOf2020}
                         style={styles.profileContainer}
-                        //imageStyle={styles.profileImage}
-                        >
+                    >
                         <Block flex style={styles.profileDetails}>
                             <Block style={styles.profileTexts}>
                             </Block>
@@ -173,19 +174,19 @@ export default CourseView = props => {
                 <Block row fixed space="between" style={{ padding: theme.SIZES.BASE, }}>
                     <Block middle>
                         <Tab name={'doc'} addname={'note'} sec={'description'} />
-                        <Text muted size={12}>Description</Text>
+                        {!smallWidth && <Text muted size={12}>Description</Text>}
                     </Block>
                     <Block middle>
                         <Tab name={'people'} addname={'user-follow'} sec={'students'} />
-                        <Text muted size={12}>Students</Text>
+                        {!smallWidth && <Text muted size={12}>Students</Text>}
                     </Block>
                     <Block middle>
                         <Tab name={'folder'} addname={'note'} sec={'resources'} />
-                        <Text muted size={12}>Documents</Text>
+                        {!smallWidth && <Text muted size={12}>Documents</Text>}
                     </Block>
                     <Block middle>
                         <Tab name={'bell'} addname={'note'} sec={'announcements'} />
-                        <Text muted size={12}>Nofications</Text>
+                        {!smallWidth && <Text muted size={12}>Nofications</Text>}
                     </Block>
                 </Block>
                 <ScrollView style={{marginHorizontal: theme.SIZES.BASE}}>

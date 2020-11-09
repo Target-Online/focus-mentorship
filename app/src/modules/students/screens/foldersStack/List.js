@@ -14,8 +14,7 @@ export default Resources = () => {
 
   return (
     <Spinner inProgress={folders.inProgress}>
-      <Block flex style={[styles.options, !data.length == 0 && { height: height }]}>
-        <Block>
+        <ScrollView>
           {data.map(folder =>
             <Card
               key={folder.name}
@@ -26,11 +25,10 @@ export default Resources = () => {
               horizontal
             />
           )}
-        </Block>
+        </ScrollView>
         <Block center style={{ marginTop: 10 }}>
           {data.length == 0 && <Text>No folders.</Text>}
         </Block>
-      </Block>
     </Spinner>
   )
 }

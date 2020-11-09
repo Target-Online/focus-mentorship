@@ -28,9 +28,9 @@ export const setData = (ref, data) => {
     })
 }
 
-export const getData = (ref, id, setData) => db.ref(ref).child(id).on("value", data => setData(data.val()));
+export const getData = (ref, id, setData) => db.ref(ref).child(id).once("value", data => setData(data.val()));
 
-export const getUser = (ref, id, setData) => db.ref(ref).child(id).on("value", data => setData({ ...data.val(), id: id }));
+export const getUser = (ref, id, setData) => db.ref(ref).child(id).once("value", data => setData({ ...data.val(), id: id }));
 
 export const updateData = (ref, id, data) => db.ref(ref).child(id).update({ ...data })
 
