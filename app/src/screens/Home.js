@@ -3,7 +3,7 @@ import { StyleSheet, Dimensions, ScrollView, TouchableOpacity, Platform } from '
 import { Block, theme } from 'galio-framework';
 import Slideshow  from "react-native-image-slider";
 
-import { Card } from '../shared/components';
+import Card from '../shared/components/Card';
 import { materialTheme, Images } from '../shared/constants';
 import { HeaderHeight } from "../../constants/utils";
 import { UserContext, UsersContext } from '../root/store';
@@ -27,7 +27,7 @@ const options = [
   }
 ];
 
-export default Home = props => {
+export default function Home (props) {
   const { navigation } = props;
   const [users] = useContext(UsersContext);
   const [currentUser] = useContext(UserContext)

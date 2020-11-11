@@ -14,7 +14,7 @@ import { onSuccess } from '../../../../shared/utils/notifications';
 const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
-export default AddFolder = props => {
+export default function AddFolder (props) {
     const [folders, setFolders] = useContext(FoldersContext);
     const { navigation } = props;
     const [image, setImage] = useState('');

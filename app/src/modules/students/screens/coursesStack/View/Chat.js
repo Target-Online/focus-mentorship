@@ -5,7 +5,7 @@ import { UserContext } from '../../../../../root/store';
 import { MessagesContext } from '../../../root/store';
 import * as realTimedbApi from '../../../../../api';
 
-export default ChatRoom = props => {
+export default function ChatRoom (props) {
     const [currentUser] = useContext(UserContext);
     const [messages, setMessages] = useContext(MessagesContext);
     const { product } = props.navigation.state.params

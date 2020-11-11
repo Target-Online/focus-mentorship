@@ -12,7 +12,7 @@ import { Block } from 'galio-framework';
 import { Spinner, FontAwesomeIcons } from '../../../../../../shared/components';
 import { DocumentsContext } from '../../../../root/store';
 
-export default Documents = props => {
+export default function Documents (props) {
     const [documents] = useContext(DocumentsContext);
 
     const renderItem = ({ item }) => {

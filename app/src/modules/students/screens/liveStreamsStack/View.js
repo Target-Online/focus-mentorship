@@ -11,7 +11,7 @@ import { UserContext } from '../../../../root/store';
 import { LiveStreamsContext } from '../../root/store';
 import { onSuccess } from '../../../../shared/utils/notifications';
 
-export default LiveStream = props => {
+export default function LiveStream (props) {
     const [liveStreams, setLiveStreams] = useContext(LiveStreamsContext)
     const [currentUser] = useContext(UserContext)
     const { isVisible, setVisible } = props;

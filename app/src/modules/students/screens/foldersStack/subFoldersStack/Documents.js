@@ -14,7 +14,7 @@ import { Spinner, FontAwesomeIcons } from '../../../../../shared/components';
 import { Block, Text } from 'galio-framework';
 import { DocumentsContext } from '../../../root/store';
 
-export default Documents = props => {
+export default function Documents (props) {
     const [documents] = useContext(DocumentsContext);
     const { product } = props.navigation.state.params;
     const [DownloadInProgress, setDownloadState] = useState(false);

@@ -14,7 +14,7 @@ if (!firebase.apps.length)  firebase.initializeApp(appsettings.firebaseConfig);
 const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
-export default Login = props => {
+export default function Login (props) {
   const { navigation } = props;
   const [inProgress, setInprogress] = useState(false);
   const [user, setUser] = useState({});

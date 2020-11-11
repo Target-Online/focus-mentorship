@@ -8,7 +8,7 @@ import { FoldersContext } from '../../root/store';
 
 const { height } = Dimensions.get('screen');
 
-export default Resources = () => {
+export default function Resources (props) {
   const [folders] = useContext(FoldersContext);
   const data = folders.data.sort((a, b) => b.createdAt - a.createdAt)
 

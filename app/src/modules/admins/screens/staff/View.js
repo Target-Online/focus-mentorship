@@ -13,7 +13,7 @@ import { HeaderHeight } from "../../../../shared/constants/utils";
 const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
-export default View = props => {
+export default function View (props) {
     const [currentUser] = useContext(UserContext);
     const { student } = props.navigation.state.params;
     const [image, setImage] = useState(student.avatar);

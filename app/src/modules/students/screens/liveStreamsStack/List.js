@@ -16,7 +16,7 @@ import LiveStream from './View';
 
 const { height } = Dimensions.get('screen');
 
-export default LiveStreams = props => {
+export default function LiveStreams (props) {
     const [liveStreams] = useContext(LiveStreamsContext);
     const [isVisible, setVisible] = useState(false);
 
