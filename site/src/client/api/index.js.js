@@ -65,6 +65,8 @@ export const updateData = (ref, id, data) =>
     .child(id)
     .update({ ...data });
 
+export const remove = (ref, id) => db.ref(ref).child(id).remove();
+
 export const updateAuthUser = async data =>
   firebase.auth().currentUser.updateProfile({
     ...data

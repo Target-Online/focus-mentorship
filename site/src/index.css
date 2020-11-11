@@ -24,3 +24,9 @@
   .Toastify__progress-bar--error {
     background-color: #C9190B;
   }
+
+  .align-text-center {	
+    text-align: center;	
+    display: flex;	
+  }	
+
