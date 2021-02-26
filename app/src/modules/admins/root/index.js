@@ -1,7 +1,7 @@
 import React, { useState, useReducer, useEffect } from 'react'
 
-import * as realTimedbApi from '../api';
-import { rootReducer } from '../../../shared/utils';
+import { db } from '../api';
+import { createListener } from '../../../shared/utils/fireabse-database'
 
 export const AnnouncementsContext = React.createContext()
 export const DocumentsContext = React.createContext()
@@ -15,23 +15,35 @@ const initalState = {
 }
 
 const Store = ({ children }) => {
-    const [announcements, dispatchAnnouncements] = useReducer(rootReducer.setStateReducer, initalState)
-    const [documents, dispatchDocuments] = useReducer(rootReducer.setStateReducer, initalState)
-    const [messages, dispatchMessages] = useReducer(rootReducer.setStateReducer, initalState)
-    const [clients, dispatchClients] = useReducer(rootReducer.setStateReducer, initalState)
+    const [documents, setDocuments] = useState(initalState)
+    const [announcements, setAnnouncements] = useState(initalState)
+    const [messages, setMessages] = useState(initalState)
+    const [clients, setClients] = useState(initalState)
 
     useEffect(() => {
-        realTimedbApi.getCollection('announcements', dispatchAnnouncements);
-        realTimedbApi.getCollection('documents', dispatchDocuments);
-        realTimedbApi.getCollection('messages', dispatchMessages);
-        realTimedbApi.getCollection('clients', dispatchClients);
+       const documentsRef = db.ref('documents');
+       const announcementsRef = db.ref('announcements');
+       const messagesRef = db.ref('messages');
+       const clientsRef = db.ref('clients');
+
+       const documentsLitener = createListener(documentsRef, setDocuments);
+       const announcementsLitener = createListener(announcementsRef, setAnnouncements);
+       const messagesLitener = createListener(messagesRef, setMessages);
+       const clientsLitener = createListener(clientsRef, setClients);
+
+        return () => {
+            documentsRef.off('value', documentsLitener);
+            announcementsRef.off('value', announcementsLitener);
+            messagesRef.off('value', messagesLitener);
+            clientsRef.off('value', clientsLitener);
+        }
     }, []);
 
     return (
-        <AnnouncementsContext.Provider value={[announcements, dispatchAnnouncements]}>
-            <DocumentsContext.Provider value={[documents, dispatchDocuments]}>
-                <MessagesContext.Provider value={[messages, dispatchMessages]}>
-                    <ClientsContext.Provider value={[clients, dispatchClients]}>
+        <AnnouncementsContext.Provider value={[announcements, setAnnouncements]}>
+            <DocumentsContext.Provider value={[documents, setDocuments]}>
+                <MessagesContext.Provider value={[messages, setMessages]}>
+                    <ClientsContext.Provider value={[clients, setClients]}>
                         {children}
                     </ClientsContext.Provider>
                 </MessagesContext.Provider>

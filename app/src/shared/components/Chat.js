@@ -1,23 +1,15 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import { GiftedChat } from 'react-native-gifted-chat'
 
-import { UserContext, StateContext } from '../../root/store';
+import { UserContext } from '../../root/store';
 import { firestoreApi } from '../../api'
+import { MessagesContext } from '../../modules/students/root/store';
 
 export default function ChatRoom (props) {
-    const [currentUser, setUser] = useContext(UserContext);
-    const [messages, setMessages] = useState([])
-    const [onChange, setChange] = useState({})
-    const [inProgress, setInProgress] = useState(false)
+    const [currentUser] = useContext(UserContext);
+    const [messages] = useContext(MessagesContext);
     const { product } = props.navigation.state.params
-
-    useEffect(() => {
-        if (currentUser) {
-            firestoreApi.getCollection('messages', setInProgress, setMessages);
-        }
-        else props.navigation.navigate('Login');
-    }, [onChange]);
-
+   
     const data = messages.filter(m => m.parentId == product.id)
      
     return (

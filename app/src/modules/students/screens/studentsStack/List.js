@@ -43,10 +43,11 @@ export default function Students (props) {
             console.log("user", s);
         }
     });
+
     return (
         <ScrollView>
             <FlatList
-                data={data.sort((a, b) => b.createdAt - a.createdAt)} 
+                data={data} 
                 keyExtractor={item => item.id.toString()}
                 renderItem={item => renderItem(item)}
             />

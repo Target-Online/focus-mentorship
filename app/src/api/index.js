@@ -6,7 +6,7 @@ import appsettings from '../../appsettings.json'
 
 if (!firebase.apps.length) firebase.initializeApp(appsettings.firebaseConfig);
 
-const db = firebase.database();
+export const db = firebase.database();
 
 export const getCollection = (
     ref,

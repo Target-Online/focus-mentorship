@@ -93,7 +93,7 @@ const Header = props => {
     switch (routeName) {
       case 'Courses':
         return ([
-          isAdmin && <AddRedirectButton family='Entypo' name='plus' redirect='AddCourse' navigation={navigation} isWhite={white} />,
+          isAdmin && <AddRedirectButton key='add-course' family='Entypo' name='plus' redirect='AddCourse' navigation={navigation} isWhite={white} />,
         ]);
       case 'ViewCourse':
           return ([
@@ -101,11 +101,11 @@ const Header = props => {
           ]);
       case 'Folders':
         return ([
-          isAdmin && <AddRedirectButton family='Entypo' name='plus' redirect='AddFolder' navigation={navigation} isWhite={white} />,
+          isAdmin && <AddRedirectButton key='add-folder' family='Entypo' name='plus' redirect='AddFolder' navigation={navigation} isWhite={white} />,
         ]);
       case 'SubFolders':
         return ([
-          isAdmin && <AddRedirectButton family='Entypo' name='plus' redirect='AddSubFolder' navigation={navigation} isWhite={white} />,
+          isAdmin && <AddRedirectButton key='add-sub-folder' family='Entypo' name='plus' redirect='AddSubFolder' navigation={navigation} isWhite={white} />,
         ]);
       case 'SubFolderDocuments':
         return ([

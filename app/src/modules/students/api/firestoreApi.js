@@ -5,7 +5,7 @@ import appsettings from '../../../../appsettings.json'
 
 if (!firebase.apps.length) firebase.initializeApp(appsettings.firebaseConfig);
 
-const db = firebase.firestore();
+export const db = firebase.firestore();
 
 export const getDocument = (
     collection,

@@ -6,7 +6,7 @@ import appsettings from '../../../../appsettings.json'
 
 var targetOnline_db = firebase.initializeApp(appsettings.adminFirebaseConfig, "secondary");
 
-const db = targetOnline_db.database();
+export const db = targetOnline_db.database();
 
 export const getCollection = (
     ref,

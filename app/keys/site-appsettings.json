@@ -1,0 +1,27 @@
+{
+    "environment": "Production",
+    "version": "3.0.0",
+    "appName": "Focus Mentorship",
+    "firebaseConfig": {
+      "apiKey": "AIzaSyAYb24sW0JgZeg80XHxclarOPYhDTwCstI",
+      "authDomain": "focus-mentorship.firebaseapp.com",
+      "databaseURL": "https://focus-mentorship.firebaseio.com",
+      "projectId": "focus-mentorship",
+      "storageBucket": "focus-mentorship.appspot.com",
+      "messagingSenderId": "182432627106"
+    },
+    "adminFirebaseConfig": {
+      "apiKey": "AIzaSyB9PjtaYIVDi-nEugjyj_siM51XIM1wNaQ",
+      "authDomain": "target-online-f4d2e.firebaseapp.com",
+      "databaseURL": "https://target-online-f4d2e.firebaseio.com",
+      "projectId": "target-online-f4d2e",
+      "storageBucket": "target-online-f4d2e.appspot.com",
+      "messagingSenderId": "811776581133"
+    },
+    "socialLinks": {
+        "whatsapp": "https://wa.me/27616337937",
+        "facebook": "https://web.facebook.com/FOCUS-Matric-Tutorials-186104458799069",
+        "instagram-ex": "https://www.instagram.com/bahlechonco97/?hl=en",
+        "twitter-ex":  "https://twitter.com/ffsa_official" 
+    }
+}

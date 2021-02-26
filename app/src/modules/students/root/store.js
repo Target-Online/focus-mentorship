@@ -1,7 +1,7 @@
-import React, { useReducer, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import { getCollection } from '../../../api/realTimedbApi';
-import { rootReducer } from '../../../shared/utils';
+import { db } from '../../../api'
+import { createListener } from '../../../shared/utils/fireabse-database'
 
 export const AnnouncementsContext = React.createContext()
 export const CoursesContext = React.createContext()
@@ -19,24 +19,44 @@ const initalState = {
 }
 
 const Store = ({ children }) => {
-    const [documents, setDocuments] = useReducer(rootReducer.setStateReducer, initalState)
-    const [announcements, setAnnouncements] = useReducer(rootReducer.setStateReducer, initalState)
-    const [courses, setCourses] = useReducer(rootReducer.setStateReducer, initalState)
-    const [studentCourse, setStudentCourse] = useReducer(rootReducer.setStateReducer, initalState)
-    const [messages, setMessages] = useReducer(rootReducer.setStateReducer, initalState)
-    const [folders, setFolders] = useReducer(rootReducer.setStateReducer, initalState)
-    const [subFolders, setSubFolders] = useReducer(rootReducer.setStateReducer, initalState)
-    const [liveStreams, setLiveStreams] = useReducer(rootReducer.setStateReducer, initalState)
+    const [documents, setDocuments] = useState(initalState)
+    const [announcements, setAnnouncements] = useState(initalState)
+    const [courses, setCourses] = useState(initalState)
+    const [studentCourse, setStudentCourse] = useState(initalState)
+    const [messages, setMessages] = useState(initalState)
+    const [folders, setFolders] = useState(initalState)
+    const [subFolders, setSubFolders] = useState(initalState)
+    const [liveStreams, setLiveStreams] = useState(initalState)
 
     useEffect(() => {
-        getCollection('documents', setDocuments);
-        getCollection('announcements', setAnnouncements);
-        getCollection('courses', setCourses);
-        getCollection('studentCourse', setStudentCourse);
-        getCollection('messages', setMessages);
-        getCollection('folders', setFolders);
-        getCollection('subFolders', setSubFolders);
-        getCollection('live-streams', setLiveStreams);
+       const documentsRef = db.ref('documents');
+       const announcementsRef = db.ref('announcements');
+       const coursesRef = db.ref('courses');
+       const studentCourseRef = db.ref('studentCourse');
+       const messagesRef = db.ref('messages');
+       const foldersRef = db.ref('folders');
+       const subFoldersRef = db.ref('subFolders');
+       const liveStreamsRef = db.ref('live-streams');
+
+       const documentsLitener = createListener(documentsRef, setDocuments);
+       const announcementsLitener = createListener(announcementsRef, setAnnouncements);
+       const coursesLitener = createListener(coursesRef, setCourses);
+       const studentCourseLitener = createListener(studentCourseRef, setStudentCourse);
+       const messagesLitener = createListener(messagesRef, setMessages);
+       const foldersLitener = createListener(foldersRef, setFolders);
+       const subFoldersLitener = createListener(subFoldersRef, setSubFolders);
+       const liveStreamsLitener = createListener(liveStreamsRef, setLiveStreams);
+
+        return () => {
+            documentsRef.off('value', documentsLitener);
+            announcementsRef.off('value', announcementsLitener);
+            coursesRef.off('value', coursesLitener);
+            studentCourseRef.off('value', studentCourseLitener);
+            messagesRef.off('value', messagesLitener);
+            foldersRef.off('value', foldersLitener);
+            subFoldersRef.off('value', subFoldersLitener);
+            liveStreamsRef.off('value', liveStreamsLitener);
+        }
     }, []);
 
     return (
