@@ -16,20 +16,19 @@ import { Images } from '../../../../../../shared/constants';
 import { StudentCourseContext } from '../../../../root/store';
 import { UsersContext } from '../../../../../../root/store';
 
-export default Students = props => {
+export default function Students (props) {
     const [students] = useContext(UsersContext);
     const [studentCourse] = useContext(StudentCourseContext);
     const { course } = props.navigation.state.params;
 
     const addStudent = (student, course) =>{
-        const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
         realTimedbApi.setData('studentCourse', { courseId: course.id, studentId: student.id });
         props.navigation.goBack();
 
         pushNotifications.sendPushNotifications(
             [student],
             course.name,
-            "You have neen added on this course, congratulations."
+            "You have been added on this course, congratulations."
         )
     }
 

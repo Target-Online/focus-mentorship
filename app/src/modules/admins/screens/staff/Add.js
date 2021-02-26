@@ -14,7 +14,7 @@ import * as realTimedbApi from '../../../../api';
 import { Images } from '../../../../shared/constants';
 import { UsersContext } from '../../../../root/store';
 
-export default users = props => {
+export default function users (props) {
     const [users] = useContext(UsersContext);
 
     const addStudent = userId =>{

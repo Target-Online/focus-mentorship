@@ -1,6 +1,7 @@
 import React, { useContext, useReducer, useEffect } from 'react';
 import { StyleSheet, ScrollView, Dimensions, Text } from 'react-native';
 import { Block, theme } from 'galio-framework';
+import { CacheManager } from "react-native-expo-image-cache";
 
 import { Spinner, Card } from '../../shared/components';
 import { Images } from '../../../../shared/constants';
@@ -8,7 +9,7 @@ import { CoursesContext } from '../../root/store';
 
 const { height } = Dimensions.get('window');
 
-export default Courses = () => {
+export default function Courses (props) {
   const [courses] = useContext(CoursesContext);
   const data = courses.data.sort((a, b) => b.createdAt - a.createdAt)
   const noData = data.length == 0;

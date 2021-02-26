@@ -4,7 +4,6 @@ import {
     StyleSheet,
     Text,
     View,
-    Image,
     TouchableOpacity,
     FlatList
 } from 'react-native';
@@ -13,7 +12,7 @@ import { Block } from 'galio-framework';
 import { Spinner } from '../../../../../../shared/components';
 import { AnnouncementsContext } from '../../../../root/store';
 
-export default Announcements = props => {
+export default function Announcements (props) {
     const [announcements] = useContext(AnnouncementsContext);
     const data = announcements.data.filter(d => d.parentId == props.id)
 
@@ -28,10 +27,9 @@ export default Announcements = props => {
                     renderItem={({ item }) => {
                         return (
                             <TouchableOpacity style={[styles.card, { borderColor: '#228B22' }]}>
-                                <Image style={styles.image} source={{ uri: 'https://img.icons8.com/flat_round/64/000000/checkmark.png' }} />
                                 <View style={styles.cardContent}>
                                     <Text style={[styles.description, styles.descriptionStyle]}>{item.message}</Text>
-                                    <Text style={styles.date}>{moment(item.createdAt).format('MM/DD/YYYY HH:MM')}</Text>
+                                    <Text style={styles.date}>{moment(item.createdAt).format('DD MMM YYYY HH:MM')}</Text>
                                 </View>
                             </TouchableOpacity>
                         )
@@ -72,24 +70,24 @@ const styles = StyleSheet.create({
         shadowRadius: 7.49,
         elevation: 12,
 
-        marginVertical: 10,
-        marginHorizontal: 20,
+        marginVertical: 5,
+        marginHorizontal: 5,
         backgroundColor: "white",
         flexBasis: '46%',
-        padding: 10,
+        //padding: 10,
         flexDirection: 'row',
         flexWrap: 'wrap',
         borderLeftWidth: 6,
     },
 
     description: {
-        fontSize: 18,
+        fontSize: 13,
         flex: 1,
         color: "#008080",
         fontWeight: 'bold',
     },
     date: {
-        fontSize: 14,
+        fontSize: 10,
         flex: 1,
         color: "#696969",
         marginTop: 5

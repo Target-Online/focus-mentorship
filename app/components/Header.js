@@ -44,14 +44,14 @@ const SearchButton = ({isWhite, style, navigation}) => (
   </TouchableOpacity>
 );
 
-class Header extends React.Component {
+ function Header (props) {
   handleLeftPress = () => {
-    const { back, navigation } = this.props;
+    const { back, navigation } = props;
     return (back ? navigation.goBack() : navigation.openDrawer());
   }
 
   renderRight = () => {
-    const { white, title, navigation } = this.props;
+    const { white, title, navigation } = props;
     const { routeName } = navigation.state;
 
     if (title === 'Title') {
@@ -108,7 +108,7 @@ class Header extends React.Component {
   }
 
   renderSearch = () => {
-    const { navigation } = this.props;
+    const { navigation } = props;
     return (
       <Input
         right
@@ -122,7 +122,7 @@ class Header extends React.Component {
   }
 
   renderTabs = () => {
-    const { navigation, tabTitleLeft, tabTitleRight } = this.props;
+    const { navigation, tabTitleLeft, tabTitleRight } = props;
 
     return (
       <Block row style={styles.tabs}>
@@ -143,20 +143,19 @@ class Header extends React.Component {
   }
 
   renderHeader = () => {
-    const { search, tabs } = this.props;
+    const { search, tabs } = props;
     if (search || tabs) {
       return (
         <Block center>
-          {search ? this.renderSearch() : null}
-          {tabs ? this.renderTabs() : null}
+          {search ? renderSearch() : null}
+          {tabs ? renderTabs() : null}
         </Block>
       )
     }
     return null;
   }
 
-  render() {
-    const { back, title, white, transparent, navigation } = this.props;
+    const { back, title, white, transparent, navigation } = props;
     const { routeName } = navigation.state;
     const noShadow = ["Search", "Categories", "Deals", "Pro", "Profile"].includes(routeName);
     const headerStyles = [
@@ -171,7 +170,7 @@ class Header extends React.Component {
           title={title}
           style={styles.navbar}
           transparent={transparent}
-          right={this.renderRight()}
+          right={renderRight()}
           rightStyle={{ alignItems: 'center' }}
           leftStyle={{ flex: 0.3, paddingTop: 2  }}
           leftIconName="navicon"
@@ -180,12 +179,11 @@ class Header extends React.Component {
             styles.title,
             {color: theme.COLORS[white ? 'WHITE' : 'ICON']},
           ]}
-          onLeftPress={this.handleLeftPress}
+          onLeftPress={handleLeftPress}
         />
-        {this.renderHeader()}
+        {renderHeader()}
       </Block>
     );
-  }
 }
 
 export default withNavigation(Header);

@@ -13,9 +13,9 @@ import { Block } from 'galio-framework';
 import { Images } from '../../../../shared/constants';
 import { UsersContext } from '../../../../root/store';
 
-export default Students = props => {
+export default function Students (props) {
     const [users] = useContext(UsersContext);
-    //const users = []
+
     const renderItem = ({ item }) => {
         return (
             <TouchableOpacity onPress={() => props.navigation.navigate('View', { student: item })}>
@@ -24,10 +24,10 @@ export default Students = props => {
                     <View>
                         <View style={styles.nameContainer}>
                             <Text style={styles.nameTxt} numberOfLines={1} ellipsizeMode="tail">{item.name}</Text>
-                            <Text style={styles.mblTxt}>Mobile</Text>
+                            <Text style={styles.mblTxt}>{item.city}</Text>
                         </View>
                         <View style={styles.msgContainer}>
-                            <Text style={styles.msgTxt}>{item.email}</Text>
+                            <Text style={styles.msgTxt}>{item.suburb_township}</Text>
                         </View>
                     </View>
                 </View>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { StyleSheet, Dimensions, ActivityIndicator, TouchableOpacity, ScrollView, TextInput, ImageBackground, Platform } from 'react-native';
 import { Button, Block, Input, theme } from 'galio-framework';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -8,11 +8,14 @@ import { imageUtils, validation } from '../../../../../shared/utils';
 import { Images } from '../../../../../shared/constants';
 import * as realTimedbApi from '../../../../../api';
 import { Spinner, Product } from '../../../../../shared/components';
+import { SubFoldersContext } from '../../../root/store';
+import { onSuccess } from '../../../../../shared/utils/notifications';
 
 const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
-export default AddSubFolder = props => {
+export default function AddSubFolder (props) {
+    const [subFolders, setSubFolders] = useContext(SubFoldersContext);
     const { navigation } = props;
     const { product } = props.navigation.state.params;
     const [image, setImage] = useState('');
@@ -70,8 +73,10 @@ export default AddSubFolder = props => {
                         style={[styles.button, styles.shadow]}
                         onPress={() => {
                             if (validation(resource, ['name', 'description'])) {
-                                realTimedbApi.setData('subFolders', { ...resource, avatar: image, parentId: product.id  })
+                                var data = realTimedbApi.setData('subFolders', { ...resource, avatar: image, parentId: product.id  })
                                 navigation.goBack();
+                                onSuccess(`Folder ${resource.name} added successfully.`)
+                                setSubFolders({ type: 'setData', data: subFolders.data.concat(data) });
                             }
                         }}>
                         Submit

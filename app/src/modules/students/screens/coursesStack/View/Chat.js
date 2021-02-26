@@ -5,15 +5,16 @@ import { UserContext } from '../../../../../root/store';
 import { MessagesContext } from '../../../root/store';
 import * as realTimedbApi from '../../../../../api';
 
-export default ChatRoom = props => {
+export default function ChatRoom (props) {
     const [currentUser] = useContext(UserContext);
-    const [messages] = useContext(MessagesContext);
+    const [messages, setMessages] = useContext(MessagesContext);
     const { product } = props.navigation.state.params
 
     useEffect(() =>{ if(!currentUser) props.navigation.navigate('Login') }, []);
 
     onSend = message => {
-        realTimedbApi.setData('messages', { ...message, parentId: product.id })
+        var data = realTimedbApi.setData('messages', { ...message, parentId: product.id });
+        setMessages({ type: 'setData', data: messages.data.concat(data)});
     }
 
     return (

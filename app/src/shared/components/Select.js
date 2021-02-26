@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import ModalDropdown from 'react-native-modal-dropdown';
+//import ModalDropdown from 'react-native-modal-dropdown';
 import { Block, Text, Icon,theme } from 'galio-framework';
 
 export default class DropDown extends React.Component {
@@ -18,17 +18,11 @@ export default class DropDown extends React.Component {
   render() {
     const { onSelect, style, ...props } = this.props;
     return (
-      <ModalDropdown
-        style={[styles.qty, style]}
-        onSelect={this.handleOnSelect}
-        dropdownStyle={styles.dropdown}
-        dropdownTextStyle={{paddingLeft:16, fontSize:12}}
-        {...props}>
+
         <Block flex row middle space="between">
           <Text size={12}>{this.state.value}</Text>
           <Icon name="angle-down" family="font-awesome" size={11} />
         </Block>
-      </ModalDropdown>
     )
   }
 }

@@ -85,10 +85,8 @@ const Header = props => {
     switch (routeName) {
       case 'Home':
         return ([
-          socialLinks.whatsapp && <NavIcon name="whatsapp" family={"font-awesome"} link={socialLinks.whatsapp} navigation={navigation} isWhite={white} />,
-          socialLinks.instagram && <NavIcon name="instagram" family={"font-awesome"} link={socialLinks.instagram} navigation={navigation} isWhite={white} />,
-          socialLinks.facebook && <NavIcon name="facebook" family={"Feather"} link={socialLinks.facebook} navigation={navigation} isWhite={white} />,
-          socialLinks.twitter && <NavIcon name="twitter" family={"Feather"} link={socialLinks.twitter} navigation={navigation} isWhite={white} />
+          socialLinks.whatsapp && <NavIcon key="whatsapp" name="whatsapp" family={"font-awesome"} link={socialLinks.whatsapp} navigation={navigation} isWhite={white} />,
+          socialLinks.facebook && <NavIcon key="facebook" name="facebook" family={"Feather"} link={socialLinks.facebook} navigation={navigation} isWhite={white} />,
         ]);
       case 'Admin':
         return ([

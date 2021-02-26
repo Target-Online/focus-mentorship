@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { StyleSheet, Dimensions, ActivityIndicator, TouchableOpacity, ScrollView, TextInput, ImageBackground, Platform } from 'react-native';
 import { Button, Block, Input, theme } from 'galio-framework';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -8,11 +8,14 @@ import { imageUtils, validation } from '../../../../shared/utils';
 import { Images } from '../../../../shared/constants';
 import * as realTimedbApi from '../../../../api';
 import { Spinner } from '../../../../shared/components';
+import { FoldersContext } from '../../root/store';
+import { onSuccess } from '../../../../shared/utils/notifications';
 
 const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
-export default AddFolder = props => {
+export default function AddFolder (props) {
+    const [folders, setFolders] = useContext(FoldersContext);
     const { navigation } = props;
     const [image, setImage] = useState('');
     const [resource, setResource] = useState({});
@@ -70,8 +73,10 @@ export default AddFolder = props => {
                         onPress={() => {
                             const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
                             if (validation(resource, ['name', 'description'])) {
-                                realTimedbApi.setData('folders', { ...resource, avatar: image })
+                                var data = realTimedbApi.setData('folders', { ...resource, avatar: image })
                                 navigation.goBack();
+                                onSuccess(`Folder ${resource.name} added successfully.`)
+                                setFolders({ type: 'setData', data: folders.data.concat(data) });
                             }
                         }}>
                         Submit

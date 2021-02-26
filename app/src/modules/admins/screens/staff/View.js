@@ -13,7 +13,7 @@ import { HeaderHeight } from "../../../../shared/constants/utils";
 const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
-export default View = props => {
+export default function View (props) {
     const [currentUser] = useContext(UserContext);
     const { student } = props.navigation.state.params;
     const [image, setImage] = useState(student.avatar);
@@ -82,15 +82,15 @@ export default View = props => {
 const styles = StyleSheet.create({
     profile: {
         marginTop: Platform.OS === 'android' ? -HeaderHeight : 0,
-        marginBottom: -HeaderHeight * 2,
+        marginBottom: -height / 2,
     },
     profileImage: {
         width: width * 1.1,
-        height: 'auto',
+        height: height / 1.5,
     },
     profileContainer: {
         width: width,
-        height: height / 2,
+        height: height / 1.5,
     },
     profileDetails: {
         paddingTop: theme.SIZES.BASE * 4,

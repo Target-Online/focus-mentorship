@@ -7,9 +7,11 @@ import { Icon, Product } from '../components/';
 const { width } = Dimensions.get('screen');
 import products from '../constants/products';
 
-export default class Home extends React.Component {
-  renderSearch = () => {
-    const { navigation } = this.props;
+import { GiftedChat } from 'react-native-gifted-chat'
+
+export default function Home (props) {
+  const renderSearch = () => {
+    const { navigation } = props;
     const iconCamera = <Icon size={16} color={theme.COLORS.MUTED} name="zoom-in" family="material" />
 
     return (
@@ -24,8 +26,8 @@ export default class Home extends React.Component {
     )
   }
   
-  renderTabs = () => {
-    const { navigation } = this.props;
+  const renderTabs = () => {
+    const { navigation } = props;
 
     return (
       <Block row style={styles.tabs}>
@@ -45,7 +47,7 @@ export default class Home extends React.Component {
     )
   }
 
-  renderProducts = () => {
+  const renderProducts = () => {
     return (
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -63,13 +65,11 @@ export default class Home extends React.Component {
     )
   }
 
-  render() {
     return (
       <Block flex center style={styles.home}>
-        {this.renderProducts()}
+        {renderProducts()}
       </Block>
     );
-  }
 }
 
 const styles = StyleSheet.create({

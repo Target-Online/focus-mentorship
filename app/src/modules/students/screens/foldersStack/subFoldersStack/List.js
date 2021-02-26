@@ -8,7 +8,7 @@ import { SubFoldersContext } from '../../../root/store';
 
 const { height } = Dimensions.get('screen');
 
-export default SubFolders = props => {
+export default function SubFolders (props) {
   const { product } = props.navigation.state.params;
   const [subFolders] = useContext(SubFoldersContext);
   const data = subFolders.data.filter(sf => sf.parentId == product.id)

@@ -18,7 +18,7 @@ if (!firebase.apps.length) firebase.initializeApp(appsettings.firebaseConfig);
 const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
-export default View = props => {
+export default function View (props) {
     const [currentUser] = useContext(UserContext);
     const [image, setImage] = useState(currentUser && currentUser.avatar);
 
@@ -32,7 +32,7 @@ export default View = props => {
             <Block flex>
                 <TouchableOpacity onPress={() => _updateUserAvatar(setImage, currentUser)}>
                     <ImageBackground
-                        source={image ? {uri: image} : Images.user }
+                        source={image ? { uri: image } : Images.user }
                         style={styles.profileContainer}
                         imageStyle={styles.profileImage}>
                         <Block flex style={styles.profileDetails}>
@@ -58,7 +58,7 @@ export default View = props => {
                     </Block>
                     <Block style={styles.title}>
                         <Text center size={12}>
-                            {currentUser && currentUser['suburb/township']}
+                            {currentUser && currentUser.suburb_township}
                         </Text>
                     </Block>
                 </ScrollView>
@@ -70,15 +70,15 @@ export default View = props => {
 const styles = StyleSheet.create({
     profile: {
         marginTop: Platform.OS === 'android' ? -HeaderHeight : 0,
-        marginBottom: -HeaderHeight * 2,
+        marginBottom: -height / 2,
     },
     profileImage: {
         width: width * 1.1,
-        height: 'auto',
+        height: height / 1.5,
     },
     profileContainer: {
         width: width,
-        height: height / 2,
+        height: height / 1.5,
     },
     profileDetails: {
         paddingTop: theme.SIZES.BASE * 4,

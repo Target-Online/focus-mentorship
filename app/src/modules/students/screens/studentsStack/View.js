@@ -14,7 +14,7 @@ import { HeaderHeight } from "../../shared/constants/utils";
 const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
-export default View = props => {
+export default function View (props) {
     const [currentUser, setUser] = useContext(UserContext);
     const { student } = props.navigation.state.params;
     const [inProgress, setInProgress] = useState(false);
@@ -40,14 +40,12 @@ export default View = props => {
                         source={image == '' ? Images.user : { uri: image }}
                         style={styles.profileContainer}
                         imageStyle={styles.profileImage}>
-                        <Block flex style={styles.profileDetails}>
-                            <LinearGradient colors={['rgba(0,0,0,0)', 'rgba(0,0,0,1)']} style={styles.gradient} />
-                        </Block>
                     </ImageBackground>
                 </TouchableOpacity>
             </Block>
+            {/*
             <Block flex style={styles.options}>
-                <ScrollView showsVerticalScrollIndicator={true}>
+                <ScrollView>
                     <Block style={styles.title}>
                         <Text bold center size={theme.SIZES.BASE} style={{ paddingBottom: 5 }}>
                             {student.name}
@@ -68,22 +66,24 @@ export default View = props => {
                     </Block>
                 </ScrollView>
             </Block>
+            */}
         </Block>
     );
 }
 
 const styles = StyleSheet.create({
     profile: {
-        marginTop: Platform.OS === 'android' ? -HeaderHeight : 0,
-        marginBottom: -HeaderHeight * 2,
+        marginTop: Platform.OS === 'android' ? -HeaderHeight - 30 : 0,
+        marginBottom: -height / 2,
     },
     profileImage: {
+        marginTop: (height - width) / 2,
         width: width * 1.1,
-        height: 'auto',
+        height: width,
     },
     profileContainer: {
         width: width,
-        height: height / 2,
+        height: height,
     },
     profileDetails: {
         paddingTop: theme.SIZES.BASE * 4,
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 0 },
         shadowRadius: 8,
         shadowOpacity: 0.2,
-        zIndex: 2,
+        zIndex: 2
     },
     thumb: {
         borderRadius: 4,

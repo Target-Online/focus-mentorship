@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { StyleSheet, Dimensions, ActivityIndicator, TouchableOpacity, ScrollView, Image, ImageBackground, Platform } from 'react-native';
 import { Button, Block, Text, Input, theme } from 'galio-framework';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -7,12 +7,14 @@ import { materialTheme, utils, Images } from '../../shared/constants';
 import { imageUtils } from '../../shared/utils';
 import { Icon, Spinner } from '../../shared/components';
 import { signup, validation } from './service';
+import { UsersContext } from "../../root/store.js";
 
 const { width, height } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 
-export default AddUser = props => {
+export default function AddUser (props) {
     const { navigation } = props;
+    const [users] = useContext(UsersContext);
     const [image, setImage] = useState('');
     const [user, setUser] = useState({
         isAdmin: false,
@@ -117,7 +119,7 @@ export default AddUser = props => {
                         color={materialTheme.COLORS.PRIMARY}
                         style={[styles.button, styles.shadow]}
                         onPress={() => {
-                            if (validation(user)) signup({ ...user, avatar: image }, navigation, setInprogress)
+                            if (validation(user)) signup({ ...user, avatar: image }, users, navigation, setInprogress)
                         }}>
                         {inProgress ? <ActivityIndicator size="small" color="#00ff00" /> : 'Submit'}
                     </Button>

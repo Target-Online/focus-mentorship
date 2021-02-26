@@ -28,7 +28,7 @@ const StudentsStack = createStackNavigator({
   View: {
     screen: StudentsView,
     navigationOptions: ({ navigation }) => ({
-      header: <Header white back transparent navigation={navigation} />,
+      header: <Header back title={navigation.state.params.student.name ? navigation.state.params.student.name : "Profile"} transparent navigation={navigation} />,
       headerTransparent: true,
     })
   },

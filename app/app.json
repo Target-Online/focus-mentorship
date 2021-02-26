@@ -8,7 +8,7 @@
       "ios",
       "android"
     ],
-    "version": "3.0.5",
+    "version": "3.2.3",
     "orientation": "portrait",
     "icon": "./assets/icons/icon.png",
     "splash": {
@@ -33,7 +33,7 @@
     },
     "android": {
       "package": "com.targetonline.focus",
-      "versionCode": 20
+      "versionCode": 22
     }
   }
 }
