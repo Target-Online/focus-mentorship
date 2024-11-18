@@ -29,7 +29,7 @@
     "expo-optimize": "^0.1.62",
     "expo-permissions": "~9.3.0",
     "expo-print": "~9.1.0",
-    "firebase": "7.9.0",
+    "firebase": "10.9.0",
     "galio-framework": "^0.6.3",
     "lodash": "^4.17.15",
     "object-to-array-convert": "^1.1.0",
